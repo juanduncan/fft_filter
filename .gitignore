@@ -1,0 +1,6 @@
+*.vhdl
+*.vhd
+*.v
+**/impl
+**/syn
+
