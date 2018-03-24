@@ -1,0 +1,5 @@
+   Compiling ../../../src/bckups/filter_tb.cpp in debug mode
+../../../src/bckups/filter_tb.cpp:4:94: fatal error: /home/juan/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.h: Permission denied
+compilation terminated.
+make: *** [obj/filter_tb.o] Error 1
+@E [SIM-1] 'csim_design' failed: compilation error(s).

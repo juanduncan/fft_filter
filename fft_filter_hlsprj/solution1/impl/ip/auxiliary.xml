@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="sosf_detector_top" xd:componentRef="sosf_detector_top" xd:initiationInterval="155650" xd:clockPeriod="3.300000" xd:sequential="true" xd:hostMachine="64">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="in[].real()" xd:originalName="in" xd:direction="in" xd:interfaceRef="in_r" xd:busTypeRef="acc_fifo" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="6912" xd:dataWidth="32"/>
+  <xd:arg xd:name="in[].imag()" xd:originalName="in" xd:direction="in" xd:interfaceRef="in_r" xd:busTypeRef="acc_fifo" xd:dataPack="true" xd:bitMapping="63:32" xd:arraySize="6912" xd:dataWidth="32"/>
+  <xd:arg xd:name="counterout" xd:originalName="counterout" xd:direction="in" xd:interfaceRef="counterout" xd:busTypeRef="register" xd:dataWidth="1" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="*(ovflo)" xd:originalName="ovflo" xd:direction="out" xd:interfaceRef="ovflo" xd:busTypeRef="acc_fifo" xd:dataWidth="1"/>
+  <xd:arg xd:name="coefs_d0" xd:originalName="coefs_d0" xd:direction="out" xd:interfaceRef="coefs_d0" xd:busTypeRef="register" xd:dataWidth="64" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="coefs_q0" xd:originalName="coefs_q0" xd:direction="in" xd:interfaceRef="coefs_q0" xd:busTypeRef="register" xd:dataWidth="64" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="out_r_d0" xd:originalName="out_r_d0" xd:direction="out" xd:interfaceRef="out_r_d0" xd:busTypeRef="register" xd:dataWidth="64" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="out_r_q0" xd:originalName="out_r_q0" xd:direction="in" xd:interfaceRef="out_r_q0" xd:busTypeRef="register" xd:dataWidth="64" xd:handshakeRef="ap_none"/>
+  <xd:latencyEstimates xd:best-case="155649" xd:worst-case="155649" xd:average-case="155649"/>
+  <xd:resourceEstimates xd:LUT="15396" xd:FF="18080" xd:BRAM="19" xd:DSP="50"/>
+</xd:acceleratorMap>

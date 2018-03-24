@@ -1,0 +1,10 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../src/bckups/filter_tb.cpp in debug mode
+   Generating csim.exe
+obj/filter_tb.o: In function `main':
+/home/juan/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution2/csim/build/../../../src/bckups/filter_tb.cpp:26: undefined reference to `sosf_detector_top(std::complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, std::complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, std::complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, std::complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*, std::complex<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >*)'
+collect2: ld returned 1 exit status
+make: *** [csim.exe] Error 1
+CRITICAL WARNING: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,18 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="sosf_detector_top" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_memory" value="" positionalBoolean="mode"/>
+                <option name="port" value="xk_to_xn" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="sosf_detector_top" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_none" value="" positionalBoolean="mode"/>
+                <option name="register" value="" positionalBoolean="1"/>
+                <option name="port" value="counterout" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

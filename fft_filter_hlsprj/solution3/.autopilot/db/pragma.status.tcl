@@ -1,0 +1,5 @@
+lappend pragmaStatus0 {pragma "INTERFACE" source "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp" location "filter_top" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "INTERFACE" source "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp" location "filter_top" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus2 {pragma "INTERFACE" source "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp" location "filter_top" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus3 {pragma "INTERFACE" source "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp" location "filter_top" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus4 {pragma "INTERFACE" source "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp" location "filter_top" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}

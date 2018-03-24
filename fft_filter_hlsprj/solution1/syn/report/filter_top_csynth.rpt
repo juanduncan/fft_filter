@@ -1,0 +1,184 @@
+
+
+================================================================
+== Vivado HLS Report for 'filter_top'
+================================================================
+* Date:           Thu Jan 25 09:57:29 2018
+
+* Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
+* Project:        fft_filter_hlsprj
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k410tffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |   3.30|      2.89|        0.41|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+----------+
+    |    Latency    |    Interval   | Pipeline |
+    |  min  |  max  |  min  |  max  |   Type   |
+    +-------+-------+-------+-------+----------+
+    |  24577|  24577|  24578|  24578| dataflow |
+    +-------+-------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------+--------------------------+-------+-------+-------+-------+---------+
+        |                                     |                          |    Latency    |    Interval   | Pipeline|
+        |               Instance              |          Module          |  min  |  max  |  min  |  max  |   Type  |
+        +-------------------------------------+--------------------------+-------+-------+-------+-------+---------+
+        |grp_filter_top_dummy_proc_fe_fu_139  |filter_top_dummy_proc_fe  |  12289|  12289|  12289|  12289|   none  |
+        |grp_fft_config1_s_fu_155             |fft_config1_s             |   6278|   6278|   6278|   6278|   none  |
+        |grp_fft_config2_s_fu_163             |fft_config2_s             |   6278|   6278|   6278|   6278|   none  |
+        |grp_filter_top_dummy_proc_be_fu_127  |filter_top_dummy_proc_be  |  24577|  24577|  24577|  24577|   none  |
+        +-------------------------------------+--------------------------+-------+-------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|Expression       |        -|      -|       -|       -|
+|FIFO             |       20|      -|     360|     496|
+|Instance         |       34|     96|   36858|   29332|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|       2|
+|Register         |        -|      -|       9|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |       54|     96|   37227|   29830|
++-----------------+---------+-------+--------+--------+
+|Available        |     1590|   1540|  508400|  254200|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        3|      6|       7|      11|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+--------------------------+---------+-------+-------+-------+
+    |           Instance          |          Module          | BRAM_18K| DSP48E|   FF  |  LUT  |
+    +-----------------------------+--------------------------+---------+-------+-------+-------+
+    |fft_config1_U0               |fft_config1_s             |       16|     40|  17987|  14499|
+    |fft_config2_U0               |fft_config2_s             |       16|     40|  17987|  14499|
+    |filter_top_dummy_proc_be_U0  |filter_top_dummy_proc_be  |        0|     16|    570|    184|
+    |filter_top_dummy_proc_fe_U0  |filter_top_dummy_proc_fe  |        2|      0|    314|    150|
+    +-----------------------------+--------------------------+---------+-------+-------+-------+
+    |Total                        |                          |       34|     96|  36858|  29332|
+    +-----------------------------+--------------------------+---------+-------+-------+-------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-------------------------+---------+-----+-----+------+-----+---------+
+    |           Name          | BRAM_18K|  FF | LUT | Depth| Bits| Size:D*B|
+    +-------------------------+---------+-----+-----+------+-----+---------+
+    |fft_config_fwd_data_V_U  |        0|    5|   28|     1|   16|       16|
+    |fft_config_inv_data_V_U  |        0|    5|   28|     1|   16|       16|
+    |xk2_channel_U            |        4|   83|   93|    64|   64|     4096|
+    |xk_channel_U             |        4|   83|   93|    64|   64|     4096|
+    |xn2_channel_U            |        4|   83|   93|    64|   64|     4096|
+    |xn_channel_U             |        8|  101|  161|  1344|   64|    86016|
+    +-------------------------+---------+-----+-----+------+-----+---------+
+    |Total                    |       20|  360|  496|  1538|  288|    98336|
+    +-------------------------+---------+-----+-----+------+-----+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                       | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sig_ready_filter_top_dummy_proc_be_U0_ap_ready  |   1|          2|    1|          2|
+    |ap_sig_ready_filter_top_dummy_proc_fe_U0_ap_ready  |   1|          2|    1|          2|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                              |   2|          4|    2|          4|
+    +---------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------+---+----+-----+-----------+
+    |                        Name                       | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------+---+----+-----+-----------+
+    |ap_CS                                              |  1|   0|    1|          0|
+    |ap_reg_procdone_fft_config1_U0                     |  1|   0|    1|          0|
+    |ap_reg_procdone_fft_config2_U0                     |  1|   0|    1|          0|
+    |ap_reg_procdone_filter_top_dummy_proc_be_U0        |  1|   0|    1|          0|
+    |ap_reg_procdone_filter_top_dummy_proc_fe_U0        |  1|   0|    1|          0|
+    |ap_reg_ready_filter_top_dummy_proc_be_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_reg_ready_filter_top_dummy_proc_fe_U0_ap_ready  |  1|   0|    1|          0|
+    |fft_config1_U0_ap_start                            |  1|   0|    1|          0|
+    |fft_config2_U0_ap_start                            |  1|   0|    1|          0|
+    +---------------------------------------------------+---+----+-----+-----------+
+    |Total                                              |  9|   0|    9|          0|
+    +---------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+--------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------+-----+-----+------------+--------------+--------------+
+|coefs_address0   | out |   11|  ap_memory |     coefs    |     array    |
+|coefs_ce0        | out |    1|  ap_memory |     coefs    |     array    |
+|coefs_d0         | out |   64|  ap_memory |     coefs    |     array    |
+|coefs_q0         |  in |   64|  ap_memory |     coefs    |     array    |
+|coefs_we0        | out |    1|  ap_memory |     coefs    |     array    |
+|in_r_address0    | out |   11|  ap_memory |     in_r     |     array    |
+|in_r_ce0         | out |    1|  ap_memory |     in_r     |     array    |
+|in_r_d0          | out |   64|  ap_memory |     in_r     |     array    |
+|in_r_q0          |  in |   64|  ap_memory |     in_r     |     array    |
+|in_r_we0         | out |    1|  ap_memory |     in_r     |     array    |
+|in_r_address1    | out |   11|  ap_memory |     in_r     |     array    |
+|in_r_ce1         | out |    1|  ap_memory |     in_r     |     array    |
+|in_r_d1          | out |   64|  ap_memory |     in_r     |     array    |
+|in_r_q1          |  in |   64|  ap_memory |     in_r     |     array    |
+|in_r_we1         | out |    1|  ap_memory |     in_r     |     array    |
+|inxn2_address0   | out |   11|  ap_memory |     inxn2    |     array    |
+|inxn2_ce0        | out |    1|  ap_memory |     inxn2    |     array    |
+|inxn2_d0         | out |   64|  ap_memory |     inxn2    |     array    |
+|inxn2_q0         |  in |   64|  ap_memory |     inxn2    |     array    |
+|inxn2_we0        | out |    1|  ap_memory |     inxn2    |     array    |
+|outxk1_address0  | out |   11|  ap_memory |    outxk1    |     array    |
+|outxk1_ce0       | out |    1|  ap_memory |    outxk1    |     array    |
+|outxk1_d0        | out |   64|  ap_memory |    outxk1    |     array    |
+|outxk1_q0        |  in |   64|  ap_memory |    outxk1    |     array    |
+|outxk1_we0       | out |    1|  ap_memory |    outxk1    |     array    |
+|out_r_address0   | out |   11|  ap_memory |     out_r    |     array    |
+|out_r_ce0        | out |    1|  ap_memory |     out_r    |     array    |
+|out_r_d0         | out |   64|  ap_memory |     out_r    |     array    |
+|out_r_q0         |  in |   64|  ap_memory |     out_r    |     array    |
+|out_r_we0        | out |    1|  ap_memory |     out_r    |     array    |
+|out_r_address1   | out |   11|  ap_memory |     out_r    |     array    |
+|out_r_ce1        | out |    1|  ap_memory |     out_r    |     array    |
+|out_r_d1         | out |   64|  ap_memory |     out_r    |     array    |
+|out_r_q1         |  in |   64|  ap_memory |     out_r    |     array    |
+|out_r_we1        | out |    1|  ap_memory |     out_r    |     array    |
+|ap_clk           |  in |    1| ap_ctrl_hs |  filter_top  | return value |
+|ap_rst           |  in |    1| ap_ctrl_hs |  filter_top  | return value |
+|ap_done          | out |    1| ap_ctrl_hs |  filter_top  | return value |
+|ap_start         |  in |    1| ap_ctrl_hs |  filter_top  | return value |
+|ap_idle          | out |    1| ap_ctrl_hs |  filter_top  | return value |
+|ap_ready         | out |    1| ap_ctrl_hs |  filter_top  | return value |
++-----------------+-----+-----+------------+--------------+--------------+
+

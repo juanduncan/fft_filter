@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vivado HLS Report for 'dummy_proc_be'
+================================================================
+* Date:           Fri Feb  2 16:43:26 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        fft_filter_hlsprj
+* Solution:       solution3
+* Product family: kintex7
+* Target device:  xc7k410tffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   3.30|      2.83|        0.41|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  18433|  18433|  18433|  18433|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |          |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  18432|  18432|         9|          -|          -|  2048|    no    |
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|     205|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|     16|     860|       4|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|      90|
+|Register         |        -|      -|     556|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|     16|    1416|     299|
++-----------------+---------+-------+--------+--------+
+|Available        |     1590|   1540|  508400|  254200|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      1|   ~0   |   ~0   |
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+-----+----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E|  FF | LUT|
+    +--------------------------+----------------------+---------+-------+-----+----+
+    |filter_top_mul_32dEe_U10  |filter_top_mul_32dEe  |        0|      4|  215|   1|
+    |filter_top_mul_32dEe_U11  |filter_top_mul_32dEe  |        0|      4|  215|   1|
+    |filter_top_mul_32dEe_U12  |filter_top_mul_32dEe  |        0|      4|  215|   1|
+    |filter_top_mul_32dEe_U13  |filter_top_mul_32dEe  |        0|      4|  215|   1|
+    +--------------------------+----------------------+---------+-------+-----+----+
+    |Total                     |                      |        0|     16|  860|   4|
+    +--------------------------+----------------------+---------+-------+-----+----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |i_2_fu_156_p2       |     +    |      0|  0|  19|          12|           1|
+    |p_Val2_1_fu_261_p2  |     +    |      0|  0|  70|          63|          63|
+    |p_Val2_s_fu_247_p2  |     -    |      0|  0|  70|          63|          63|
+    |ap_block_state10    |    and   |      0|  0|   8|           1|           1|
+    |exitcond_fu_150_p2  |   icmp   |      0|  0|  13|          12|          13|
+    |icmp_fu_177_p2      |   icmp   |      0|  0|   9|           3|           1|
+    |ap_block_state1     |    or    |      0|  0|   8|           1|           1|
+    |ap_block_state3     |    or    |      0|  0|   8|           1|           1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |Total               |          |      0|  0| 205|         156|         144|
+    +--------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------+----+-----------+-----+-----------+
+    |       Name      | LUT| Input Size| Bits| Total Bits|
+    +-----------------+----+-----------+-----+-----------+
+    |ap_NS_fsm        |  45|         11|    1|         11|
+    |ap_done          |   9|          2|    1|          2|
+    |i_reg_139        |   9|          2|   12|         24|
+    |input_xk1_blk_n  |   9|          2|    1|          2|
+    |input_xk2_blk_n  |   9|          2|    1|          2|
+    |out_r_blk_n      |   9|          2|    1|          2|
+    +-----------------+----+-----------+-----+-----------+
+    |Total            |  90|         21|   17|         43|
+    +-----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |  10|   0|   10|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |complex_M_imag_V_wr_reg_378  |  32|   0|   32|          0|
+    |complex_M_real_V_wr_reg_373  |  32|   0|   32|          0|
+    |i_2_reg_285                  |  12|   0|   12|          0|
+    |i_reg_139                    |  12|   0|   12|          0|
+    |icmp_reg_300                 |   1|   0|    1|          0|
+    |input_xk2_read_reg_324       |  64|   0|   64|          0|
+    |p_r_M_imag_V_reg_319         |  32|   0|   32|          0|
+    |p_r_M_real_V_reg_314         |  32|   0|   32|          0|
+    |p_y_M_imag_V_read_a_reg_309  |  32|   0|   32|          0|
+    |tmp1_i_i_cast_reg_353        |  63|   0|   63|          0|
+    |tmp_1_i_i_cast_reg_358       |  63|   0|   63|          0|
+    |tmp_2_i_i_cast_reg_363       |  63|   0|   63|          0|
+    |tmp_3_i_i_cast_reg_368       |  63|   0|   63|          0|
+    |tmp_5_reg_304                |  32|   0|   32|          0|
+    |tmp_reg_290                  |  12|   0|   64|         52|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 556|   0|  608|         52|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+---------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  | Source Object |    C Type    |
++---------------------+-----+-----+------------+---------------+--------------+
+|ap_clk               |  in |    1| ap_ctrl_hs | dummy_proc_be | return value |
+|ap_rst               |  in |    1| ap_ctrl_hs | dummy_proc_be | return value |
+|ap_start             |  in |    1| ap_ctrl_hs | dummy_proc_be | return value |
+|ap_done              | out |    1| ap_ctrl_hs | dummy_proc_be | return value |
+|ap_continue          |  in |    1| ap_ctrl_hs | dummy_proc_be | return value |
+|ap_idle              | out |    1| ap_ctrl_hs | dummy_proc_be | return value |
+|ap_ready             | out |    1| ap_ctrl_hs | dummy_proc_be | return value |
+|coefs_address0       | out |   11|  ap_memory |     coefs     |     array    |
+|coefs_ce0            | out |    1|  ap_memory |     coefs     |     array    |
+|coefs_q0             |  in |   64|  ap_memory |     coefs     |     array    |
+|input_xk1_dout       |  in |   64|   ap_fifo  |   input_xk1   |    pointer   |
+|input_xk1_empty_n    |  in |    1|   ap_fifo  |   input_xk1   |    pointer   |
+|input_xk1_read       | out |    1|   ap_fifo  |   input_xk1   |    pointer   |
+|input_xk2_dout       |  in |   64|   ap_fifo  |   input_xk2   |    pointer   |
+|input_xk2_empty_n    |  in |    1|   ap_fifo  |   input_xk2   |    pointer   |
+|input_xk2_read       | out |    1|   ap_fifo  |   input_xk2   |    pointer   |
+|output_xk1_address0  | out |   11|  ap_memory |   output_xk1  |     array    |
+|output_xk1_ce0       | out |    1|  ap_memory |   output_xk1  |     array    |
+|output_xk1_we0       | out |    1|  ap_memory |   output_xk1  |     array    |
+|output_xk1_d0        | out |   64|  ap_memory |   output_xk1  |     array    |
+|out_r_din            | out |   64|   ap_fifo  |     out_r     |    pointer   |
+|out_r_full_n         |  in |    1|   ap_fifo  |     out_r     |    pointer   |
+|out_r_write          | out |    1|   ap_fifo  |     out_r     |    pointer   |
++---------------------+-----+-----+------------+---------------+--------------+
+

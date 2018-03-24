@@ -1,0 +1,19 @@
+
+
+Implementation tool: Xilinx Vivado v.2017.4
+Project:             fft_filter_hlsprj
+Solution:            solution3
+Device target:       xc7k410tffg900-2
+Report date:         Fri Feb 02 16:55:02 CET 2018
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:          11823
+FF:           16999
+DSP:             96
+BRAM:            52
+SRL:           4012
+#=== Final timing ===
+CP required:    3.300
+CP achieved post-synthesis:    2.829
+Timing met

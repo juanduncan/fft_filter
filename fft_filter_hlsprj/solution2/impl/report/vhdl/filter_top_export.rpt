@@ -1,0 +1,17 @@
+
+
+Implementation tool: Xilinx Vivado v.2014.4
+Device target:       xc7k410tffg900-2
+Report date:         Mon Jan 22 15:26:28 CET 2018
+
+#=== Resource usage ===
+SLICE:         4021
+LUT:          10996
+FF:           16360
+DSP:             96
+BRAM:            52
+SRL:           3695
+#=== Final timing ===
+CP required:    3.300
+CP achieved:    3.078
+Timing met

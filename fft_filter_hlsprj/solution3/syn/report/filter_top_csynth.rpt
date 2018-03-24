@@ -1,0 +1,186 @@
+
+
+================================================================
+== Vivado HLS Report for 'filter_top'
+================================================================
+* Date:           Fri Feb  2 16:43:27 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        fft_filter_hlsprj
+* Solution:       solution3
+* Product family: kintex7
+* Target device:  xc7k410tffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   3.30|      2.89|        0.41|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+----------+
+    |    Latency    |    Interval   | Pipeline |
+    |  min  |  max  |  min  |  max  |   Type   |
+    +-------+-------+-------+-------+----------+
+    |  18433|  18433|  18434|  18434| dataflow |
+    +-------+-------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +------------------+---------------+-------+-------+-------+-------+---------+
+        |                  |               |    Latency    |    Interval   | Pipeline|
+        |     Instance     |     Module    |  min  |  max  |  min  |  max  |   Type  |
+        +------------------+---------------+-------+-------+-------+-------+---------+
+        |dummy_proc_be_U0  |dummy_proc_be  |  18433|  18433|  18433|  18433|   none  |
+        |dummy_proc_fe_U0  |dummy_proc_fe  |  10241|  10241|  10241|  10241|   none  |
+        |fft_config1_U0    |fft_config1_s  |   6278|   6278|   6278|   6278|   none  |
+        |fft_config2_U0    |fft_config2_s  |   6278|   6278|   6278|   6278|   none  |
+        +------------------+---------------+-------+-------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|      68|
+|FIFO             |       24|      -|     478|     704|
+|Instance         |       34|     96|   37640|   29529|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|      36|
+|Register         |        -|      -|       8|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |       58|     96|   38126|   30337|
++-----------------+---------+-------+--------+--------+
+|Available        |     1590|   1540|  508400|  254200|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        3|      6|       7|      11|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +------------------+---------------+---------+-------+-------+-------+
+    |     Instance     |     Module    | BRAM_18K| DSP48E|   FF  |  LUT  |
+    +------------------+---------------+---------+-------+-------+-------+
+    |dummy_proc_be_U0  |dummy_proc_be  |        0|     16|   1416|    299|
+    |dummy_proc_fe_U0  |dummy_proc_fe  |        2|      0|    250|    232|
+    |fft_config1_U0    |fft_config1_s  |       16|     40|  17987|  14499|
+    |fft_config2_U0    |fft_config2_s  |       16|     40|  17987|  14499|
+    +------------------+---------------+---------+-------+-------+-------+
+    |Total             |               |       34|     96|  37640|  29529|
+    +------------------+---------------+---------+-------+-------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-------------------------+---------+-----+-----+------+-----+---------+
+    |           Name          | BRAM_18K|  FF | LUT | Depth| Bits| Size:D*B|
+    +-------------------------+---------+-----+-----+------+-----+---------+
+    |fft_config_fwd_data_s_U  |        2|   64|  132|  2048|   16|    32768|
+    |fft_config_inv_data_s_U  |        2|   64|  132|  2048|   16|    32768|
+    |xk2_channel_U            |        4|   83|   93|    64|   64|     4096|
+    |xk_channel_U             |        4|   83|   93|    64|   64|     4096|
+    |xn2_channel_U            |        4|   83|   93|    64|   64|     4096|
+    |xn_channel_U             |        8|  101|  161|  1344|   64|    86016|
+    +-------------------------+---------+-----+-----+------+-----+---------+
+    |Total                    |       24|  478|  704|  5632|  288|   163840|
+    +-------------------------+---------+-----+-----+------+-----+---------+
+
+    * Expression: 
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |dummy_proc_be_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |dummy_proc_fe_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |ap_idle                            |    and   |      0|  0|   8|           1|           1|
+    |ap_sync_ready                      |    and   |      0|  0|   8|           1|           1|
+    |dummy_proc_be_U0_ap_start          |    and   |      0|  0|   8|           1|           1|
+    |dummy_proc_fe_U0_ap_start          |    and   |      0|  0|   8|           1|           1|
+    |ap_sync_dummy_proc_be_U0_ap_ready  |    or    |      0|  0|   8|           1|           1|
+    |ap_sync_dummy_proc_fe_U0_ap_ready  |    or    |      0|  0|   8|           1|           1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0|  68|          10|           8|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_dummy_proc_be_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_dummy_proc_fe_U0_ap_ready  |   9|          2|    1|          2|
+    |dummy_proc_be_U0_ap_ready_count        |   9|          2|    2|          4|
+    |dummy_proc_fe_U0_ap_ready_count        |   9|          2|    2|          4|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  |  36|          8|    6|         12|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------+---+----+-----+-----------+
+    |                  Name                 | FF| LUT| Bits| Const Bits|
+    +---------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_dummy_proc_be_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_dummy_proc_fe_U0_ap_ready  |  1|   0|    1|          0|
+    |dummy_proc_be_U0_ap_ready_count        |  2|   0|    2|          0|
+    |dummy_proc_fe_U0_ap_ready_count        |  2|   0|    2|          0|
+    |fft_config1_U0_ap_start                |  1|   0|    1|          0|
+    |fft_config2_U0_ap_start                |  1|   0|    1|          0|
+    +---------------------------------------+---+----+-----+-----------+
+    |Total                                  |  8|   0|    8|          0|
+    +---------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+--------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------+-----+-----+------------+--------------+--------------+
+|coefs_address0   | out |   11|  ap_memory |     coefs    |     array    |
+|coefs_ce0        | out |    1|  ap_memory |     coefs    |     array    |
+|coefs_d0         | out |   64|  ap_memory |     coefs    |     array    |
+|coefs_q0         |  in |   64|  ap_memory |     coefs    |     array    |
+|coefs_we0        | out |    1|  ap_memory |     coefs    |     array    |
+|in_r_dout        |  in |   64|   ap_fifo  |     in_r     |    pointer   |
+|in_r_empty_n     |  in |    1|   ap_fifo  |     in_r     |    pointer   |
+|in_r_read        | out |    1|   ap_fifo  |     in_r     |    pointer   |
+|inxn2_address0   | out |   11|  ap_memory |     inxn2    |     array    |
+|inxn2_ce0        | out |    1|  ap_memory |     inxn2    |     array    |
+|inxn2_d0         | out |   64|  ap_memory |     inxn2    |     array    |
+|inxn2_q0         |  in |   64|  ap_memory |     inxn2    |     array    |
+|inxn2_we0        | out |    1|  ap_memory |     inxn2    |     array    |
+|outxk1_address0  | out |   11|  ap_memory |    outxk1    |     array    |
+|outxk1_ce0       | out |    1|  ap_memory |    outxk1    |     array    |
+|outxk1_d0        | out |   64|  ap_memory |    outxk1    |     array    |
+|outxk1_q0        |  in |   64|  ap_memory |    outxk1    |     array    |
+|outxk1_we0       | out |    1|  ap_memory |    outxk1    |     array    |
+|out_r_din        | out |   64|   ap_fifo  |     out_r    |    pointer   |
+|out_r_full_n     |  in |    1|   ap_fifo  |     out_r    |    pointer   |
+|out_r_write      | out |    1|   ap_fifo  |     out_r    |    pointer   |
+|ap_clk           |  in |    1| ap_ctrl_hs |  filter_top  | return value |
+|ap_rst           |  in |    1| ap_ctrl_hs |  filter_top  | return value |
+|ap_done          | out |    1| ap_ctrl_hs |  filter_top  | return value |
+|ap_start         |  in |    1| ap_ctrl_hs |  filter_top  | return value |
+|ap_ready         | out |    1| ap_ctrl_hs |  filter_top  | return value |
+|ap_idle          | out |    1| ap_ctrl_hs |  filter_top  | return value |
++-----------------+-----+-----+------------+--------------+--------------+
+

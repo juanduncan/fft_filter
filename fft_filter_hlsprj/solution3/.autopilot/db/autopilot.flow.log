@@ -1,0 +1,644 @@
+INFO: [HLS 200-0] Workspace /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3 opened at Fri Feb 02 16:44:36 CET 2018
+Execute     config_clock -quiet -name default -period 3.3 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.3ns.
+Command     config_clock returned 0; 0 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.lib 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.lib 
+Command         ap_source returned 0; 0.01 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.lib 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_old.lib 
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_vivado.lib 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/dsp48e1.hlp 
+Command       ap_source returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 50950} {LUT 203800}    {FF 407600} {DSP48E 840}    {BRAM 890}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed medium 
+Command       config_chip_info returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Command     import_lib returned 0; 0.03 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.02 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.09 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.14 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.14 sec.
+Command     ap_source returned 0; 0.14 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_hp.hlp 
+Command       ap_source returned 0; 0 sec.
+Command     import_lib returned 0; 0.02 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     set_part xc7k410tffg900-2 
+Execute       add_library xilinx/kintex7/kintex7:xc7k410t:ffg900:-2 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         license_isbetapart xc7k410t 
+Command         license_isbetapart returned 1; 0 sec.
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         config_chip_info -quiet -resource  {SLICE 63550} {LUT 254200}    {FF 508400} {DSP48E 1540}   {BRAM 1590}  
+Command         config_chip_info returned 0; 0 sec.
+Execute         config_chip_info -quiet -speed medium 
+Command         config_chip_info returned 0; 0 sec.
+Command       add_library returned 0; 0.01 sec.
+Execute       add_library xilinx/kintex7/kintex7_fpv6 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Command       add_library returned 0; 0 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7k410tffg900-2'
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     set_part returned 0; 0.04 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Execute     config_chip_info -quiet -resource  {SLICE 63550} {LUT 254200}    {FF 508400} {DSP48E 1540}   {BRAM 1590}  
+Command     config_chip_info returned 0; 0 sec.
+Execute     config_chip_info -quiet -speed medium 
+Command     config_chip_info returned 0; 0 sec.
+Execute     config_dataflow -default_channel=fifo -fifo_depth=2048 
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2048.
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+Command     config_dataflow returned 0; 0 sec.
+Command   open_solution returned 0; 0.25 sec.
+Execute   export_design -flow syn -rtl vhdl -format ip_catalog -vendor COMMLAB 
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.06 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.08 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.08 sec.
+Command     ap_source returned 0; 0.08 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.01 sec.
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.06 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.09 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.09 sec.
+Command     ap_source returned 0; 0.09 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/dummy_proc_fe.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl 
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/dummy_proc_be.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/dummy_proc_fe.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/dummy_proc_be.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.compgen.tcl 
+Execute       source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/dummy_proc_fe.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl 
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/dummy_proc_be.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     sc_get_clocks filter_top 
+Command     sc_get_clocks returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/impl/misc/fft_config1_s_core_ip.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/impl/misc/fft_config2_s_core_ip.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.01 sec.
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.02 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.09 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.14 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.15 sec.
+Command     ap_source returned 0; 0.15 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.02 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.09 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.15 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.15 sec.
+Command     ap_source returned 0; 0.15 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.06 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.09 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.09 sec.
+Command     ap_source returned 0; 0.09 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/dummy_proc_fe.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/dummy_proc_be.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.06 sec.
+Execute           source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.09 sec.
+Execute         source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.09 sec.
+Command     ap_source returned 0; 0.09 sec.
+Execute     source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Command   export_design returned 0; 627.03 sec.
+Command ap_source returned 0; 627.28 sec.
+Execute cleanup_all 
+Command cleanup_all returned 0; 0 sec.

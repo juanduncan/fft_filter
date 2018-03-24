@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 16:47:07 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Thu Nov  9 08:46:50 2017
+# Process ID: 12172
+# Log file: /home/commlab/Documents/VIVADO_projects/dvbs2x_rec/solution1/impl/vhdl/vivado.log
+# Journal file: /home/commlab/Documents/VIVADO_projects/dvbs2x_rec/solution1/impl/vhdl/vivado.jou
+#-----------------------------------------------------------
+source run_vivado.tcl -notrace

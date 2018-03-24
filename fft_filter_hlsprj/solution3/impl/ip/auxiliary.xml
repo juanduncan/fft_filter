@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="filter_top" xd:componentRef="filter_top" xd:initiationInterval="18434" xd:clockPeriod="3.300" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="in[].real()" xd:originalName="in" xd:direction="in" xd:interfaceRef="in_r" xd:busTypeRef="acc_fifo" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="1536" xd:dataWidth="32"/>
+  <xd:arg xd:name="in[].imag()" xd:originalName="in" xd:direction="in" xd:interfaceRef="in_r" xd:busTypeRef="acc_fifo" xd:dataPack="true" xd:bitMapping="63:32" xd:arraySize="1536" xd:dataWidth="32"/>
+  <xd:arg xd:name="out[].real()" xd:originalName="out" xd:direction="out" xd:interfaceRef="out_r" xd:busTypeRef="acc_fifo" xd:firstOut="9" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="1536" xd:dataWidth="32"/>
+  <xd:arg xd:name="out[].imag()" xd:originalName="out" xd:direction="out" xd:interfaceRef="out_r" xd:busTypeRef="acc_fifo" xd:firstOut="9" xd:dataPack="true" xd:bitMapping="63:32" xd:arraySize="1536" xd:dataWidth="32"/>
+  <xd:arg xd:name="coefs_d0" xd:originalName="coefs_d0" xd:direction="out" xd:interfaceRef="coefs_d0" xd:busTypeRef="ap_memory" xd:arraySize="2048" xd:dataWidth="64"/>
+  <xd:arg xd:name="coefs_q0" xd:originalName="coefs_q0" xd:direction="in" xd:interfaceRef="coefs_q0" xd:busTypeRef="ap_memory" xd:arraySize="2048" xd:dataWidth="64"/>
+  <xd:arg xd:name="inxn2_d0" xd:originalName="inxn2_d0" xd:direction="out" xd:interfaceRef="inxn2_d0" xd:busTypeRef="ap_memory" xd:arraySize="2048" xd:dataWidth="64"/>
+  <xd:arg xd:name="inxn2_q0" xd:originalName="inxn2_q0" xd:direction="in" xd:interfaceRef="inxn2_q0" xd:busTypeRef="ap_memory" xd:arraySize="2048" xd:dataWidth="64"/>
+  <xd:arg xd:name="outxk1_d0" xd:originalName="outxk1_d0" xd:direction="out" xd:interfaceRef="outxk1_d0" xd:busTypeRef="ap_memory" xd:arraySize="2048" xd:dataWidth="64"/>
+  <xd:arg xd:name="outxk1_q0" xd:originalName="outxk1_q0" xd:direction="in" xd:interfaceRef="outxk1_q0" xd:busTypeRef="ap_memory" xd:arraySize="2048" xd:dataWidth="64"/>
+  <xd:latencyEstimates xd:best-case="18433" xd:worst-case="18433" xd:average-case="18433"/>
+  <xd:resourceEstimates xd:LUT="30337" xd:FF="38126" xd:BRAM="58" xd:DSP="96"/>
+</xd:acceleratorMap>
