@@ -5,24 +5,24 @@
 <ModuleName>filter_top</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>dummy_proc_be_U0</InstName>
-<ModuleName>dummy_proc_be</ModuleName>
-<ID>282</ID>
+<InstName>grp_filter_top_dummy_proc_fe_fu_141</InstName>
+<ModuleName>filter_top_dummy_proc_fe</ModuleName>
+<ID>141</ID>
 </Instance>
 <Instance>
-<InstName>dummy_proc_fe_U0</InstName>
-<ModuleName>dummy_proc_fe</ModuleName>
-<ID>294</ID>
-</Instance>
-<Instance>
-<InstName>fft_config1_U0</InstName>
+<InstName>grp_fft_config1_s_fu_157</InstName>
 <ModuleName>fft_config1_s</ModuleName>
-<ID>310</ID>
+<ID>157</ID>
 </Instance>
 <Instance>
-<InstName>fft_config2_U0</InstName>
+<InstName>grp_fft_config2_s_fu_165</InstName>
 <ModuleName>fft_config2_s</ModuleName>
-<ID>318</ID>
+<ID>165</ID>
+</Instance>
+<Instance>
+<InstName>grp_filter_top_dummy_proc_be_fu_129</InstName>
+<ModuleName>filter_top_dummy_proc_be</ModuleName>
+<ID>129</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -30,42 +30,48 @@
 
 <ModuleInformation>
 <Module>
-<Name>dummy_proc_fe</Name>
+<Name>filter_top_dummy_proc_fe</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>3.30</TargetClockPeriod>
 <ClockUncertainty>0.41</ClockUncertainty>
-<EstimatedClockPeriod>2.89</EstimatedClockPeriod>
+<EstimatedClockPeriod>2.39</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>10241</Best-caseLatency>
+<Best-caseLatency>8193</Best-caseLatency>
 <Average-caseLatency>10241</Average-caseLatency>
 <Worst-caseLatency>10241</Worst-caseLatency>
-<PipelineInitiationInterval>10241</PipelineInitiationInterval>
+<PipelineInitiationInterval>8193 ~ 10241</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
 <Name>Loop 1</Name>
 <TripCount>2048</TripCount>
-<Latency>10240</Latency>
-<IterationLatency>5</IterationLatency>
-<PipelineDepth>5</PipelineDepth>
+<Latency>8192 ~ 10240</Latency>
+<IterationLatency>
+<range>
+<min>4</min>
+<max>5</max>
+</range>
+</IterationLatency>
+<PipelineDepth>4 ~ 5</PipelineDepth>
 </Loop1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
 <BRAM_18K>2</BRAM_18K>
-<FF>250</FF>
-<LUT>232</LUT>
+<FF>172</FF>
+<LUT>138</LUT>
 <DSP48E>0</DSP48E>
+<SLICE>0</SLICE>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>dummy_proc_fe</Object>
+<Object>filter_top_dummy_proc_fe</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -76,7 +82,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>dummy_proc_fe</Object>
+<Object>filter_top_dummy_proc_fe</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -87,7 +93,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>dummy_proc_fe</Object>
+<Object>filter_top_dummy_proc_fe</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -98,7 +104,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>dummy_proc_fe</Object>
+<Object>filter_top_dummy_proc_fe</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -109,7 +115,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_continue</name>
-<Object>dummy_proc_fe</Object>
+<Object>filter_top_dummy_proc_fe</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -120,7 +126,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>dummy_proc_fe</Object>
+<Object>filter_top_dummy_proc_fe</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -131,7 +137,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>dummy_proc_fe</Object>
+<Object>filter_top_dummy_proc_fe</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -207,33 +213,33 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_r_dout</name>
+<name>in_r_TDATA</name>
 <Object>in_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>64</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_r_empty_n</name>
+<name>in_r_TVALID</name>
 <Object>in_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>in_r_read</name>
+<name>in_r_TREADY</name>
 <Object>in_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
@@ -362,6 +368,7 @@
 <DSP48E>40</DSP48E>
 <FF>17987</FF>
 <LUT>14499</LUT>
+<SLICE>0</SLICE>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
@@ -439,6 +446,17 @@
 <IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_continue</name>
+<Object>fft&lt;config1&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
@@ -598,6 +616,7 @@
 <DSP48E>40</DSP48E>
 <FF>17987</FF>
 <LUT>14499</LUT>
+<SLICE>0</SLICE>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
@@ -675,6 +694,17 @@
 <IOProtocol>ap_ctrl_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_continue</name>
+<Object>fft&lt;config2&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
@@ -813,42 +843,43 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>dummy_proc_be</Name>
+<Name>filter_top_dummy_proc_be</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>3.30</TargetClockPeriod>
 <ClockUncertainty>0.41</ClockUncertainty>
-<EstimatedClockPeriod>2.83</EstimatedClockPeriod>
+<EstimatedClockPeriod>2.39</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>18433</Best-caseLatency>
-<Average-caseLatency>18433</Average-caseLatency>
-<Worst-caseLatency>18433</Worst-caseLatency>
-<PipelineInitiationInterval>18433</PipelineInitiationInterval>
+<Best-caseLatency>22529</Best-caseLatency>
+<Average-caseLatency>22529</Average-caseLatency>
+<Worst-caseLatency>22529</Worst-caseLatency>
+<PipelineInitiationInterval>22529</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
 <Name>Loop 1</Name>
 <TripCount>2048</TripCount>
-<Latency>18432</Latency>
-<IterationLatency>9</IterationLatency>
-<PipelineDepth>9</PipelineDepth>
+<Latency>22528</Latency>
+<IterationLatency>11</IterationLatency>
+<PipelineDepth>11</PipelineDepth>
 </Loop1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
 <DSP48E>16</DSP48E>
-<FF>1416</FF>
-<LUT>299</LUT>
+<FF>559</FF>
+<LUT>175</LUT>
 <BRAM_18K>0</BRAM_18K>
+<SLICE>0</SLICE>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>dummy_proc_be</Object>
+<Object>filter_top_dummy_proc_be</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -859,7 +890,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>dummy_proc_be</Object>
+<Object>filter_top_dummy_proc_be</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -870,7 +901,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>dummy_proc_be</Object>
+<Object>filter_top_dummy_proc_be</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -881,7 +912,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>dummy_proc_be</Object>
+<Object>filter_top_dummy_proc_be</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -892,7 +923,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_continue</name>
-<Object>dummy_proc_be</Object>
+<Object>filter_top_dummy_proc_be</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -903,7 +934,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>dummy_proc_be</Object>
+<Object>filter_top_dummy_proc_be</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -914,7 +945,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>dummy_proc_be</Object>
+<Object>filter_top_dummy_proc_be</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -1067,35 +1098,35 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_din</name>
+<name>out_r_TDATA</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>64</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_full_n</name>
+<name>out_r_TVALID</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
-<Dir>in</Dir>
+<Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_write</name>
+<name>out_r_TREADY</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
-<Dir>out</Dir>
+<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
@@ -1110,11 +1141,11 @@
 <EstimatedClockPeriod>2.89</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>18433</Best-caseLatency>
-<Average-caseLatency>18433</Average-caseLatency>
-<Worst-caseLatency>18433</Worst-caseLatency>
-<DataflowPipelineThroughput>18434</DataflowPipelineThroughput>
-<PipelineInitiationInterval>18434</PipelineInitiationInterval>
+<Best-caseLatency>22529</Best-caseLatency>
+<Average-caseLatency>22529</Average-caseLatency>
+<Worst-caseLatency>22529</Worst-caseLatency>
+<DataflowPipelineThroughput>22530</DataflowPipelineThroughput>
+<PipelineInitiationInterval>22530</PipelineInitiationInterval>
 <PipelineType>dataflow</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
@@ -1122,8 +1153,9 @@
 <Resources>
 <BRAM_18K>58</BRAM_18K>
 <DSP48E>96</DSP48E>
-<FF>38126</FF>
-<LUT>30337</LUT>
+<FF>37192</FF>
+<LUT>30017</LUT>
+<SLICE>0</SLICE>
 </Resources>
 </AreaEstimates>
 <InterfaceSummary>
@@ -1188,11 +1220,11 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>in_r_dout</name>
+<name>in_r_TDATA</name>
 <Object>in_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>64</Bits>
@@ -1200,11 +1232,11 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>in_r_empty_n</name>
+<name>in_r_TVALID</name>
 <Object>in_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
@@ -1212,11 +1244,11 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>in_r_read</name>
+<name>in_r_TREADY</name>
 <Object>in_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
@@ -1344,11 +1376,11 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_din</name>
+<name>out_r_TDATA</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>64</Bits>
@@ -1356,25 +1388,25 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_full_n</name>
+<name>out_r_TVALID</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
-<Dir>in</Dir>
+<Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_write</name>
+<name>out_r_TREADY</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
-<Dir>out</Dir>
+<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
@@ -1391,7 +1423,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>ap_rst</name>
+<name>ap_rst_n</name>
 <Object>filter_top</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1424,7 +1456,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>ap_ready</name>
+<name>ap_idle</name>
 <Object>filter_top</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -1435,7 +1467,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>ap_idle</name>
+<name>ap_ready</name>
 <Object>filter_top</Object>
 <Type>return value</Type>
 <Scope></Scope>

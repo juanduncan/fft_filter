@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2017.4</Version>
+<Version>2014.4</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -21,12 +21,12 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>18433</Best-caseLatency>
-<Average-caseLatency>18433</Average-caseLatency>
-<Worst-caseLatency>18433</Worst-caseLatency>
-<DataflowPipelineThroughput>18434</DataflowPipelineThroughput>
-<Interval-min>18434</Interval-min>
-<Interval-max>18434</Interval-max>
+<Best-caseLatency>22529</Best-caseLatency>
+<Average-caseLatency>22529</Average-caseLatency>
+<Worst-caseLatency>22529</Worst-caseLatency>
+<DataflowPipelineThroughput>22530</DataflowPipelineThroughput>
+<Interval-min>22530</Interval-min>
+<Interval-max>22530</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
@@ -34,14 +34,16 @@
 <Resources>
 <BRAM_18K>58</BRAM_18K>
 <DSP48E>96</DSP48E>
-<FF>38126</FF>
-<LUT>30337</LUT>
+<FF>37192</FF>
+<LUT>30017</LUT>
+<SLICE>0</SLICE>
 </Resources>
 <AvailableResources>
 <BRAM_18K>1590</BRAM_18K>
 <DSP48E>1540</DSP48E>
 <FF>508400</FF>
 <LUT>254200</LUT>
+<SLICE>63550</SLICE>
 </AvailableResources>
 </AreaEstimates>
 
@@ -107,11 +109,11 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>in_r_dout</name>
+<name>in_r_TDATA</name>
 <Object>in_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>64</Bits>
@@ -119,11 +121,11 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>in_r_empty_n</name>
+<name>in_r_TVALID</name>
 <Object>in_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
@@ -131,11 +133,11 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>in_r_read</name>
+<name>in_r_TREADY</name>
 <Object>in_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
@@ -263,11 +265,11 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_din</name>
+<name>out_r_TDATA</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>64</Bits>
@@ -275,25 +277,25 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_full_n</name>
+<name>out_r_TVALID</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
-<Dir>in</Dir>
+<Dir>out</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_write</name>
+<name>out_r_TREADY</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>ap_fifo</IOProtocol>
+<IOProtocol>axis</IOProtocol>
 <IOConfig></IOConfig>
-<Dir>out</Dir>
+<Dir>in</Dir>
 <Bits>1</Bits>
 <Attribute>control</Attribute>
 <CType>int</CType>
@@ -310,7 +312,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>ap_rst</name>
+<name>ap_rst_n</name>
 <Object>filter_top</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -343,7 +345,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>ap_ready</name>
+<name>ap_idle</name>
 <Object>filter_top</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -354,7 +356,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>ap_idle</name>
+<name>ap_ready</name>
 <Object>filter_top</Object>
 <Type>return value</Type>
 <Scope></Scope>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!DOCTYPE boost_serialization>
-<boost_serialization signature="serialization::archive" version="15">
+<boost_serialization signature="serialization::archive" version="10">
   <syndb class_id="0" tracking_level="0" version="0">
     <userIPLatency>-1</userIPLatency>
     <userIPName>Vivado_FFT</userIPName>
@@ -67,10 +67,6 @@
         <count>0</count>
         <item_version>0</item_version>
       </dp_register_resource>
-      <dp_dsp_resource>
-        <count>0</count>
-        <item_version>0</item_version>
-      </dp_dsp_resource>
       <dp_component_map class_id="11" tracking_level="0" version="0">
         <count>0</count>
         <item_version>0</item_version>
@@ -168,7 +164,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>38</item>
+              <item>34</item>
             </second>
           </item>
         </second>
@@ -183,7 +179,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>32</item>
+              <item>30</item>
             </second>
           </item>
         </second>
@@ -198,7 +194,7 @@
             <second>
               <count>1</count>
               <item_version>0</item_version>
-              <item>31</item>
+              <item>29</item>
             </second>
           </item>
         </second>

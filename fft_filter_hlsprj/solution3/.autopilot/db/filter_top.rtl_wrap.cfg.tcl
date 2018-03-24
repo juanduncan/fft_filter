@@ -73,6 +73,5 @@ set hasSCFix 0
 set hasCBool 0 
 set hasCPPComplex 1 
 set isTemplateTop 0
-set hasHalf 0 
 set dataPackList ""
 set module [list $moduleName $PortList $rawDecl $argAPInt $returnAPInt $dataPackList]

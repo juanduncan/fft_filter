@@ -39,7 +39,10 @@ void filter_top(	data_in_t coefs[FFT_LENGTH],
 					data_out_t outxk1[FFT_LENGTH],
 					data_out_t out[FILTER_LENGTH])
 {
-#pragma HLS RESOURCE variable=outxk1 core=RAM_1P_BRAM
+#pragma HLS INTERFACE axis port=out
+#pragma HLS INTERFACE axis port=in
+#pragma HLS INTERFACE ap_memory port=outxk1
+#pragma HLS RESOURCE variable=outxk1 core=RAM_1P
 #pragma HLS DATA_PACK variable=outxk1
 #pragma HLS DATA_PACK variable=inxn2
 #pragma HLS RESOURCE variable=inxn2 core=ROM_1P_BRAM

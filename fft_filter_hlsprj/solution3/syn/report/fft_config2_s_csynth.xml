@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2017.4</Version>
+<Version>2014.4</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -35,12 +35,14 @@
 <DSP48E>40</DSP48E>
 <FF>17987</FF>
 <LUT>14499</LUT>
+<SLICE>0</SLICE>
 </Resources>
 <AvailableResources>
 <BRAM_18K>1590</BRAM_18K>
 <DSP48E>1540</DSP48E>
 <FF>508400</FF>
 <LUT>254200</LUT>
+<SLICE>63550</SLICE>
 </AvailableResources>
 </AreaEstimates>
 
