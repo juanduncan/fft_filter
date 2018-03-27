@@ -304,7 +304,7 @@
 
 <node id="11" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-.preheader51.preheader:3  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !7
+.preheader51.preheader:3  call void (...)* @_ssdm_op_SpecBitsMap(i64* %in_r), !map !7
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -319,7 +319,7 @@
 
 <node id="12" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-.preheader51.preheader:4  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !16
+.preheader51.preheader:4  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !16
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -334,7 +334,7 @@
 
 <node id="13" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-.preheader51.preheader:5  call void (...)* @_ssdm_op_SpecBitsMap(i64* %in_r), !map !23
+.preheader51.preheader:5  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !25
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

@@ -258,9 +258,9 @@ define void @filter_top([2048 x i64]* %coefs, i64* %in, [2048 x i64]* %inxn2, [2
   %fft_config_inv_data_V = alloca i16, align 2    ; [#uses=5 type=i16*]
   %fft_config_fwd_data_V = alloca i16, align 2    ; [#uses=5 type=i16*]
   call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str1) nounwind, !dbg !1071 ; [debug line = 56:1]
-  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !1083
-  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !1092
-  call void (...)* @_ssdm_op_SpecBitsMap(i64* %in), !map !1099
+  call void (...)* @_ssdm_op_SpecBitsMap(i64* %in), !map !1083
+  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !1092
+  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !1101
   call void (...)* @_ssdm_op_SpecBitsMap(i64* %out), !map !1108
   call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %coefs), !map !1115
   %xn2_channel = alloca i64, align 8              ; [#uses=5 type=i64*]
@@ -1748,42 +1748,42 @@ declare i9 @_ssdm_op_PartSelect.i9.i12.i32.i32(i12, i32, i32) nounwind readnone
 !1083 = metadata !{metadata !1084, metadata !1089}
 !1084 = metadata !{i32 0, i32 31, metadata !1085}
 !1085 = metadata !{metadata !1086}
-!1086 = metadata !{metadata !"outxk1._M_real.V", metadata !1087, metadata !"int32", i32 0, i32 31}
+!1086 = metadata !{metadata !"in._M_real.V", metadata !1087, metadata !"int32", i32 0, i32 31}
 !1087 = metadata !{metadata !1088}
-!1088 = metadata !{i32 0, i32 2047, i32 1}
+!1088 = metadata !{i32 0, i32 1535, i32 1}
 !1089 = metadata !{i32 32, i32 63, metadata !1090}
 !1090 = metadata !{metadata !1091}
-!1091 = metadata !{metadata !"outxk1._M_imag.V", metadata !1087, metadata !"int32", i32 0, i32 31}
-!1092 = metadata !{metadata !1093, metadata !1096}
+!1091 = metadata !{metadata !"in._M_imag.V", metadata !1087, metadata !"int32", i32 0, i32 31}
+!1092 = metadata !{metadata !1093, metadata !1098}
 !1093 = metadata !{i32 0, i32 31, metadata !1094}
 !1094 = metadata !{metadata !1095}
-!1095 = metadata !{metadata !"inxn2._M_real.V", metadata !1087, metadata !"int32", i32 0, i32 31}
-!1096 = metadata !{i32 32, i32 63, metadata !1097}
-!1097 = metadata !{metadata !1098}
-!1098 = metadata !{metadata !"inxn2._M_imag.V", metadata !1087, metadata !"int32", i32 0, i32 31}
-!1099 = metadata !{metadata !1100, metadata !1105}
-!1100 = metadata !{i32 0, i32 31, metadata !1101}
-!1101 = metadata !{metadata !1102}
-!1102 = metadata !{metadata !"in._M_real.V", metadata !1103, metadata !"int32", i32 0, i32 31}
+!1095 = metadata !{metadata !"outxk1._M_real.V", metadata !1096, metadata !"int32", i32 0, i32 31}
+!1096 = metadata !{metadata !1097}
+!1097 = metadata !{i32 0, i32 2047, i32 1}
+!1098 = metadata !{i32 32, i32 63, metadata !1099}
+!1099 = metadata !{metadata !1100}
+!1100 = metadata !{metadata !"outxk1._M_imag.V", metadata !1096, metadata !"int32", i32 0, i32 31}
+!1101 = metadata !{metadata !1102, metadata !1105}
+!1102 = metadata !{i32 0, i32 31, metadata !1103}
 !1103 = metadata !{metadata !1104}
-!1104 = metadata !{i32 0, i32 1535, i32 1}
+!1104 = metadata !{metadata !"inxn2._M_real.V", metadata !1096, metadata !"int32", i32 0, i32 31}
 !1105 = metadata !{i32 32, i32 63, metadata !1106}
 !1106 = metadata !{metadata !1107}
-!1107 = metadata !{metadata !"in._M_imag.V", metadata !1103, metadata !"int32", i32 0, i32 31}
+!1107 = metadata !{metadata !"inxn2._M_imag.V", metadata !1096, metadata !"int32", i32 0, i32 31}
 !1108 = metadata !{metadata !1109, metadata !1112}
 !1109 = metadata !{i32 0, i32 31, metadata !1110}
 !1110 = metadata !{metadata !1111}
-!1111 = metadata !{metadata !"out._M_real.V", metadata !1103, metadata !"int32", i32 0, i32 31}
+!1111 = metadata !{metadata !"out._M_real.V", metadata !1087, metadata !"int32", i32 0, i32 31}
 !1112 = metadata !{i32 32, i32 63, metadata !1113}
 !1113 = metadata !{metadata !1114}
-!1114 = metadata !{metadata !"out._M_imag.V", metadata !1103, metadata !"int32", i32 0, i32 31}
+!1114 = metadata !{metadata !"out._M_imag.V", metadata !1087, metadata !"int32", i32 0, i32 31}
 !1115 = metadata !{metadata !1116, metadata !1119}
 !1116 = metadata !{i32 0, i32 31, metadata !1117}
 !1117 = metadata !{metadata !1118}
-!1118 = metadata !{metadata !"coefs._M_real.V", metadata !1087, metadata !"int32", i32 0, i32 31}
+!1118 = metadata !{metadata !"coefs._M_real.V", metadata !1096, metadata !"int32", i32 0, i32 31}
 !1119 = metadata !{i32 32, i32 63, metadata !1120}
 !1120 = metadata !{metadata !1121}
-!1121 = metadata !{metadata !"coefs._M_imag.V", metadata !1087, metadata !"int32", i32 0, i32 31}
+!1121 = metadata !{metadata !"coefs._M_imag.V", metadata !1096, metadata !"int32", i32 0, i32 31}
 !1122 = metadata !{i32 790544, metadata !1123, metadata !"coefs", null, i32 38, metadata !450, i32 0, i32 0, metadata !1124, metadata !1125} ; [ DW_TAG_arg_variable_aggr_vec ]
 !1123 = metadata !{i32 786689, metadata !1073, metadata !"coefs", metadata !1074, i32 16777254, metadata !1077, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
 !1124 = metadata !{i32 790531, metadata !1123, metadata !"coefs._M_real.V", null, i32 38, metadata !450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]

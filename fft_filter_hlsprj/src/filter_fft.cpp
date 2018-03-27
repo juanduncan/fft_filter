@@ -41,8 +41,8 @@ void filter_top(	complex_coef_t coefs[FFT_LENGTH],
 					data_out_t outxk1[FFT_LENGTH],
 					data_out_t out[FILTER_LENGTH])
 {
-#pragma HLS INTERFACE ap_hs port=out
-#pragma HLS INTERFACE ap_hs port=in
+#pragma HLS INTERFACE axis port=out
+#pragma HLS INTERFACE axis port=in
 #pragma HLS INTERFACE ap_memory port=outxk1
 #pragma HLS RESOURCE variable=outxk1 core=RAM_1P
 #pragma HLS DATA_PACK variable=outxk1

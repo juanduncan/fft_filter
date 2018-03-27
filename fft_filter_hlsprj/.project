@@ -52,6 +52,11 @@
 			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.tcls</location>
 		</link>
 		<link>
+			<name>solution4_axi/constraints</name>
+			<type>2</type>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution4_axi/.tcls</location>
+		</link>
+		<link>
 			<name>source/filter_fft.cpp</name>
 			<type>1</type>
 			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp</location>
@@ -105,6 +110,21 @@
 			<name>solution3/constraints/script.tcl</name>
 			<type>1</type>
 			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/script.tcl</location>
+		</link>
+		<link>
+			<name>solution4_axi/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution4_axi/solution4_axi.directive</location>
+		</link>
+		<link>
+			<name>solution4_axi/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution4_axi/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution4_axi/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution4_axi/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

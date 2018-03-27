@@ -304,7 +304,7 @@
 
 <node id="11" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-.preheader51.preheader:3  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !7
+.preheader51.preheader:3  call void (...)* @_ssdm_op_SpecBitsMap(i64* %in_r), !map !7
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -319,7 +319,7 @@
 
 <node id="12" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-.preheader51.preheader:4  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !16
+.preheader51.preheader:4  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !16
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -334,7 +334,7 @@
 
 <node id="13" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-.preheader51.preheader:5  call void (...)* @_ssdm_op_SpecBitsMap(i64* %in_r), !map !23
+.preheader51.preheader:5  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !25
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -861,15 +861,15 @@
 </dataflow>
 <dataflow id="128" from="_ssdm_op_SpecBitsMap" to="stg_23" fromId="127" toId="23">
 </dataflow>
-<dataflow id="129" from="outxk1" to="stg_23" fromId="60" toId="23">
+<dataflow id="129" from="in_r" to="stg_23" fromId="58" toId="23">
 </dataflow>
 <dataflow id="130" from="_ssdm_op_SpecBitsMap" to="stg_24" fromId="127" toId="24">
 </dataflow>
-<dataflow id="131" from="inxn2" to="stg_24" fromId="59" toId="24">
+<dataflow id="131" from="outxk1" to="stg_24" fromId="60" toId="24">
 </dataflow>
 <dataflow id="132" from="_ssdm_op_SpecBitsMap" to="stg_25" fromId="127" toId="25">
 </dataflow>
-<dataflow id="133" from="in_r" to="stg_25" fromId="58" toId="25">
+<dataflow id="133" from="inxn2" to="stg_25" fromId="59" toId="25">
 </dataflow>
 <dataflow id="134" from="_ssdm_op_SpecBitsMap" to="stg_26" fromId="127" toId="26">
 </dataflow>

@@ -2,8 +2,8 @@
 # Vivado v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 16:47:07 MST 2014
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Sat Mar 24 17:29:49 2018
-# Process ID: 38983
+# Start of session at: Tue Mar 27 14:02:24 2018
+# Process ID: 134096
 # Log file: /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/impl/ip/vivado.log
 # Journal file: /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/impl/ip/vivado.jou
 #-----------------------------------------------------------
@@ -20,4 +20,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fft_config2_s_cor
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2014.4/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Sat Mar 24 17:29:56 2018...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 27 14:02:31 2018...

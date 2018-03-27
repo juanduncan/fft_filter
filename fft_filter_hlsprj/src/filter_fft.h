@@ -3,9 +3,9 @@
 #include <complex>
 using namespace std;
 
-const char FFT_INPUT_WIDTH                     = 32;
+const char FFT_INPUT_WIDTH                     = 16;
 const char FFT_OUTPUT_WIDTH                    = 32;
-const char IFFT_INPUT_WIDTH                    = 32;
+const char IFFT_INPUT_WIDTH                    = 16;
 const char IFFT_OUTPUT_WIDTH                   = 32;
 
 const char FFT_CONFIG_WIDTH                    = 16;

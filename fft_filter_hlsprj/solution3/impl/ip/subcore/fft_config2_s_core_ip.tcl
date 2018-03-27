@@ -20,7 +20,7 @@ set_property -dict [list \
     CONFIG.rounding_modes {truncation} \
     CONFIG.run_time_configurable_transform_length {0} \
     CONFIG.scaling_options {scaled} \
-    CONFIG.target_clock_frequency {304} \
+    CONFIG.target_clock_frequency {200} \
     CONFIG.throttle_scheme {nonrealtime} \
     CONFIG.transform_length {2048} \
     CONFIG.xk_index {0} \

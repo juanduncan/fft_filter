@@ -1,0 +1,14 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="filter_top" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_memory" value="" positionalBoolean="mode"/>
+                <option name="port" value="coefs" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="dummy_proc_be" label="for_of_the_multi" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

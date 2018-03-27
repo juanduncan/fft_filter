@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="filter_top,hls_ip_2014_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k410tffg900-2,HLS_INPUT_CLOCK=3.300000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=2.887500,HLS_SYN_LAT=24577,HLS_SYN_TPT=24578,HLS_SYN_MEM=58,HLS_SYN_DSP=96,HLS_SYN_FF=37182,HLS_SYN_LUT=30017}" *)
+(* CORE_GENERATION_INFO="filter_top,hls_ip_2014_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k410tffg900-2,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=4.375000,HLS_SYN_LAT=6278,HLS_SYN_TPT=6279,HLS_SYN_MEM=58,HLS_SYN_DSP=96,HLS_SYN_FF=36680,HLS_SYN_LUT=30039}" *)
 
 module filter_top (
         coefs_address0,
@@ -15,7 +15,7 @@ module filter_top (
         coefs_d0,
         coefs_q0,
         coefs_we0,
-        in_r_TDATA,
+        in_r,
         inxn2_address0,
         inxn2_ce0,
         inxn2_d0,
@@ -28,9 +28,9 @@ module filter_top (
         outxk1_we0,
         out_r,
         ap_clk,
-        ap_rst_n,
-        in_r_TVALID,
-        in_r_TREADY,
+        ap_rst,
+        in_r_ap_vld,
+        in_r_ap_ack,
         out_r_ap_vld,
         out_r_ap_ack,
         ap_done,
@@ -50,7 +50,7 @@ output   coefs_ce0;
 output  [63:0] coefs_d0;
 input  [63:0] coefs_q0;
 output   coefs_we0;
-input  [63:0] in_r_TDATA;
+input  [63:0] in_r;
 output  [10:0] inxn2_address0;
 output   inxn2_ce0;
 output  [63:0] inxn2_d0;
@@ -63,9 +63,9 @@ input  [63:0] outxk1_q0;
 output   outxk1_we0;
 output  [63:0] out_r;
 input   ap_clk;
-input   ap_rst_n;
-input   in_r_TVALID;
-output   in_r_TREADY;
+input   ap_rst;
+input   in_r_ap_vld;
+output   in_r_ap_ack;
 output   out_r_ap_vld;
 input   out_r_ap_ack;
 output   ap_done;
@@ -74,7 +74,6 @@ output   ap_idle;
 output   ap_ready;
 
 reg ap_idle;
-reg    ap_rst_n_inv;
 wire    filter_top_dummy_proc_fe_U0_ap_start;
 wire    filter_top_dummy_proc_fe_U0_ap_done;
 wire    filter_top_dummy_proc_fe_U0_ap_continue;
@@ -86,9 +85,9 @@ wire    filter_top_dummy_proc_fe_U0_config_fwd_data_V_write;
 wire   [15:0] filter_top_dummy_proc_fe_U0_config_inv_data_V_din;
 wire    filter_top_dummy_proc_fe_U0_config_inv_data_V_full_n;
 wire    filter_top_dummy_proc_fe_U0_config_inv_data_V_write;
-wire   [63:0] filter_top_dummy_proc_fe_U0_in_r_TDATA;
-wire    filter_top_dummy_proc_fe_U0_in_r_TVALID;
-wire    filter_top_dummy_proc_fe_U0_in_r_TREADY;
+wire   [63:0] filter_top_dummy_proc_fe_U0_in_r;
+wire    filter_top_dummy_proc_fe_U0_in_r_ap_vld;
+wire    filter_top_dummy_proc_fe_U0_in_r_ap_ack;
 wire   [10:0] filter_top_dummy_proc_fe_U0_input_xn2_address0;
 wire    filter_top_dummy_proc_fe_U0_input_xn2_ce0;
 wire   [63:0] filter_top_dummy_proc_fe_U0_input_xn2_q0;
@@ -215,7 +214,7 @@ reg    ap_sig_start_in_filter_top_dummy_proc_be_U0_ap_start;
 
 filter_top_dummy_proc_fe filter_top_dummy_proc_fe_U0(
     .ap_clk( ap_clk ),
-    .ap_rst( ap_rst_n_inv ),
+    .ap_rst( ap_rst ),
     .ap_start( filter_top_dummy_proc_fe_U0_ap_start ),
     .ap_done( filter_top_dummy_proc_fe_U0_ap_done ),
     .ap_continue( filter_top_dummy_proc_fe_U0_ap_continue ),
@@ -227,9 +226,9 @@ filter_top_dummy_proc_fe filter_top_dummy_proc_fe_U0(
     .config_inv_data_V_din( filter_top_dummy_proc_fe_U0_config_inv_data_V_din ),
     .config_inv_data_V_full_n( filter_top_dummy_proc_fe_U0_config_inv_data_V_full_n ),
     .config_inv_data_V_write( filter_top_dummy_proc_fe_U0_config_inv_data_V_write ),
-    .in_r_TDATA( filter_top_dummy_proc_fe_U0_in_r_TDATA ),
-    .in_r_TVALID( filter_top_dummy_proc_fe_U0_in_r_TVALID ),
-    .in_r_TREADY( filter_top_dummy_proc_fe_U0_in_r_TREADY ),
+    .in_r( filter_top_dummy_proc_fe_U0_in_r ),
+    .in_r_ap_vld( filter_top_dummy_proc_fe_U0_in_r_ap_vld ),
+    .in_r_ap_ack( filter_top_dummy_proc_fe_U0_in_r_ap_ack ),
     .input_xn2_address0( filter_top_dummy_proc_fe_U0_input_xn2_address0 ),
     .input_xn2_ce0( filter_top_dummy_proc_fe_U0_input_xn2_ce0 ),
     .input_xn2_q0( filter_top_dummy_proc_fe_U0_input_xn2_q0 ),
@@ -243,7 +242,7 @@ filter_top_dummy_proc_fe filter_top_dummy_proc_fe_U0(
 
 fft_config1_s fft_config1_U0(
     .ap_clk( ap_clk ),
-    .ap_rst( ap_rst_n_inv ),
+    .ap_rst( ap_rst ),
     .ap_start( fft_config1_U0_ap_start ),
     .ap_ce( fft_config1_U0_ap_ce ),
     .ap_done( fft_config1_U0_ap_done ),
@@ -265,7 +264,7 @@ fft_config1_s fft_config1_U0(
 
 fft_config2_s fft_config2_U0(
     .ap_clk( ap_clk ),
-    .ap_rst( ap_rst_n_inv ),
+    .ap_rst( ap_rst ),
     .ap_start( fft_config2_U0_ap_start ),
     .ap_ce( fft_config2_U0_ap_ce ),
     .ap_done( fft_config2_U0_ap_done ),
@@ -287,7 +286,7 @@ fft_config2_s fft_config2_U0(
 
 filter_top_dummy_proc_be filter_top_dummy_proc_be_U0(
     .ap_clk( ap_clk ),
-    .ap_rst( ap_rst_n_inv ),
+    .ap_rst( ap_rst ),
     .ap_start( filter_top_dummy_proc_be_U0_ap_start ),
     .ap_done( filter_top_dummy_proc_be_U0_ap_done ),
     .ap_continue( filter_top_dummy_proc_be_U0_ap_continue ),
@@ -313,7 +312,7 @@ filter_top_dummy_proc_be filter_top_dummy_proc_be_U0(
 
 FIFO_filter_top_fft_config_fwd_data_V fft_config_fwd_data_V_U(
     .clk( ap_clk ),
-    .reset( ap_rst_n_inv ),
+    .reset( ap_rst ),
     .if_read_ce( fft_config_fwd_data_V_U_ap_dummy_ce ),
     .if_write_ce( fft_config_fwd_data_V_U_ap_dummy_ce ),
     .if_din( fft_config_fwd_data_V_din ),
@@ -326,7 +325,7 @@ FIFO_filter_top_fft_config_fwd_data_V fft_config_fwd_data_V_U(
 
 FIFO_filter_top_fft_config_inv_data_V fft_config_inv_data_V_U(
     .clk( ap_clk ),
-    .reset( ap_rst_n_inv ),
+    .reset( ap_rst ),
     .if_read_ce( fft_config_inv_data_V_U_ap_dummy_ce ),
     .if_write_ce( fft_config_inv_data_V_U_ap_dummy_ce ),
     .if_din( fft_config_inv_data_V_din ),
@@ -339,7 +338,7 @@ FIFO_filter_top_fft_config_inv_data_V fft_config_inv_data_V_U(
 
 FIFO_filter_top_xn_channel xn_channel_U(
     .clk( ap_clk ),
-    .reset( ap_rst_n_inv ),
+    .reset( ap_rst ),
     .if_read_ce( xn_channel_U_ap_dummy_ce ),
     .if_write_ce( xn_channel_U_ap_dummy_ce ),
     .if_din( xn_channel_din ),
@@ -352,7 +351,7 @@ FIFO_filter_top_xn_channel xn_channel_U(
 
 FIFO_filter_top_xn2_channel xn2_channel_U(
     .clk( ap_clk ),
-    .reset( ap_rst_n_inv ),
+    .reset( ap_rst ),
     .if_read_ce( xn2_channel_U_ap_dummy_ce ),
     .if_write_ce( xn2_channel_U_ap_dummy_ce ),
     .if_din( xn2_channel_din ),
@@ -365,7 +364,7 @@ FIFO_filter_top_xn2_channel xn2_channel_U(
 
 FIFO_filter_top_xk_channel xk_channel_U(
     .clk( ap_clk ),
-    .reset( ap_rst_n_inv ),
+    .reset( ap_rst ),
     .if_read_ce( xk_channel_U_ap_dummy_ce ),
     .if_write_ce( xk_channel_U_ap_dummy_ce ),
     .if_din( xk_channel_din ),
@@ -378,7 +377,7 @@ FIFO_filter_top_xk_channel xk_channel_U(
 
 FIFO_filter_top_xk2_channel xk2_channel_U(
     .clk( ap_clk ),
-    .reset( ap_rst_n_inv ),
+    .reset( ap_rst ),
     .if_read_ce( xk2_channel_U_ap_dummy_ce ),
     .if_write_ce( xk2_channel_U_ap_dummy_ce ),
     .if_din( xk2_channel_din ),
@@ -394,7 +393,7 @@ FIFO_filter_top_xk2_channel xk2_channel_U(
 /// ap_reg_procdone_fft_config1_U0 assign process. ///
 always @ (posedge ap_clk)
 begin : ap_ret_ap_reg_procdone_fft_config1_U0
-    if (ap_rst_n_inv == 1'b1) begin
+    if (ap_rst == 1'b1) begin
         ap_reg_procdone_fft_config1_U0 <= ap_const_logic_0;
     end else begin
         if ((ap_const_logic_1 == ap_sig_hs_done)) begin
@@ -408,7 +407,7 @@ end
 /// ap_reg_procdone_fft_config2_U0 assign process. ///
 always @ (posedge ap_clk)
 begin : ap_ret_ap_reg_procdone_fft_config2_U0
-    if (ap_rst_n_inv == 1'b1) begin
+    if (ap_rst == 1'b1) begin
         ap_reg_procdone_fft_config2_U0 <= ap_const_logic_0;
     end else begin
         if ((ap_const_logic_1 == ap_sig_hs_done)) begin
@@ -422,7 +421,7 @@ end
 /// ap_reg_procdone_filter_top_dummy_proc_be_U0 assign process. ///
 always @ (posedge ap_clk)
 begin : ap_ret_ap_reg_procdone_filter_top_dummy_proc_be_U0
-    if (ap_rst_n_inv == 1'b1) begin
+    if (ap_rst == 1'b1) begin
         ap_reg_procdone_filter_top_dummy_proc_be_U0 <= ap_const_logic_0;
     end else begin
         if ((ap_const_logic_1 == ap_sig_hs_done)) begin
@@ -436,7 +435,7 @@ end
 /// ap_reg_procdone_filter_top_dummy_proc_fe_U0 assign process. ///
 always @ (posedge ap_clk)
 begin : ap_ret_ap_reg_procdone_filter_top_dummy_proc_fe_U0
-    if (ap_rst_n_inv == 1'b1) begin
+    if (ap_rst == 1'b1) begin
         ap_reg_procdone_filter_top_dummy_proc_fe_U0 <= ap_const_logic_0;
     end else begin
         if ((ap_const_logic_1 == ap_sig_hs_done)) begin
@@ -450,7 +449,7 @@ end
 /// ap_reg_ready_filter_top_dummy_proc_be_U0_ap_ready assign process. ///
 always @ (posedge ap_clk)
 begin : ap_ret_ap_reg_ready_filter_top_dummy_proc_be_U0_ap_ready
-    if (ap_rst_n_inv == 1'b1) begin
+    if (ap_rst == 1'b1) begin
         ap_reg_ready_filter_top_dummy_proc_be_U0_ap_ready <= ap_const_logic_0;
     end else begin
         if (((ap_const_logic_1 == ap_start) & (ap_const_logic_1 == ap_sig_top_allready))) begin
@@ -464,7 +463,7 @@ end
 /// ap_reg_ready_filter_top_dummy_proc_fe_U0_ap_ready assign process. ///
 always @ (posedge ap_clk)
 begin : ap_ret_ap_reg_ready_filter_top_dummy_proc_fe_U0_ap_ready
-    if (ap_rst_n_inv == 1'b1) begin
+    if (ap_rst == 1'b1) begin
         ap_reg_ready_filter_top_dummy_proc_fe_U0_ap_ready <= ap_const_logic_0;
     end else begin
         if (((ap_const_logic_1 == ap_start) & (ap_const_logic_1 == ap_sig_top_allready))) begin
@@ -478,7 +477,7 @@ end
 /// fft_config1_U0_ap_start assign process. ///
 always @ (posedge ap_clk)
 begin : ap_ret_fft_config1_U0_ap_start
-    if (ap_rst_n_inv == 1'b1) begin
+    if (ap_rst == 1'b1) begin
         fft_config1_U0_ap_start <= ap_const_logic_0;
     end else begin
         fft_config1_U0_ap_start <= ap_const_logic_1;
@@ -488,7 +487,7 @@ end
 /// fft_config2_U0_ap_start assign process. ///
 always @ (posedge ap_clk)
 begin : ap_ret_fft_config2_U0_ap_start
-    if (ap_rst_n_inv == 1'b1) begin
+    if (ap_rst == 1'b1) begin
         fft_config2_U0_ap_start <= ap_const_logic_0;
     end else begin
         fft_config2_U0_ap_start <= ap_const_logic_1;
@@ -572,12 +571,6 @@ begin
 end
 assign ap_done = ap_sig_hs_done;
 assign ap_ready = ap_sig_top_allready;
-
-/// ap_rst_n_inv assign process. ///
-always @ (ap_rst_n)
-begin
-    ap_rst_n_inv = ~ap_rst_n;
-end
 assign ap_sig_hs_continue = ap_const_logic_1;
 assign coefs_address0 = filter_top_dummy_proc_be_U0_coefs_address0;
 assign coefs_ce0 = filter_top_dummy_proc_be_U0_coefs_ce0;
@@ -619,12 +612,12 @@ assign filter_top_dummy_proc_fe_U0_ap_continue = ap_const_logic_1;
 assign filter_top_dummy_proc_fe_U0_ap_start = ap_sig_start_in_filter_top_dummy_proc_fe_U0_ap_start;
 assign filter_top_dummy_proc_fe_U0_config_fwd_data_V_full_n = fft_config_fwd_data_V_full_n;
 assign filter_top_dummy_proc_fe_U0_config_inv_data_V_full_n = fft_config_inv_data_V_full_n;
-assign filter_top_dummy_proc_fe_U0_in_r_TDATA = in_r_TDATA;
-assign filter_top_dummy_proc_fe_U0_in_r_TVALID = in_r_TVALID;
+assign filter_top_dummy_proc_fe_U0_in_r = in_r;
+assign filter_top_dummy_proc_fe_U0_in_r_ap_vld = in_r_ap_vld;
 assign filter_top_dummy_proc_fe_U0_input_xn2_q0 = inxn2_q0;
 assign filter_top_dummy_proc_fe_U0_output_xn1_full_n = xn_channel_full_n;
 assign filter_top_dummy_proc_fe_U0_output_xn2_full_n = xn2_channel_full_n;
-assign in_r_TREADY = filter_top_dummy_proc_fe_U0_in_r_TREADY;
+assign in_r_ap_ack = filter_top_dummy_proc_fe_U0_in_r_ap_ack;
 assign inxn2_address0 = filter_top_dummy_proc_fe_U0_input_xn2_address0;
 assign inxn2_ce0 = filter_top_dummy_proc_fe_U0_input_xn2_ce0;
 assign inxn2_d0 = ap_const_lv64_0;

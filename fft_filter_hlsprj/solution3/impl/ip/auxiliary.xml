@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="filter_top" xd:componentRef="filter_top" xd:initiationInterval="24578" xd:clockPeriod="3.300000" xd:sequential="true" xd:hostMachine="64">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="filter_top" xd:componentRef="filter_top" xd:initiationInterval="6279" xd:clockPeriod="5.000000" xd:sequential="true" xd:hostMachine="64">
   <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
-  <xd:arg xd:name="in[].real()" xd:originalName="in" xd:direction="in" xd:interfaceRef="in_r" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="1536" xd:dataWidth="32"/>
-  <xd:arg xd:name="in[].imag()" xd:originalName="in" xd:direction="in" xd:interfaceRef="in_r" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:32" xd:arraySize="1536" xd:dataWidth="32"/>
+  <xd:arg xd:name="in[].real()" xd:originalName="in" xd:direction="in" xd:interfaceRef="in_r" xd:busTypeRef="register" xd:dataWidth="32" xd:handshakeRef="ap_hs" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="1536"/>
+  <xd:arg xd:name="in[].imag()" xd:originalName="in" xd:direction="in" xd:interfaceRef="in_r" xd:busTypeRef="register" xd:dataWidth="32" xd:handshakeRef="ap_hs" xd:dataPack="true" xd:bitMapping="63:32" xd:arraySize="1536"/>
   <xd:arg xd:name="out[].real()" xd:originalName="out" xd:direction="out" xd:interfaceRef="out_r" xd:busTypeRef="register" xd:dataWidth="32" xd:handshakeRef="ap_hs" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="1536"/>
   <xd:arg xd:name="out[].imag()" xd:originalName="out" xd:direction="out" xd:interfaceRef="out_r" xd:busTypeRef="register" xd:dataWidth="32" xd:handshakeRef="ap_hs" xd:dataPack="true" xd:bitMapping="63:32" xd:arraySize="1536"/>
   <xd:arg xd:name="coefs_d0" xd:originalName="coefs_d0" xd:direction="out" xd:interfaceRef="coefs_d0" xd:busTypeRef="register" xd:dataWidth="64" xd:handshakeRef="ap_none"/>
@@ -11,6 +11,6 @@
   <xd:arg xd:name="inxn2_q0" xd:originalName="inxn2_q0" xd:direction="in" xd:interfaceRef="inxn2_q0" xd:busTypeRef="register" xd:dataWidth="64" xd:handshakeRef="ap_none"/>
   <xd:arg xd:name="outxk1_d0" xd:originalName="outxk1_d0" xd:direction="out" xd:interfaceRef="outxk1_d0" xd:busTypeRef="register" xd:dataWidth="64" xd:handshakeRef="ap_none"/>
   <xd:arg xd:name="outxk1_q0" xd:originalName="outxk1_q0" xd:direction="in" xd:interfaceRef="outxk1_q0" xd:busTypeRef="register" xd:dataWidth="64" xd:handshakeRef="ap_none"/>
-  <xd:latencyEstimates xd:best-case="24577" xd:worst-case="24577" xd:average-case="24577"/>
-  <xd:resourceEstimates xd:LUT="30017" xd:FF="37182" xd:BRAM="58" xd:DSP="96"/>
+  <xd:latencyEstimates xd:best-case="6278" xd:worst-case="6278" xd:average-case="6278"/>
+  <xd:resourceEstimates xd:LUT="30039" xd:FF="36680" xd:BRAM="58" xd:DSP="96"/>
 </xd:acceleratorMap>

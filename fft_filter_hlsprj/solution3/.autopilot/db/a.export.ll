@@ -223,9 +223,9 @@ define void @filter_top([2048 x i64]* %coefs, i64* %in_r, [2048 x i64]* %inxn2, 
   %fft_config_inv_data_V = alloca i16, align 2
   %fft_config_fwd_data_V = alloca i16, align 2
   call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str1) nounwind
-  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !7
-  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !16
-  call void (...)* @_ssdm_op_SpecBitsMap(i64* %in_r), !map !23
+  call void (...)* @_ssdm_op_SpecBitsMap(i64* %in_r), !map !7
+  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !16
+  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !25
   call void (...)* @_ssdm_op_SpecBitsMap(i64* %out_r), !map !32
   call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %coefs), !map !39
   %xn2_channel = alloca i64, align 8
@@ -551,39 +551,39 @@ declare i9 @_ssdm_op_PartSelect.i9.i12.i32.i32(i12, i32, i32) nounwind readnone
 !7 = metadata !{metadata !8, metadata !13}
 !8 = metadata !{i32 0, i32 31, metadata !9}
 !9 = metadata !{metadata !10}
-!10 = metadata !{metadata !"outxk1._M_real.V", metadata !11, metadata !"int32", i32 0, i32 31}
+!10 = metadata !{metadata !"in._M_real.V", metadata !11, metadata !"int32", i32 0, i32 31}
 !11 = metadata !{metadata !12}
-!12 = metadata !{i32 0, i32 2047, i32 1}
+!12 = metadata !{i32 0, i32 1535, i32 1}
 !13 = metadata !{i32 32, i32 63, metadata !14}
 !14 = metadata !{metadata !15}
-!15 = metadata !{metadata !"outxk1._M_imag.V", metadata !11, metadata !"int32", i32 0, i32 31}
-!16 = metadata !{metadata !17, metadata !20}
+!15 = metadata !{metadata !"in._M_imag.V", metadata !11, metadata !"int32", i32 0, i32 31}
+!16 = metadata !{metadata !17, metadata !22}
 !17 = metadata !{i32 0, i32 31, metadata !18}
 !18 = metadata !{metadata !19}
-!19 = metadata !{metadata !"inxn2._M_real.V", metadata !11, metadata !"int32", i32 0, i32 31}
-!20 = metadata !{i32 32, i32 63, metadata !21}
-!21 = metadata !{metadata !22}
-!22 = metadata !{metadata !"inxn2._M_imag.V", metadata !11, metadata !"int32", i32 0, i32 31}
-!23 = metadata !{metadata !24, metadata !29}
-!24 = metadata !{i32 0, i32 31, metadata !25}
-!25 = metadata !{metadata !26}
-!26 = metadata !{metadata !"in._M_real.V", metadata !27, metadata !"int32", i32 0, i32 31}
+!19 = metadata !{metadata !"outxk1._M_real.V", metadata !20, metadata !"int32", i32 0, i32 31}
+!20 = metadata !{metadata !21}
+!21 = metadata !{i32 0, i32 2047, i32 1}
+!22 = metadata !{i32 32, i32 63, metadata !23}
+!23 = metadata !{metadata !24}
+!24 = metadata !{metadata !"outxk1._M_imag.V", metadata !20, metadata !"int32", i32 0, i32 31}
+!25 = metadata !{metadata !26, metadata !29}
+!26 = metadata !{i32 0, i32 31, metadata !27}
 !27 = metadata !{metadata !28}
-!28 = metadata !{i32 0, i32 1535, i32 1}
+!28 = metadata !{metadata !"inxn2._M_real.V", metadata !20, metadata !"int32", i32 0, i32 31}
 !29 = metadata !{i32 32, i32 63, metadata !30}
 !30 = metadata !{metadata !31}
-!31 = metadata !{metadata !"in._M_imag.V", metadata !27, metadata !"int32", i32 0, i32 31}
+!31 = metadata !{metadata !"inxn2._M_imag.V", metadata !20, metadata !"int32", i32 0, i32 31}
 !32 = metadata !{metadata !33, metadata !36}
 !33 = metadata !{i32 0, i32 31, metadata !34}
 !34 = metadata !{metadata !35}
-!35 = metadata !{metadata !"out._M_real.V", metadata !27, metadata !"int32", i32 0, i32 31}
+!35 = metadata !{metadata !"out._M_real.V", metadata !11, metadata !"int32", i32 0, i32 31}
 !36 = metadata !{i32 32, i32 63, metadata !37}
 !37 = metadata !{metadata !38}
-!38 = metadata !{metadata !"out._M_imag.V", metadata !27, metadata !"int32", i32 0, i32 31}
+!38 = metadata !{metadata !"out._M_imag.V", metadata !11, metadata !"int32", i32 0, i32 31}
 !39 = metadata !{metadata !40, metadata !43}
 !40 = metadata !{i32 0, i32 31, metadata !41}
 !41 = metadata !{metadata !42}
-!42 = metadata !{metadata !"coefs._M_real.V", metadata !11, metadata !"int32", i32 0, i32 31}
+!42 = metadata !{metadata !"coefs._M_real.V", metadata !20, metadata !"int32", i32 0, i32 31}
 !43 = metadata !{i32 32, i32 63, metadata !44}
 !44 = metadata !{metadata !45}
-!45 = metadata !{metadata !"coefs._M_imag.V", metadata !11, metadata !"int32", i32 0, i32 31}
+!45 = metadata !{metadata !"coefs._M_imag.V", metadata !20, metadata !"int32", i32 0, i32 31}
