@@ -1,6 +1,6 @@
 @I [LIC-101] Checked out feature [HLS]
 @I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2014.4/bin/unwrapped/lnx64.o/vivado_hls'
-            for user 'commlab' on host 'commlab-server.uni.lux' (Linux_x86_64 version 3.10.0-693.17.1.el7.x86_64) on Tue Mar 27 09:39:30 CEST 2018
+            for user 'commlab' on host 'commlab-server.uni.lux' (Linux_x86_64 version 3.10.0-693.17.1.el7.x86_64) on Tue Mar 27 10:00:29 CEST 2018
             in directory '/home/commlab/Documents/VIVADO_projects/fft_filter'
 @I [HLS-10] Opening project '/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj'.
 @I [HLS-10] Adding design file 'fft_filter_hlsprj/src/filter_fft.cpp' to the project
@@ -34,7 +34,7 @@
 @W [XFORM-631] Renaming function 'std::operator*<ap_fixed<32, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >' into operator*<ap_fixed >.
 @W [XFORM-631] Renaming function 'hls::fft<config2>' (/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls_fft.h:909) into fft<config2>.
 @W [XFORM-631] Renaming function 'hls::fft<config1>' (/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls_fft.h:909) into fft<config1>.
-@I [HLS-111] Elapsed time: 4.27 seconds; current memory usage: 119 MB.
+@I [HLS-111] Elapsed time: 4.76 seconds; current memory usage: 120 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'filter_top' ...
 @W [SYN-103] Legalizing function name 'fft<config1>' to 'fft_config1_s'.
@@ -47,7 +47,7 @@
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.06 seconds; current memory usage: 120 MB.
+@I [HLS-111] Elapsed time: 0.1 seconds; current memory usage: 120 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'filter_top_dummy_proc_fe' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -56,12 +56,12 @@
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 120 MB.
+@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 120 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'fft_config1_s' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Skip scheduling the IP block.
-@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 120 MB.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 120 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'fft_config1_s' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -75,7 +75,7 @@
 @I [HLS-10] -- Scheduling module 'fft_config2_s' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Skip scheduling the IP block.
-@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 121 MB.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 121 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'fft_config2_s' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -89,8 +89,10 @@
 @I [HLS-10] -- Scheduling module 'filter_multop_operator_ap_fixed_s' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining function 'filter_top_operator*<ap_fixed >'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 8.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.08 seconds; current memory usage: 121 MB.
+@I [HLS-111] Elapsed time: 0.09 seconds; current memory usage: 121 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'filter_multop_operator_ap_fixed_s' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -99,13 +101,15 @@
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 121 MB.
+@I [HLS-111] Elapsed time: 0 seconds; current memory usage: 121 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'filter_top_dummy_proc_be' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'for_of_the_multi'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 10.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.06 seconds; current memory usage: 121 MB.
+@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 121 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'filter_top_dummy_proc_be' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -114,13 +118,13 @@
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 121 MB.
+@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 122 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'filter_top' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 121 MB.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 122 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'filter_top' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -139,12 +143,12 @@
 @I [HLS-10] -- Generating RTL for module 'fft_config1_s' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [RTGEN-100] Finished creating RTL model for 'fft_config1_s'.
-@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 123 MB.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 123 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'fft_config2_s' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [RTGEN-100] Finished creating RTL model for 'fft_config2_s'.
-@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 123 MB.
+@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 123 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'filter_multop_operator_ap_fixed_s' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -155,7 +159,7 @@
 @I [HLS-10] -- Generating RTL for module 'filter_top_dummy_proc_be' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [RTGEN-100] Finished creating RTL model for 'filter_top_dummy_proc_be'.
-@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 124 MB.
+@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 124 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'filter_top' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -166,7 +170,7 @@
 @I [RTGEN-500] Setting interface mode on port 'filter_top/out_r' to 'ap_hs'.
 @I [RTGEN-500] Setting interface mode on function 'filter_top' to 'ap_ctrl_hs'.
 @I [RTGEN-100] Finished creating RTL model for 'filter_top'.
-@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 125 MB.
+@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 125 MB.
 @I [RTMG-278] Implementing memory 'filter_top_dummy_proc_fe_detector_tail_M_real_V_ram' using block RAMs with power-on initialization.
 @I [RTMG-282] Generating pipelined core: 'filter_top_mul_32s_32s_63_7_MulnS_0'
 @I [RTMG-285] Implementing FIFO 'FIFO_filter_top_fft_config_fwd_data_V' using Block RAMs.
@@ -179,5 +183,5 @@
 @I [WSYSC-301] Generating RTL SystemC for 'filter_top'.
 @I [WVHDL-304] Generating RTL VHDL for 'filter_top'.
 @I [WVLOG-307] Generating RTL Verilog for 'filter_top'.
-@I [HLS-112] Total elapsed time: 16.841 seconds; peak memory usage: 125 MB.
+@I [HLS-112] Total elapsed time: 18.43 seconds; peak memory usage: 125 MB.
 @I [LIC-101] Checked in feature [HLS]

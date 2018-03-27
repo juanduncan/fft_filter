@@ -1468,8 +1468,8 @@
 				<item_version>0</item_version>
 				<item>30</item>
 			</basic_blocks>
-			<mII>-1</mII>
-			<mDepth>-1</mDepth>
+			<mII>1</mII>
+			<mDepth>8</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
 			<mMinLatency>7</mMinLatency>
@@ -1534,14 +1534,14 @@
 		<item>
 			<first>6</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>7</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -1698,14 +1698,30 @@
 		</item>
 	</bblk_ent_exit>
 	<regions class_id="34" tracking_level="0" version="0">
-		<count>0</count>
+		<count>1</count>
 		<item_version>0</item_version>
+		<item class_id="35" tracking_level="1" version="0" object_id="_76">
+			<region_name>filter_top_operator*&lt;ap_fixed &gt;</region_name>
+			<basic_blocks>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>30</item>
+			</basic_blocks>
+			<nodes>
+				<count>0</count>
+				<item_version>0</item_version>
+			</nodes>
+			<anchor_node>-1</anchor_node>
+			<region_type>8</region_type>
+			<interval>1</interval>
+			<pipe_depth>8</pipe_depth>
+		</item>
 	</regions>
-	<dp_fu_nodes class_id="35" tracking_level="0" version="0">
+	<dp_fu_nodes class_id="36" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_fu_nodes>
-	<dp_fu_nodes_expression class_id="36" tracking_level="0" version="0">
+	<dp_fu_nodes_expression class_id="37" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_fu_nodes_expression>
@@ -1721,7 +1737,7 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</return_ports>
-	<dp_mem_port_nodes class_id="37" tracking_level="0" version="0">
+	<dp_mem_port_nodes class_id="38" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_mem_port_nodes>
@@ -1741,11 +1757,11 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_regname_phi>
-	<dp_port_io_nodes class_id="38" tracking_level="0" version="0">
+	<dp_port_io_nodes class_id="39" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_port_io_nodes>
-	<port2core class_id="39" tracking_level="0" version="0">
+	<port2core class_id="40" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</port2core>

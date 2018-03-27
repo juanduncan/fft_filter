@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'filter_multop_operator_ap_fixed_s'" level="0">
-<item name = "Date">Tue Mar 27 09:39:46 2018
+<item name = "Date">Tue Mar 27 10:00:47 2018
 </item>
 <item name = "Version">2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)</item>
 <item name = "Project">fft_filter_hlsprj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">7, 7, 7, 7, none</column>
+<column name="">7, 7, 1, 1, function</column>
 </table>
 </item>
 <item name = "Detail">
@@ -50,7 +50,7 @@
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, 16, 0, 0</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 68</column>
+<column name="Multiplexer">-, -, -, -</column>
 <column name="Register">-, -, 72, -</column>
 <specialColumn name="Available">1590, 1540, 508400, 254200</specialColumn>
 <specialColumn name="Utilization (%)">0, 1, ~0, ~0</specialColumn>
@@ -76,22 +76,26 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="p_Val2_1_fu_148_p2">+, 0, 0, 63, 63, 63</column>
-<column name="p_Val2_s_fu_132_p2">-, 0, 0, 63, 63, 63</column>
+<column name="p_Val2_1_fu_146_p2">+, 0, 0, 63, 63, 63</column>
+<column name="p_Val2_s_fu_130_p2">-, 0, 0, 63, 63, 63</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">4, 9, 1, 9</column>
-<column name="ap_return_0">32, 2, 32, 64</column>
-<column name="ap_return_1">32, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">8, 0, 8, 0</column>
-<column name="ap_return_0_preg">32, 0, 32, 0</column>
-<column name="ap_return_1_preg">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it1">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it2">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it3">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it4">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it5">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it6">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it7">1, 0, 1, 0</column>
+<column name="p_x_M_imag_V_read_1_reg_174">32, 0, 32, 0</column>
+<column name="p_x_M_real_V_read_1_reg_179">32, 0, 32, 0</column>
 </table>
 </item>
 </section>
@@ -107,6 +111,7 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, filter_top_operator*&lt;ap_fixed &gt;, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, filter_top_operator*&lt;ap_fixed &gt;, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, filter_top_operator*&lt;ap_fixed &gt;, return value</column>
+<column name="ap_ce">in, 1, ap_ctrl_hs, filter_top_operator*&lt;ap_fixed &gt;, return value</column>
 <column name="ap_return_0">out, 32, ap_ctrl_hs, filter_top_operator*&lt;ap_fixed &gt;, return value</column>
 <column name="ap_return_1">out, 32, ap_ctrl_hs, filter_top_operator*&lt;ap_fixed &gt;, return value</column>
 <column name="p_x_M_real_V_read">in, 32, ap_none, p_x_M_real_V_read, scalar</column>

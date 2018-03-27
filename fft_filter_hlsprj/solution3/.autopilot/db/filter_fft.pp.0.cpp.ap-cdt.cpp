@@ -42040,14 +42040,17 @@ void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, complex_coef_t c
   data_out_t output_xk1[FFT_LENGTH], data_out_t dummy[TAIL_LENGTH], data_out_t out[FILTER_LENGTH])
 {_ssdm_SpecArrayDimSize(dummy,TAIL_LENGTH);_ssdm_SpecArrayDimSize(coefs,FFT_LENGTH);_ssdm_SpecArrayDimSize(output_xk1,FFT_LENGTH);_ssdm_SpecArrayDimSize(input_xk2,FFT_LENGTH);_ssdm_SpecArrayDimSize(input_xk1,FFT_LENGTH);_ssdm_SpecArrayDimSize(out,FILTER_LENGTH);
    int i;
-    for (i=0; i< FFT_LENGTH; i++){
+    for_of_the_multi : for (i=0; i< FFT_LENGTH; i++){_ssdm_op_SpecLoopName("for_of_the_multi");_ssdm_RegionBegin("for_of_the_multi");
+#pragma HLS PIPELINE
+#pragma line 27 "fft_filter_hlsprj/src/filter_fft.cpp"
+
      output_xk1[i] = data_out_t( complex_coef_t(input_xk1[i]) * coefs[i] );
      if(i< TAIL_LENGTH){
       dummy[i] = input_xk2[i]; //dummy ---> To discard the first TAIL_LENGTH output samples
      }else{
       out[i-TAIL_LENGTH] = input_xk2[i];
      }
-    }
+    _ssdm_RegionEnd("for_of_the_multi");}
     //*ovflo = status_in->getOvflo() & 0x1;
 }
 #pragma empty_line

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'filter_top'" level="0">
-<item name = "Date">Tue Mar 27 09:39:46 2018
+<item name = "Date">Tue Mar 27 10:00:47 2018
 </item>
 <item name = "Version">2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)</item>
 <item name = "Project">fft_filter_hlsprj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">20481, 20481, 20482, 20482, dataflow</column>
+<column name="">6278, 6278, 6279, 6279, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
@@ -34,7 +34,7 @@
 <column name="grp_filter_top_dummy_proc_fe_fu_141">filter_top_dummy_proc_fe, 6145, 6145, 6145, 6145, none</column>
 <column name="grp_fft_config1_s_fu_157">fft_config1_s, 6278, 6278, 6278, 6278, none</column>
 <column name="grp_fft_config2_s_fu_165">fft_config2_s, 6278, 6278, 6278, 6278, none</column>
-<column name="grp_filter_top_dummy_proc_be_fu_129">filter_top_dummy_proc_be, 20481, 20481, 20481, 20481, none</column>
+<column name="grp_filter_top_dummy_proc_be_fu_129">filter_top_dummy_proc_be, 2058, 2058, 2058, 2058, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -52,7 +52,7 @@
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="Expression">-, -, -, -</column>
 <column name="FIFO">24, -, 478, 704</column>
-<column name="Instance">34, 96, 36311, 29375</column>
+<column name="Instance">34, 96, 36193, 29333</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, 2</column>
 <column name="Register">-, -, 9, -</column>
@@ -66,7 +66,7 @@
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="fft_config1_U0">fft_config1_s, 16, 40, 17987, 14499</column>
 <column name="fft_config2_U0">fft_config2_s, 16, 40, 17987, 14499</column>
-<column name="filter_top_dummy_proc_be_U0">filter_top_dummy_proc_be, 0, 16, 295, 239</column>
+<column name="filter_top_dummy_proc_be_U0">filter_top_dummy_proc_be, 0, 16, 177, 197</column>
 <column name="filter_top_dummy_proc_fe_U0">filter_top_dummy_proc_fe, 2, 0, 42, 138</column>
 </table>
 </item>

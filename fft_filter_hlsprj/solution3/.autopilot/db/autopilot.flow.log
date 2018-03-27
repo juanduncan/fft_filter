@@ -1,228 +1,230 @@
-@I [HLS-0] Workspace /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3 opened at Tue Mar 27 09:39:30 CEST 2018
+@I [HLS-0] Workspace /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3 opened at Tue Mar 27 10:00:29 CEST 2018
 @I [HLS-100] Command "config_clock -quiet -name default -period 5 -default=false "
 @I [SYN-201] Setting up clock 'default' with a period of 5ns.
-@I [HLS-100] Command 'config_clock' returned 0; elapsed 0Total elapsed time: 0.200 sec.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0Total elapsed time: 0.204 sec.
 @I [HLS-100] Command "open_platform DefaultPlatform "
-@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 0.201 sec.
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 0.205 sec.
 @I [HLS-100] Command "import_lib /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/kintex7/kintex7 "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.lib "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/xilinx_interface.lib "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.202 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.206 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.202 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.206 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.202 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.207 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.203 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.207 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.203 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.203 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.207 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.207 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.203 sec.
-@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.203 sec.
-@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.203 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.205 sec.
-@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_old.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.208 sec.
-@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_vivado.lib "
 @I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.208 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.208 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.208 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.210 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_old.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.213 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_vivado.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.213 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/target_info.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.211 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.216 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/xilinx_interface.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.211 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.216 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.211 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.211 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.216 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.216 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.212 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.212 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.217 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.217 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/kintex7/dsp48e1.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.212 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.218 sec.
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.212 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.218 sec.
 @I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 50950} {LUT 203800}    {FF 407600} {DSP48E 840}    {BRAM 890}  "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.212 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.218 sec.
 @I [HLS-100] Command "config_chip_info -quiet -speed medium "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.212 sec.
-@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.01Total elapsed time: 0.214 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.218 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.01Total elapsed time: 0.220 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/kintex7/kintex7.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.215 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.221 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.216 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.222 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.218 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.224 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.221 sec.
-@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
 @I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.227 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.227 sec.
-@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
 @I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.234 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.234 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.242 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.241 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.250 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.241 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.250 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 0.319 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.12Total elapsed time: 0.358 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/tps/tcl/tcllib1.11.1/struct/list.tcl "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.330 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.330 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.383 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.384 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/tps/tcl/tcllib1.11.1/math/bignum.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.333 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.338 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.12Total elapsed time: 0.338 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.391 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.04Total elapsed time: 0.401 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.19Total elapsed time: 0.401 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.339 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.12Total elapsed time: 0.339 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.12Total elapsed time: 0.339 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.403 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.19Total elapsed time: 0.403 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.19Total elapsed time: 0.403 sec.
 @I [HLS-100] Command "set_part xc7k410tffg900-2 "
 @I [HLS-100] Command "add_library xilinx/kintex7/kintex7:xc7k410t:ffg900:-2 "
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.342 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.408 sec.
 @I [HLS-100] Command "license_exists VIVADO_HLS "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.347 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.416 sec.
 @I [HLS-100] Command "license_exists ap_opencl "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.351 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.424 sec.
 @I [HLS-100] Command "license_exists AUTOESL_NI "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.355 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.431 sec.
 @I [HLS-100] Command "license_exists HLS "
-@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.355 sec.
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.431 sec.
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.355 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.432 sec.
 @I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 63550} {LUT 254200}    {FF 508400} {DSP48E 1540}   {BRAM 1590}  "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.355 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.432 sec.
 @I [HLS-100] Command "config_chip_info -quiet -speed medium "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.356 sec.
-@I [HLS-100] Command 'add_library' returned 0; elapsed 0.01Total elapsed time: 0.357 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.432 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.02Total elapsed time: 0.433 sec.
 @I [HLS-100] Command "add_library xilinx/kintex7/kintex7_fpv6 "
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.357 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.434 sec.
 @I [HLS-100] Command "license_exists VIVADO_HLS "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.361 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.441 sec.
 @I [HLS-100] Command "license_exists ap_opencl "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.365 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.447 sec.
 @I [HLS-100] Command "license_exists AUTOESL_NI "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.369 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.454 sec.
 @I [HLS-100] Command "license_exists HLS "
-@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.369 sec.
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.454 sec.
 @I [HLS-100] Command "open_platform DefaultPlatform "
-@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 0.370 sec.
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 0.454 sec.
 @I [HLS-100] Command "import_lib /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/kintex7/kintex7_fpv6 "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv7.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.371 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.457 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/target_info.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.375 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.462 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/xilinx_interface.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.375 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.463 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.375 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.375 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.463 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.463 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.376 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.376 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.376 sec.
-@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.02Total elapsed time: 0.379 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.463 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.464 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.464 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.02Total elapsed time: 0.468 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.380 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.380 sec.
-@I [HLS-100] Command 'add_library' returned 0; elapsed 0.03Total elapsed time: 0.381 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.470 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.470 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.05Total elapsed time: 0.470 sec.
 @I [HLS-10] Setting target device to 'xc7k410tffg900-2'
-@I [HLS-100] Command 'set_part' returned 0; elapsed 0.05Total elapsed time: 0.381 sec.
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.07Total elapsed time: 0.470 sec.
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.381 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.470 sec.
 @I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 63550} {LUT 254200}    {FF 508400} {DSP48E 1540}   {BRAM 1590}  "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.381 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.470 sec.
 @I [HLS-100] Command "config_chip_info -quiet -speed medium "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.381 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.470 sec.
 @I [HLS-100] Command "config_dataflow -default_channel=fifo -fifo_depth=2048 "
 @I [XFORM-701] Set default FIFO size in dataflow to 2048.
 @I [XFORM-701] Set the default channel type in dataflow to FIFO.
-@I [HLS-100] Command 'config_dataflow' returned 0; elapsed 0Total elapsed time: 0.382 sec.
-@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.19Total elapsed time: 0.382 sec.
+@I [HLS-100] Command 'config_dataflow' returned 0; elapsed 0Total elapsed time: 0.472 sec.
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.28Total elapsed time: 0.472 sec.
 @I [HLS-100] Command "set_part xc7k410tffg900-2 "
 @I [HLS-100] Command "add_library xilinx/kintex7/kintex7:xc7k410t:ffg900:-2 "
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.383 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.474 sec.
 @I [HLS-100] Command "license_exists VIVADO_HLS "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.388 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.480 sec.
 @I [HLS-100] Command "license_exists ap_opencl "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.392 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.485 sec.
 @I [HLS-100] Command "license_exists AUTOESL_NI "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.396 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.491 sec.
 @I [HLS-100] Command "license_exists HLS "
-@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.396 sec.
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.491 sec.
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.397 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.491 sec.
 @I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 63550} {LUT 254200}    {FF 508400} {DSP48E 1540}   {BRAM 1590}  "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.397 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.491 sec.
 @I [HLS-100] Command "config_chip_info -quiet -speed medium "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.397 sec.
-@I [HLS-100] Command 'add_library' returned 0; elapsed 0.01Total elapsed time: 0.398 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 0.491 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.01Total elapsed time: 0.492 sec.
 @I [HLS-100] Command "add_library xilinx/kintex7/kintex7_fpv6 "
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.398 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 0.493 sec.
 @I [HLS-100] Command "license_exists VIVADO_HLS "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.403 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.498 sec.
 @I [HLS-100] Command "license_exists ap_opencl "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.407 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0.01Total elapsed time: 0.503 sec.
 @I [HLS-100] Command "license_exists AUTOESL_NI "
-@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.411 sec.
+@I [HLS-100] Command 'license_exists' returned 1; elapsed 0Total elapsed time: 0.508 sec.
 @I [HLS-100] Command "license_exists HLS "
-@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.411 sec.
+@I [HLS-100] Command 'license_exists' returned 0; elapsed 0Total elapsed time: 0.508 sec.
 @I [HLS-100] Command "open_platform DefaultPlatform "
-@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 0.411 sec.
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 0.509 sec.
 @I [HLS-100] Command "import_lib /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/kintex7/kintex7_fpv6 "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv7.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.413 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.511 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/target_info.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.417 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.515 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/xilinx_interface.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.417 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.515 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.417 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.417 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.515 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.515 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.418 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.418 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.418 sec.
-@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.01Total elapsed time: 0.421 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.515 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.516 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 0.516 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.01Total elapsed time: 0.520 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.422 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.422 sec.
-@I [HLS-100] Command 'add_library' returned 0; elapsed 0.02Total elapsed time: 0.423 sec.
-@I [HLS-100] Command 'set_part' returned 0; elapsed 0.03Total elapsed time: 0.423 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.521 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.521 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.02Total elapsed time: 0.521 sec.
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.04Total elapsed time: 0.521 sec.
 @I [HLS-100] Command "create_clock -period 5 -name default "
 @I [HLS-100] Command "config_clock -quiet -name default -period 5 -default=false "
 @I [SYN-201] Setting up clock 'default' with a period of 5ns.
-@I [HLS-100] Command 'config_clock' returned 0; elapsed 0Total elapsed time: 0.423 sec.
-@I [HLS-100] Command 'create_clock' returned 0; elapsed 0.01Total elapsed time: 0.424 sec.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0Total elapsed time: 0.522 sec.
+@I [HLS-100] Command 'create_clock' returned 0; elapsed 0Total elapsed time: 0.522 sec.
 @I [HLS-100] Command "config_dataflow -default_channel fifo -fifo_depth 2048 "
 @I [XFORM-701] Set default FIFO size in dataflow to 2048.
 @I [XFORM-701] Set the default channel type in dataflow to FIFO.
-@I [HLS-100] Command 'config_dataflow' returned 0; elapsed 0Total elapsed time: 0.424 sec.
+@I [HLS-100] Command 'config_dataflow' returned 0; elapsed 0Total elapsed time: 0.523 sec.
 @I [HLS-100] Command "source ./fft_filter_hlsprj/solution3/directives.tcl "
 @I [HLS-100] Command "set_directive_interface -mode ap_memory filter_top coefs "
-@I [HLS-100] Command 'set_directive_interface' returned 0; elapsed 0Total elapsed time: 0.424 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.425 sec.
+@I [HLS-100] Command 'set_directive_interface' returned 0; elapsed 0Total elapsed time: 0.523 sec.
+@I [HLS-100] Command "set_directive_pipeline dummy_proc_be/for_of_the_multi "
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 0.523 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 0.523 sec.
 @I [HLS-100] Command "csynth_design "
 @I [HLS-100] Command "elaborate -effort=medium -skip_syncheck=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 "
 @I [HLS-10] Analyzing design file 'fft_filter_hlsprj/src/filter_fft.cpp' ... 
@@ -237,8 +239,9 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 
 @I [HLS-0] GCC PP time: 0 seconds per iteration
 @I [HLS-0] Setting directive 'INTERFACE' ap_memory=positionBoolean0mode port=positionBooleanTextRequiredcoefs 
+@I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-100] Command "list_core -type functional_unit "
-@I [HLS-100] Command 'list_core' returned 0; elapsed 0Total elapsed time: 1.247 sec.
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0Total elapsed time: 1.463 sec.
 @I [HLS-0] Marker-Pragma convertor: /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_fft.pp.0.cpp /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_fft.pp.0.cpp.ap-line.cpp /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_fft.pp.0.cpp.ap-line.cpp.CXX 1
 @I [HLS-0] 
 Source processor: exec /opt/Xilinx/Vivado_HLS/2014.4/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/Xilinx/Vivado_HLS/2014.4/lib/classes/autopilot.sourceprocessor.jar:/opt/Xilinx/Vivado_HLS/2014.4/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/Xilinx/Vivado_HLS/2014.4/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/Xilinx/Vivado_HLS/2014.4/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/Xilinx/Vivado_HLS/2014.4/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/Xilinx/Vivado_HLS/2014.4/lib/classes/jargs.jar:/opt/Xilinx/Vivado_HLS/2014.4/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.0.v20140514-1158.jar:/opt/Xilinx/Vivado_HLS/2014.4/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.0.v20140514-1158.jar:/opt/Xilinx/Vivado_HLS/2014.4/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.0.v20140514-1158.jar:/opt/Xilinx/Vivado_HLS/2014.4/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/Xilinx/Vivado_HLS/2014.4/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_fft.pp.0.cpp.ap-line.cpp"  -m "filter_top" -o "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_fft.pp.0.cpp.ap-cdt.cpp" --ad --pc --pp --directive /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/solution3.directive --source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp --error /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S MulnS" --ve --vetcl /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db --lp --ca --es --gf --df --pd --p2d /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db --sd --scff /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/.systemc_flag
@@ -253,7 +256,7 @@ Error:Syntax error in source:)
  *__first = __tmp;
 @I [HLS-0] Marker-Pragma convertor: /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_fft.pp.0.cpp.ap-cdt.cpp /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_fft.pragma.0.cpp /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_fft.pragma.0.cpp.ap-line.CXX 0
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/pragma.status.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 11.483 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.324 sec.
 @I [HLS-0] CDT processor time: 10 seconds per iteration
 @I [HLS-0] Pragma handling time: 0 seconds per iteration
 @I [HLS-0] 
@@ -261,11 +264,11 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 
 @I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado_HLS/2014.4/lnx64/tools/gcc -hls -fno-exceptions  -D__llvm__  -w  "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_fft.pragma.2.cpp"    -D "__asm__(...)=" -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_fft.g.bc"
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/ve_warning.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.379 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 13.219 sec.
 @I [HLS-10] Validating synthesis directives ...
 @0 [HLS-0] Validating synthesis directives ...
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/pragma.status.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 12.380 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 13.220 sec.
 @I [HLS-0] Linking all ...
 @I [HLS-0] exec llvm-ld  "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_fft.bc"  -disable-opt  -L/opt/Xilinx/Vivado_HLS/2014.4/lnx64/lib -lm_basic -o "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/a.o.pre"
 @I [HLS-0] Link time: 0 seconds per iteration
@@ -274,7 +277,7 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-0] Link time: 0 seconds per iteration
 @I [HLS-100] Command "opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 "
 @I [HLS-100] Command "cleanup_all_models "
-@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 0Total elapsed time: 12.760 sec.
+@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 0Total elapsed time: 13.526 sec.
 @I [HLS-10] Starting code transformations ...
 @0 [HLS-0] Starting code transformations ...
 @I [HLS-0] std xform: transform -hls -share-std-xform -always-inline -promote-dbg-pointer  -interface-preproc  -scalarrepl -mem2reg -keep-read-access -instcombine -dce  -promote-dbg-pointer  -bitop-raise  -indvars -loop-simplify -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -basicaa  -simplifycfg -mem2reg -globalopt  -global-constprop -deadargelim -instcombine -simplifycfg  -prune-eh -simplifycfg  -scalarrepl -instcombine -reassociate -licm  -simplifycfg -loop-simplify -indvars -instcombine  -simplifycfg -mem2reg -loop-simplify -indvars -instcombine  -gvn -gvn -instcombine -adce  -break-crit-edges  -simplifycfg -loop-delete  -global-array-opt -dce -dse -adce  -find-syn-modules -top filter_top  -deadargelim  -mem2reg -instcombine -dce  -presyn-prepare -auto-rom-infer  -interface-preproc  -syn-check -check-rec-only  -find-region -simplifycfg -func-extr -function-inline  -mem2reg -instcombine -dce   -gvn -globaldce -adce -adse  -constprop -instcombine -bit-constprop  -instcombine -dce -simplifycfg -bitop-raise  -simplifycfg -dce -loop-delete -reassociate  -globalopt -global-privatize -mem2reg -dce  -global-constprop -pointer-simplify -constprop -dce  -func-inst -deadargelim  -promote-dbg-pointer  -norm-name   /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/a.g.0.bc -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/a.g.1.bc -f  -phase std-opt
@@ -311,9 +314,9 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @W [XFORM-631] Renaming function 'hls::fft<config1>' (/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls_fft.h:909) into fft<config1>.
 @I [HLS-0] Build ssdm time: 0 seconds per iteration
 @I [HLS-0] Finish building internal data model.
-@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 2.97Total elapsed time: 15.979 sec.
-@I [HLS-111] Elapsed time: 4.27 seconds; current memory usage: 119 MB.
-@I [HLS-100] Command 'elaborate' returned 0; elapsed 3.85Total elapsed time: 15.979 sec.
+@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 3.26Total elapsed time: 17.85 sec.
+@I [HLS-111] Elapsed time: 4.76 seconds; current memory usage: 120 MB.
+@I [HLS-100] Command 'elaborate' returned 0; elapsed 4.25Total elapsed time: 17.85 sec.
 @I [HLS-100] Command "autosyn "
 @I [HLS-10] Starting hardware synthesis ...
 @0 [HLS-0] Starting hardware synthesis ...
@@ -324,99 +327,99 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @W [SYN-103] Legalizing function name 'fft<config1>' to 'fft_config1_s'.
 @W [SYN-103] Legalizing function name 'fft<config2>' to 'fft_config2_s'.
 @W [SYN-103] Legalizing function name 'filter_top_operator*<ap_fixed >' to 'filter_multop_operator_ap_fixed_s'.
-@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 0Total elapsed time: 15.980 sec.
+@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 0Total elapsed time: 17.87 sec.
 @I [HLS-100] Command "get_model_list filter_top -filter all-wo-channel -topdown "
-@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 15.980 sec.
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 17.87 sec.
 @I [HLS-100] Command "preproc_iomode -model filter_top "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 15.981 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 17.88 sec.
 @I [HLS-100] Command "preproc_iomode -model filter_top_dummy_proc_be "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 15.981 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 17.88 sec.
 @I [HLS-100] Command "preproc_iomode -model filter_top_operator*<ap_fixed > "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 15.981 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 17.88 sec.
 @I [HLS-100] Command "preproc_iomode -model fft<config2> "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 15.981 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 17.88 sec.
 @I [HLS-100] Command "preproc_iomode -model fft<config1> "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 15.981 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 17.88 sec.
 @I [HLS-100] Command "preproc_iomode -model filter_top_dummy_proc_fe "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 15.981 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 17.88 sec.
 @I [HLS-100] Command "get_model_list filter_top -filter all-wo-channel "
-@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 15.981 sec.
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 17.89 sec.
 @I [HLS-0] Model list for configure: filter_top_dummy_proc_fe fft<config1> fft<config2> {filter_top_operator*<ap_fixed >} filter_top_dummy_proc_be filter_top
 @I [HLS-0] Configuring Module : filter_top_dummy_proc_fe ...
 @I [HLS-100] Command "set_default_model filter_top_dummy_proc_fe "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.981 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.89 sec.
 @I [HLS-100] Command "apply_spec_resource_limit filter_top_dummy_proc_fe "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 15.981 sec.
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 17.89 sec.
 @I [HLS-0] Configuring Module : fft<config1> ...
 @I [HLS-100] Command "set_default_model fft<config1> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.982 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.89 sec.
 @I [HLS-100] Command "apply_spec_resource_limit fft<config1> "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 15.982 sec.
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 17.89 sec.
 @I [HLS-0] Configuring Module : fft<config2> ...
 @I [HLS-100] Command "set_default_model fft<config2> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.982 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.89 sec.
 @I [HLS-100] Command "apply_spec_resource_limit fft<config2> "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 15.982 sec.
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 17.89 sec.
 @I [HLS-0] Configuring Module : filter_top_operator*<ap_fixed > ...
 @I [HLS-100] Command "set_default_model filter_top_operator*<ap_fixed > "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.982 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.89 sec.
 @I [HLS-100] Command "apply_spec_resource_limit filter_top_operator*<ap_fixed > "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 15.982 sec.
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 17.89 sec.
 @I [HLS-0] Configuring Module : filter_top_dummy_proc_be ...
 @I [HLS-100] Command "set_default_model filter_top_dummy_proc_be "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.982 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.90 sec.
 @I [HLS-100] Command "apply_spec_resource_limit filter_top_dummy_proc_be "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 15.982 sec.
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 17.90 sec.
 @I [HLS-0] Configuring Module : filter_top ...
 @I [HLS-100] Command "set_default_model filter_top "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.982 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.90 sec.
 @I [HLS-100] Command "apply_spec_resource_limit filter_top "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 15.982 sec.
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 17.90 sec.
 @I [HLS-0] Model list for preprocess: filter_top_dummy_proc_fe fft<config1> fft<config2> {filter_top_operator*<ap_fixed >} filter_top_dummy_proc_be filter_top
 @I [HLS-0] Preprocessing Module: filter_top_dummy_proc_fe ...
 @I [HLS-100] Command "set_default_model filter_top_dummy_proc_fe "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.982 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.90 sec.
 @I [HLS-100] Command "cdfg_preprocess -model filter_top_dummy_proc_fe "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.01Total elapsed time: 15.983 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 17.91 sec.
 @I [HLS-100] Command "rtl_gen_preprocess filter_top_dummy_proc_fe "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 15.984 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.92 sec.
 @I [HLS-0] Preprocessing Module: fft<config1> ...
 @I [HLS-100] Command "set_default_model fft<config1> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.984 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.92 sec.
 @I [HLS-100] Command "cdfg_preprocess -model fft<config1> "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 15.984 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 17.93 sec.
 @I [HLS-100] Command "rtl_gen_preprocess fft<config1> "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 15.984 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.93 sec.
 @I [HLS-0] Preprocessing Module: fft<config2> ...
 @I [HLS-100] Command "set_default_model fft<config2> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.984 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.93 sec.
 @I [HLS-100] Command "cdfg_preprocess -model fft<config2> "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 15.984 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 17.93 sec.
 @I [HLS-100] Command "rtl_gen_preprocess fft<config2> "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 15.985 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.94 sec.
 @I [HLS-0] Preprocessing Module: filter_top_operator*<ap_fixed > ...
 @I [HLS-100] Command "set_default_model filter_top_operator*<ap_fixed > "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.985 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.94 sec.
 @I [HLS-100] Command "cdfg_preprocess -model filter_top_operator*<ap_fixed > "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 15.985 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 17.94 sec.
 @I [HLS-100] Command "rtl_gen_preprocess filter_top_operator*<ap_fixed > "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 15.985 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.95 sec.
 @I [HLS-0] Preprocessing Module: filter_top_dummy_proc_be ...
 @I [HLS-100] Command "set_default_model filter_top_dummy_proc_be "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.985 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.95 sec.
 @I [HLS-100] Command "cdfg_preprocess -model filter_top_dummy_proc_be "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 15.986 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 17.95 sec.
 @I [HLS-100] Command "rtl_gen_preprocess filter_top_dummy_proc_be "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 15.986 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.96 sec.
 @I [HLS-0] Preprocessing Module: filter_top ...
 @I [HLS-100] Command "set_default_model filter_top "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.986 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.96 sec.
 @I [HLS-100] Command "cdfg_preprocess -model filter_top "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 15.986 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 17.96 sec.
 @I [HLS-100] Command "rtl_gen_preprocess filter_top "
 @W [SYN-107] Renaming port name 'filter_top/in' to 'filter_top/in_r' to avoid conflict or HDL keywords.
 @W [SYN-107] Renaming port name 'filter_top/out' to 'filter_top/out_r' to avoid conflict or HDL keywords.
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 15.987 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.97 sec.
 @I [HLS-0] Model list for synthesis: filter_top_dummy_proc_fe fft<config1> fft<config2> {filter_top_operator*<ap_fixed >} filter_top_dummy_proc_be filter_top
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -425,16 +428,16 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model filter_top_dummy_proc_fe "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 15.987 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.98 sec.
 @I [HLS-100] Command "schedule -model filter_top_dummy_proc_fe "
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 0.05Total elapsed time: 16.48 sec.
-@I [HLS-111] Elapsed time: 0.06 seconds; current memory usage: 120 MB.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.08Total elapsed time: 17.177 sec.
+@I [HLS-111] Elapsed time: 0.1 seconds; current memory usage: 120 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_fe.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.51 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.181 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_fe.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.54 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 17.184 sec.
 @I [HLS-0] Finish scheduling filter_top_dummy_proc_fe.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -443,7 +446,7 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model filter_top_dummy_proc_fe "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 16.55 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.185 sec.
 @I [HLS-100] Command "bind -model filter_top_dummy_proc_fe "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -478,12 +481,12 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0.01Total elapsed time: 16.58 sec.
-@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 120 MB.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.01Total elapsed time: 17.189 sec.
+@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 120 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_fe.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.63 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.194 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_fe.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.66 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 17.198 sec.
 @I [HLS-0] Finish binding filter_top_dummy_proc_fe.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -492,15 +495,15 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model fft<config1> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 16.67 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.198 sec.
 @I [HLS-100] Command "schedule -model fft<config1> "
 @I [SCHED-11] Skip scheduling the IP block.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 0.01Total elapsed time: 16.76 sec.
-@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 120 MB.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.01Total elapsed time: 17.207 sec.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 120 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 16.86 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 17.218 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.89 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 17.221 sec.
 @I [HLS-0] Finish scheduling fft<config1>.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -509,7 +512,7 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model fft<config1> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 16.90 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.221 sec.
 @I [HLS-100] Command "bind -model fft<config1> "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -544,12 +547,12 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0Total elapsed time: 16.90 sec.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0Total elapsed time: 17.221 sec.
 @I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 121 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 16.94 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.225 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.97 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 17.229 sec.
 @I [HLS-0] Finish binding fft<config1>.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -558,15 +561,15 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model fft<config2> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 16.97 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.229 sec.
 @I [HLS-100] Command "schedule -model fft<config2> "
 @I [SCHED-11] Skip scheduling the IP block.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 0.02Total elapsed time: 16.106 sec.
-@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 121 MB.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.01Total elapsed time: 17.237 sec.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 121 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 16.113 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.244 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.116 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 17.247 sec.
 @I [HLS-0] Finish scheduling fft<config2>.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -575,7 +578,7 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model fft<config2> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 16.117 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.248 sec.
 @I [HLS-100] Command "bind -model fft<config2> "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -610,12 +613,12 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0Total elapsed time: 16.117 sec.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0Total elapsed time: 17.248 sec.
 @I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 121 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.121 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.252 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 16.124 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 17.255 sec.
 @I [HLS-0] Finish binding fft<config2>.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -624,16 +627,18 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model filter_top_operator*<ap_fixed > "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 16.124 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.255 sec.
 @I [HLS-100] Command "schedule -model filter_top_operator*<ap_fixed > "
 @I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining function 'filter_top_operator*<ap_fixed >'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 8.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 0.07Total elapsed time: 16.208 sec.
-@I [HLS-111] Elapsed time: 0.08 seconds; current memory usage: 121 MB.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.09Total elapsed time: 17.340 sec.
+@I [HLS-111] Elapsed time: 0.09 seconds; current memory usage: 121 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_multop_operator_ap_fixed_s.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 16.210 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.341 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_multop_operator_ap_fixed_s.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.212 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 17.343 sec.
 @I [HLS-0] Finish scheduling filter_top_operator*<ap_fixed >.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -642,7 +647,7 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model filter_top_operator*<ap_fixed > "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 16.212 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.344 sec.
 @I [HLS-100] Command "bind -model filter_top_operator*<ap_fixed > "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -677,12 +682,12 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0Total elapsed time: 16.218 sec.
-@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 121 MB.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0Total elapsed time: 17.349 sec.
+@I [HLS-111] Elapsed time: 0 seconds; current memory usage: 121 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_multop_operator_ap_fixed_s.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 16.235 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 17.368 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_multop_operator_ap_fixed_s.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.237 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 17.371 sec.
 @I [HLS-0] Finish binding filter_top_operator*<ap_fixed >.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -691,16 +696,18 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model filter_top_dummy_proc_be "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 16.238 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.372 sec.
 @I [HLS-100] Command "schedule -model filter_top_dummy_proc_be "
 @I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'for_of_the_multi'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 10.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 0.03Total elapsed time: 16.264 sec.
-@I [HLS-111] Elapsed time: 0.06 seconds; current memory usage: 121 MB.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.03Total elapsed time: 17.402 sec.
+@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 121 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_be.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.265 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.404 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_be.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.267 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 17.406 sec.
 @I [HLS-0] Finish scheduling filter_top_dummy_proc_be.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -709,7 +716,7 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model filter_top_dummy_proc_be "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 16.267 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.406 sec.
 @I [HLS-100] Command "bind -model filter_top_dummy_proc_be "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -744,12 +751,12 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0.01Total elapsed time: 16.274 sec.
-@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 121 MB.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0Total elapsed time: 17.413 sec.
+@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 122 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_be.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 16.292 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 17.431 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_be.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.295 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 17.434 sec.
 @I [HLS-0] Finish binding filter_top_dummy_proc_be.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -758,16 +765,16 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model filter_top "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 16.295 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.434 sec.
 @I [HLS-100] Command "schedule -model filter_top "
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 0.01Total elapsed time: 16.310 sec.
-@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 121 MB.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.02Total elapsed time: 17.449 sec.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 122 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.312 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.451 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 16.314 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 17.453 sec.
 @I [HLS-0] Finish scheduling filter_top.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -776,7 +783,7 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model filter_top "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 16.314 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 17.454 sec.
 @I [HLS-100] Command "bind -model filter_top "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -811,28 +818,28 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0.02Total elapsed time: 16.341 sec.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.03Total elapsed time: 17.480 sec.
 @I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 122 MB.
 @I [HLS-100] Command "report -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.04Total elapsed time: 16.380 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.04Total elapsed time: 17.518 sec.
 @I [HLS-100] Command "db_write -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.383 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 17.520 sec.
 @I [HLS-0] Finish binding filter_top.
 @I [HLS-100] Command "get_model_list filter_top -filter all-wo-channel "
-@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 16.383 sec.
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 17.521 sec.
 @I [HLS-0] Preprocessing for RTLGen ...
 @I [HLS-100] Command "rtl_gen_preprocess filter_top_dummy_proc_fe "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 16.383 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.521 sec.
 @I [HLS-100] Command "rtl_gen_preprocess fft<config1> "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 16.383 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.521 sec.
 @I [HLS-100] Command "rtl_gen_preprocess fft<config2> "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 16.384 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.522 sec.
 @I [HLS-100] Command "rtl_gen_preprocess filter_top_operator*<ap_fixed > "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 16.384 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.522 sec.
 @I [HLS-100] Command "rtl_gen_preprocess filter_top_dummy_proc_be "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 16.384 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.522 sec.
 @I [HLS-100] Command "rtl_gen_preprocess filter_top "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 16.385 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 17.523 sec.
 @I [HLS-0] Model list for RTL generation: filter_top_dummy_proc_fe fft<config1> fft<config2> {filter_top_operator*<ap_fixed >} filter_top_dummy_proc_be filter_top
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -842,26 +849,26 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "create_rtl_model filter_top_dummy_proc_fe -vendor xilinx -mg_file /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_fe.compgen.tcl "
 @I [RTGEN-100] Finished creating RTL model for 'filter_top_dummy_proc_fe'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.02Total elapsed time: 16.398 sec.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.02Total elapsed time: 17.536 sec.
 @I [HLS-111] Elapsed time: 0.06 seconds; current memory usage: 122 MB.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.399 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.537 sec.
 @I [HLS-100] Command "gen_rtl filter_top_dummy_proc_fe -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/systemc/filter_top_dummy_proc_fe -synmodules filter_top_dummy_proc_fe fft<config1> fft<config2> {filter_top_operator*<ap_fixed >} filter_top_dummy_proc_be filter_top "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.400 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.538 sec.
 @I [HLS-100] Command "gen_rtl filter_top_dummy_proc_fe -style xilinx -f -lang vhdl -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/vhdl/filter_top_dummy_proc_fe "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.401 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.539 sec.
 @I [HLS-100] Command "gen_rtl filter_top_dummy_proc_fe -style xilinx -f -lang vlog -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/verilog/filter_top_dummy_proc_fe "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.402 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.540 sec.
 @I [HLS-100] Command "gen_tb_info filter_top_dummy_proc_fe -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_fe -p /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 16.403 sec.
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 17.541 sec.
 @I [HLS-100] Command "report -model filter_top_dummy_proc_fe -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/filter_top_dummy_proc_fe_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.406 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.544 sec.
 @I [HLS-100] Command "report -model filter_top_dummy_proc_fe -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/filter_top_dummy_proc_fe_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.409 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.546 sec.
 @I [HLS-100] Command "report -model filter_top_dummy_proc_fe -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_fe.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 16.416 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 17.553 sec.
 @I [HLS-100] Command "db_write -model filter_top_dummy_proc_fe -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_fe.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 16.422 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 17.559 sec.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'fft_config1_s' 
@@ -870,26 +877,26 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "create_rtl_model fft<config1> -vendor xilinx -mg_file /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl "
 @I [RTGEN-100] Finished creating RTL model for 'fft_config1_s'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0Total elapsed time: 16.429 sec.
-@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 123 MB.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0Total elapsed time: 17.566 sec.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 123 MB.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.430 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.566 sec.
 @I [HLS-100] Command "gen_rtl fft<config1> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/systemc/fft_config1_s -synmodules filter_top_dummy_proc_fe fft<config1> fft<config2> {filter_top_operator*<ap_fixed >} filter_top_dummy_proc_be filter_top "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.430 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.566 sec.
 @I [HLS-100] Command "gen_rtl fft<config1> -style xilinx -f -lang vhdl -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/vhdl/fft_config1_s "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.430 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.566 sec.
 @I [HLS-100] Command "gen_rtl fft<config1> -style xilinx -f -lang vlog -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/verilog/fft_config1_s "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.430 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.566 sec.
 @I [HLS-100] Command "gen_tb_info fft<config1> -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s -p /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 16.430 sec.
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.01Total elapsed time: 17.566 sec.
 @I [HLS-100] Command "report -model fft<config1> -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/fft_config1_s_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 16.434 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.570 sec.
 @I [HLS-100] Command "report -model fft<config1> -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/fft_config1_s_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.438 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 17.574 sec.
 @I [HLS-100] Command "report -model fft<config1> -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.442 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.578 sec.
 @I [HLS-100] Command "db_write -model fft<config1> -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 16.446 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 17.581 sec.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'fft_config2_s' 
@@ -898,26 +905,26 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "create_rtl_model fft<config2> -vendor xilinx -mg_file /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl "
 @I [RTGEN-100] Finished creating RTL model for 'fft_config2_s'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0Total elapsed time: 16.446 sec.
-@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 123 MB.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0Total elapsed time: 17.582 sec.
+@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 123 MB.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.447 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.582 sec.
 @I [HLS-100] Command "gen_rtl fft<config2> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/systemc/fft_config2_s -synmodules filter_top_dummy_proc_fe fft<config1> fft<config2> {filter_top_operator*<ap_fixed >} filter_top_dummy_proc_be filter_top "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.447 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.582 sec.
 @I [HLS-100] Command "gen_rtl fft<config2> -style xilinx -f -lang vhdl -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/vhdl/fft_config2_s "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.447 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.582 sec.
 @I [HLS-100] Command "gen_rtl fft<config2> -style xilinx -f -lang vlog -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/verilog/fft_config2_s "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.447 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.582 sec.
 @I [HLS-100] Command "gen_tb_info fft<config2> -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s -p /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 16.447 sec.
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 17.583 sec.
 @I [HLS-100] Command "report -model fft<config2> -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/fft_config2_s_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.451 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.587 sec.
 @I [HLS-100] Command "report -model fft<config2> -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/fft_config2_s_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 16.455 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.590 sec.
 @I [HLS-100] Command "report -model fft<config2> -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.459 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 17.594 sec.
 @I [HLS-100] Command "db_write -model fft<config2> -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.463 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 17.598 sec.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'filter_multop_operator_ap_fixed_s' 
@@ -927,26 +934,26 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-100] Command "create_rtl_model filter_top_operator*<ap_fixed > -vendor xilinx -mg_file /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_multop_operator_ap_fixed_s.compgen.tcl "
 @I [RTGEN-100] Generating core module 'filter_top_mul_32s_32s_63_7': 4 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'filter_multop_operator_ap_fixed_s'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.01Total elapsed time: 16.469 sec.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.01Total elapsed time: 17.609 sec.
 @I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 123 MB.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.469 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.609 sec.
 @I [HLS-100] Command "gen_rtl filter_top_operator*<ap_fixed > -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/systemc/filter_multop_operator_ap_fixed_s -synmodules filter_top_dummy_proc_fe fft<config1> fft<config2> {filter_top_operator*<ap_fixed >} filter_top_dummy_proc_be filter_top "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.470 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.610 sec.
 @I [HLS-100] Command "gen_rtl filter_top_operator*<ap_fixed > -style xilinx -f -lang vhdl -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/vhdl/filter_multop_operator_ap_fixed_s "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.470 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.610 sec.
 @I [HLS-100] Command "gen_rtl filter_top_operator*<ap_fixed > -style xilinx -f -lang vlog -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/verilog/filter_multop_operator_ap_fixed_s "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.471 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.611 sec.
 @I [HLS-100] Command "gen_tb_info filter_top_operator*<ap_fixed > -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_multop_operator_ap_fixed_s -p /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 16.471 sec.
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 17.611 sec.
 @I [HLS-100] Command "report -model filter_top_operator*<ap_fixed > -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/filter_multop_operator_ap_fixed_s_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 16.477 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 17.617 sec.
 @I [HLS-100] Command "report -model filter_top_operator*<ap_fixed > -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/filter_multop_operator_ap_fixed_s_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.483 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.623 sec.
 @I [HLS-100] Command "report -model filter_top_operator*<ap_fixed > -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_multop_operator_ap_fixed_s.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 16.506 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 17.646 sec.
 @I [HLS-100] Command "db_write -model filter_top_operator*<ap_fixed > -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_multop_operator_ap_fixed_s.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.514 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 17.654 sec.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'filter_top_dummy_proc_be' 
@@ -955,26 +962,26 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "create_rtl_model filter_top_dummy_proc_be -vendor xilinx -mg_file /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_be.compgen.tcl "
 @I [RTGEN-100] Finished creating RTL model for 'filter_top_dummy_proc_be'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0Total elapsed time: 16.525 sec.
-@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 124 MB.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.02Total elapsed time: 17.678 sec.
+@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 124 MB.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.525 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.678 sec.
 @I [HLS-100] Command "gen_rtl filter_top_dummy_proc_be -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/systemc/filter_top_dummy_proc_be -synmodules filter_top_dummy_proc_fe fft<config1> fft<config2> {filter_top_operator*<ap_fixed >} filter_top_dummy_proc_be filter_top "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.526 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.681 sec.
 @I [HLS-100] Command "gen_rtl filter_top_dummy_proc_be -style xilinx -f -lang vhdl -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/vhdl/filter_top_dummy_proc_be "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 16.526 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.683 sec.
 @I [HLS-100] Command "gen_rtl filter_top_dummy_proc_be -style xilinx -f -lang vlog -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/verilog/filter_top_dummy_proc_be "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.527 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 17.686 sec.
 @I [HLS-100] Command "gen_tb_info filter_top_dummy_proc_be -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_be -p /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 16.528 sec.
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 17.686 sec.
 @I [HLS-100] Command "report -model filter_top_dummy_proc_be -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/filter_top_dummy_proc_be_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.531 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.693 sec.
 @I [HLS-100] Command "report -model filter_top_dummy_proc_be -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/filter_top_dummy_proc_be_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.532 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 17.697 sec.
 @I [HLS-100] Command "report -model filter_top_dummy_proc_be -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_be.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 16.554 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 17.734 sec.
 @I [HLS-100] Command "db_write -model filter_top_dummy_proc_be -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_be.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 16.558 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 17.741 sec.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'filter_top' 
@@ -989,58 +996,58 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [RTGEN-500] Setting interface mode on port 'filter_top/out_r' to 'ap_hs'.
 @I [RTGEN-500] Setting interface mode on function 'filter_top' to 'ap_ctrl_hs'.
 @I [RTGEN-100] Finished creating RTL model for 'filter_top'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0Total elapsed time: 16.565 sec.
-@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 125 MB.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0Total elapsed time: 17.753 sec.
+@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 125 MB.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.565 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.754 sec.
 @I [HLS-100] Command "gen_rtl filter_top -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/systemc/filter_top -synmodules filter_top_dummy_proc_fe fft<config1> fft<config2> {filter_top_operator*<ap_fixed >} filter_top_dummy_proc_be filter_top "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.566 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.755 sec.
 @I [HLS-100] Command "gen_rtl filter_top -istop -style xilinx -f -lang vhdl -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/vhdl/filter_top "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 16.571 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 17.761 sec.
 @I [HLS-100] Command "gen_rtl filter_top -istop -style xilinx -f -lang vlog -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/verilog/filter_top "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 16.574 sec.
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 17.766 sec.
 @I [HLS-100] Command "export_constraint_db -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.constraint.tcl -f -tool general "
-@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0Total elapsed time: 16.575 sec.
+@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0Total elapsed time: 17.766 sec.
 @I [HLS-100] Command "report -model filter_top -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.design.xml -verbose -f -dv "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.04Total elapsed time: 16.611 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.05Total elapsed time: 17.813 sec.
 @I [HLS-100] Command "gen_tb_info filter_top -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top -p /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 16.612 sec.
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 17.814 sec.
 @I [HLS-100] Command "report -model filter_top -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/filter_top_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 16.616 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 17.819 sec.
 @I [HLS-100] Command "report -model filter_top -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/syn/report/filter_top_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 16.620 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 17.822 sec.
 @I [HLS-100] Command "report -model filter_top -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.05Total elapsed time: 16.664 sec.
+@I [HLS-100] Command 'report' returned 0; elapsed 0.04Total elapsed time: 17.867 sec.
 @I [HLS-100] Command "db_write -model filter_top -o /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 16.670 sec.
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 17.873 sec.
 @I [HLS-100] Command "sc_get_clocks filter_top "
-@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 0Total elapsed time: 16.674 sec.
+@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 0Total elapsed time: 17.876 sec.
 @I [HLS-100] Command "sc_get_portdomain filter_top "
-@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 0Total elapsed time: 16.674 sec.
+@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 0Total elapsed time: 17.876 sec.
 @I [HLS-0] Model list for RTL component generation: filter_top_dummy_proc_fe fft<config1> fft<config2> {filter_top_operator*<ap_fixed >} filter_top_dummy_proc_be filter_top
 @I [HLS-0] Handling components in module [filter_top_dummy_proc_fe] ... 
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_fe.compgen.tcl "
 @I [HLS-0] Found component filter_top_dummy_proc_fe_detector_tail_M_real_V.
 @I [HLS-0] Append model filter_top_dummy_proc_fe_detector_tail_M_real_V
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.675 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.877 sec.
 @I [HLS-0] Handling components in module [fft_config1_s] ... 
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl "
 @I [HLS-0] Found component fft_config1_s.
 @I [HLS-0] Append model fft_config1_s
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.675 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.877 sec.
 @I [HLS-0] Handling components in module [fft_config2_s] ... 
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl "
 @I [HLS-0] Found component fft_config2_s.
 @I [HLS-0] Append model fft_config2_s
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.675 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.878 sec.
 @I [HLS-0] Handling components in module [filter_multop_operator_ap_fixed_s] ... 
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_multop_operator_ap_fixed_s.compgen.tcl "
 @I [HLS-0] Found component filter_top_mul_32s_32s_63_7.
 @I [HLS-0] Append model filter_top_mul_32s_32s_63_7
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.675 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.878 sec.
 @I [HLS-0] Handling components in module [filter_top_dummy_proc_be] ... 
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_be.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.675 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 17.878 sec.
 @I [HLS-0] Handling components in module [filter_top] ... 
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.compgen.tcl "
 @I [HLS-0] Found component FIFO_filter_top_fft_config_fwd_data_V.
@@ -1055,7 +1062,7 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-0] Append model FIFO_filter_top_xk_channel
 @I [HLS-0] Found component FIFO_filter_top_xk2_channel.
 @I [HLS-0] Append model FIFO_filter_top_xk2_channel
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.676 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.879 sec.
 @I [HLS-0] Append model filter_top_dummy_proc_fe
 @I [HLS-0] Append model fft_config1_s
 @I [HLS-0] Append model fft_config2_s
@@ -1087,77 +1094,77 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-0] CAS Generation done.
 @I [HLS-0] CBC Generation done.
 @I [HLS-100] Command "export_ssdm /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/a.export.ll "
-@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0Total elapsed time: 16.677 sec.
+@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0Total elapsed time: 17.880 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.679 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.882 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/generic/autopilot/common.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/generic/autopilot/APCoreGen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.680 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.680 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.883 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.883 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/generic/autopilot/op.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.680 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.883 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/generic/autopilot/op_simcore.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.681 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.884 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/generic/autopilot/interface.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.681 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.884 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.681 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.884 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/kintex7/kintex7.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/virtex.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/plb46.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 16.682 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.885 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/fsl.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.683 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.886 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/axi4.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.684 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.887 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/nativeAXI4.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/saxilite.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.686 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.889 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/maxi.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.691 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.691 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 17.893 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 17.893 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 16.696 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.898 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.702 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 17.904 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/ip/util.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.702 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.904 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfft.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.07Total elapsed time: 16.771 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.07Total elapsed time: 17.971 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/ip/xfir.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 16.788 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.11Total elapsed time: 16.788 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 17.988 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.11Total elapsed time: 17.988 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/dsp48.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.789 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.11Total elapsed time: 16.789 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.11Total elapsed time: 16.789 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.989 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.11Total elapsed time: 17.990 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.11Total elapsed time: 17.990 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/kintex7/kintex7_fpv6.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2014.4/common/technology/xilinx/common/xilinx_fpv6.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.790 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.790 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.991 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.991 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.791 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.991 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.791 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.991 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.791 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.992 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.795 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 17.995 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.797 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 17.997 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_fe.compgen.tcl "
 @I [RTMG-278] Implementing memory 'filter_top_dummy_proc_fe_detector_tail_M_real_V_ram' using block RAMs with power-on initialization.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 16.804 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 18.4 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config1_s.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.804 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 18.5 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/fft_config2_s.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.805 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 18.5 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_multop_operator_ap_fixed_s.compgen.tcl "
 @I [RTMG-282] Generating pipelined core: 'filter_top_mul_32s_32s_63_7_MulnS_0'
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 16.812 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 18.13 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top_dummy_proc_be.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 16.812 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 18.13 sec.
 @I [HLS-100] Command "source /home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.autopilot/db/filter_top.compgen.tcl "
 @I [RTMG-285] Implementing FIFO 'FIFO_filter_top_fft_config_fwd_data_V' using Block RAMs.
 @I [RTMG-285] Implementing FIFO 'FIFO_filter_top_fft_config_inv_data_V' using Block RAMs.
@@ -1165,13 +1172,13 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [RTMG-285] Implementing FIFO 'FIFO_filter_top_xn2_channel' using Block RAMs.
 @I [RTMG-285] Implementing FIFO 'FIFO_filter_top_xk_channel' using Block RAMs.
 @I [RTMG-285] Implementing FIFO 'FIFO_filter_top_xk2_channel' using Block RAMs.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 16.828 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 18.28 sec.
 @I [HLS-10] Finished generating all RTL models.
 @0 [HLS-0] Finished generating all RTL models.
 @I [WSYSC-301] Generating RTL SystemC for 'filter_top'.
 @I [WVHDL-304] Generating RTL VHDL for 'filter_top'.
 @I [WVLOG-307] Generating RTL Verilog for 'filter_top'.
-@I [HLS-100] Command 'autosyn' returned 0; elapsed 0.85Total elapsed time: 16.835 sec.
-@I [HLS-100] Command 'csynth_design' returned 0; elapsed 4.7Total elapsed time: 16.835 sec.
+@I [HLS-100] Command 'autosyn' returned 0; elapsed 0.96Total elapsed time: 18.35 sec.
+@I [HLS-100] Command 'csynth_design' returned 0; elapsed 5.21Total elapsed time: 18.35 sec.
 @I [HLS-100] Command "cleanup_all "
-@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.01Total elapsed time: 16.840 sec.
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0Total elapsed time: 18.42 sec.

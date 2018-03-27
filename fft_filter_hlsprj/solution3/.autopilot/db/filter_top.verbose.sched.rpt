@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'filter_top'
 ================================================================
-* Date:           Tue Mar 27 09:39:46 2018
+* Date:           Tue Mar 27 10:00:47 2018
 
 * Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
 * Project:        fft_filter_hlsprj
@@ -25,12 +25,12 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +-------+-------+-------+-------+----------+
-    |    Latency    |    Interval   | Pipeline |
-    |  min  |  max  |  min  |  max  |   Type   |
-    +-------+-------+-------+-------+----------+
-    |  20481|  20481|  20482|  20482| dataflow |
-    +-------+-------+-------+-------+----------+
+    +------+------+------+------+----------+
+    |   Latency   |   Interval  | Pipeline |
+    |  min |  max |  min |  max |   Type   |
+    +------+------+------+------+----------+
+    |  6278|  6278|  6279|  6279| dataflow |
+    +------+------+------+------+----------+
 
     + Detail: 
         * Instance: 
@@ -189,51 +189,51 @@ ST_5: stg_21 [2/2] 0.00ns
 .preheader51.preheader:38  call fastcc void @filter_top_dummy_proc_be([2048 x i64]* %coefs, i64* %xk_channel, i64* %xk2_channel, [2048 x i64]* %outxk1, i64* %out_r)
 
 
- <State 6>: 0.00ns
+ <State 6>: 1.79ns
 ST_6: stg_22 [1/1] 0.00ns
 .preheader51.preheader:2  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str1) nounwind
 
 ST_6: stg_23 [1/1] 0.00ns
-.preheader51.preheader:3  call void (...)* @_ssdm_op_SpecBitsMap(i64* %in_r), !map !7
+.preheader51.preheader:3  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !7
 
 ST_6: stg_24 [1/1] 0.00ns
-.preheader51.preheader:4  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %coefs), !map !16
+.preheader51.preheader:4  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !16
 
 ST_6: stg_25 [1/1] 0.00ns
-.preheader51.preheader:5  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !25
+.preheader51.preheader:5  call void (...)* @_ssdm_op_SpecBitsMap(i64* %in_r), !map !23
 
 ST_6: stg_26 [1/1] 0.00ns
-.preheader51.preheader:6  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !32
+.preheader51.preheader:6  call void (...)* @_ssdm_op_SpecBitsMap(i64* %out_r), !map !32
 
 ST_6: stg_27 [1/1] 0.00ns
-.preheader51.preheader:7  call void (...)* @_ssdm_op_SpecBitsMap(i64* %out_r), !map !39
+.preheader51.preheader:7  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %coefs), !map !39
 
 ST_6: stg_28 [1/1] 0.00ns
 .preheader51.preheader:12  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @str) nounwind
 
 ST_6: stg_29 [1/1] 0.00ns
-.preheader51.preheader:15  call void (...)* @_ssdm_op_SpecInterface([2048 x i64]* %coefs, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+.preheader51.preheader:15  call void (...)* @_ssdm_op_SpecInterface([2048 x i64]* %coefs, [10 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
 ST_6: stg_30 [1/1] 0.00ns
-.preheader51.preheader:16  call void (...)* @_ssdm_op_SpecInterface(i64* %out_r, [6 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+.preheader51.preheader:16  call void (...)* @_ssdm_op_SpecInterface(i64* %out_r, [6 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ST_6: stg_31 [1/1] 0.00ns
-.preheader51.preheader:17  call void (...)* @_ssdm_op_SpecInterface(i64* %in_r, [6 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+.preheader51.preheader:17  call void (...)* @_ssdm_op_SpecInterface(i64* %in_r, [6 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ST_6: stg_32 [1/1] 0.00ns
-.preheader51.preheader:18  call void (...)* @_ssdm_op_SpecInterface([2048 x i64]* %outxk1, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+.preheader51.preheader:18  call void (...)* @_ssdm_op_SpecInterface([2048 x i64]* %outxk1, [10 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
 ST_6: stg_33 [1/1] 0.00ns
-.preheader51.preheader:19  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %outxk1, [1 x i8]* @p_str1, [7 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+.preheader51.preheader:19  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %outxk1, [1 x i8]* @p_str1, [7 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ST_6: stg_34 [1/1] 0.00ns
-.preheader51.preheader:20  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %inxn2, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+.preheader51.preheader:20  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %inxn2, [1 x i8]* @p_str1, [12 x i8]* @p_str5, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ST_6: stg_35 [1/1] 0.00ns
-.preheader51.preheader:21  call void (...)* @_ssdm_op_SpecInterface([2048 x i64]* %inxn2, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+.preheader51.preheader:21  call void (...)* @_ssdm_op_SpecInterface([2048 x i64]* %inxn2, [10 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
 ST_6: stg_36 [1/1] 0.00ns
-.preheader51.preheader:22  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %coefs, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+.preheader51.preheader:22  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %coefs, [1 x i8]* @p_str1, [12 x i8]* @p_str5, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ST_6: empty [1/1] 0.00ns
 .preheader51.preheader:24  %empty = call i32 (...)* @_ssdm_op_SpecChannel([30 x i8]* @str62, i32 1, [1 x i8]* @str63, [1 x i8]* @str63, i32 2048, i32 0, i16* %fft_config_fwd_data_V, i16* %fft_config_fwd_data_V)
@@ -271,7 +271,7 @@ ST_6: empty_31 [1/1] 0.00ns
 ST_6: stg_48 [1/1] 0.00ns
 .preheader51.preheader:37  call void (...)* @_ssdm_op_SpecInterface(i64* %xk2_channel, [8 x i8]* @str79, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str79, [8 x i8]* @str79, [8 x i8]* @str79)
 
-ST_6: stg_49 [1/2] 0.00ns
+ST_6: stg_49 [1/2] 1.79ns
 .preheader51.preheader:38  call fastcc void @filter_top_dummy_proc_be([2048 x i64]* %coefs, i64* %xk_channel, i64* %xk2_channel, [2048 x i64]* %outxk1, i64* %out_r)
 
 ST_6: stg_50 [1/1] 0.00ns

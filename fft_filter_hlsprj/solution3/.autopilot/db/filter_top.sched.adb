@@ -1019,7 +1019,7 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>20481</mMinLatency>
+			<mMinLatency>6278</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>1</mIsDfPipe>
 			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_65">

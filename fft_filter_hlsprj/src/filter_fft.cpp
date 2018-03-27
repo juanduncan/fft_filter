@@ -24,7 +24,7 @@ void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, complex_coef_t c
 		data_out_t  output_xk1[FFT_LENGTH], data_out_t  dummy[TAIL_LENGTH], data_out_t out[FILTER_LENGTH])
 {
    int i;
-    for (i=0; i< FFT_LENGTH; i++){
+    for_of_the_multi : for (i=0; i< FFT_LENGTH; i++){
     	output_xk1[i] =  data_out_t( complex_coef_t(input_xk1[i]) * coefs[i]  );
     	if(i< TAIL_LENGTH){
     		dummy[i] = input_xk2[i];  //dummy ---> To discard the first TAIL_LENGTH output samples

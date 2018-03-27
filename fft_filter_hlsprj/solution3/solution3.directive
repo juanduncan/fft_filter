@@ -6,6 +6,9 @@
                 <option name="port" value="coefs" positionalBoolean="4"/>
             </pragma>
         </directive>
+        <directive functionName="dummy_proc_be" label="for_of_the_multi" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

@@ -104,7 +104,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:3  call void (...)* @_ssdm_op_S
 
 <node id="13" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="8" op_7_bw="8" op_8_bw="8">
 <![CDATA[
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:4  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %input_xn2, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:4  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %input_xn2, [1 x i8]* @p_str1, [12 x i8]* @p_str5, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -119,7 +119,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:4  call void (...)* @_ssdm_op_S
 
 <node id="14" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:5  call void (...)* @_ssdm_op_SpecInterface([2048 x i64]* %input_xn2, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:5  call void (...)* @_ssdm_op_SpecInterface([2048 x i64]* %input_xn2, [10 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -934,7 +934,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:10  br label %0
 </dataflow>
 <dataflow id="119" from="p_str1" to="stg_9" fromId="118" toId="9">
 </dataflow>
-<dataflow id="121" from="p_str4" to="stg_9" fromId="120" toId="9">
+<dataflow id="121" from="p_str5" to="stg_9" fromId="120" toId="9">
 </dataflow>
 <dataflow id="122" from="p_str1" to="stg_9" fromId="118" toId="9">
 </dataflow>
@@ -950,7 +950,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:10  br label %0
 </dataflow>
 <dataflow id="129" from="input_xn2" to="stg_10" fromId="64" toId="10">
 </dataflow>
-<dataflow id="131" from="p_str" to="stg_10" fromId="130" toId="10">
+<dataflow id="131" from="p_str2" to="stg_10" fromId="130" toId="10">
 </dataflow>
 <dataflow id="132" from="stg_74" to="stg_10" fromId="74" toId="10">
 </dataflow>
