@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 # FIFO definition:
-set ID 19
+set ID 23
 set FifoName FIFO_filter_top_fft_config_fwd_data_V
 set CoreName ap_simcore_fifo
 set NumOfStage 2
@@ -62,7 +62,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 
 # FIFO definition:
-set ID 20
+set ID 24
 set FifoName FIFO_filter_top_fft_config_inv_data_V
 set CoreName ap_simcore_fifo
 set NumOfStage 2
@@ -123,7 +123,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 
 # FIFO definition:
-set ID 21
+set ID 25
 set FifoName FIFO_filter_top_xn_channel
 set CoreName ap_simcore_fifo
 set NumOfStage 2
@@ -184,7 +184,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 
 # FIFO definition:
-set ID 22
+set ID 26
 set FifoName FIFO_filter_top_xn2_channel
 set CoreName ap_simcore_fifo
 set NumOfStage 2
@@ -245,7 +245,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 
 # FIFO definition:
-set ID 23
+set ID 27
 set FifoName FIFO_filter_top_xk_channel
 set CoreName ap_simcore_fifo
 set NumOfStage 2
@@ -306,7 +306,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 
 # FIFO definition:
-set ID 24
+set ID 28
 set FifoName FIFO_filter_top_xk2_channel
 set CoreName ap_simcore_fifo
 set NumOfStage 2
@@ -377,7 +377,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 25 \
+    id 29 \
     name coefs \
     reset_level 0 \
     sync_rst true \
@@ -396,7 +396,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 26 \
+    id 30 \
     name in_r \
     reset_level 0 \
     sync_rst true \
@@ -415,7 +415,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 27 \
+    id 31 \
     name inxn2 \
     reset_level 0 \
     sync_rst true \
@@ -434,7 +434,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 28 \
+    id 32 \
     name outxk1 \
     reset_level 0 \
     sync_rst true \
@@ -449,24 +449,20 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
-# Native AXIS:
+# Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
-eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 29 \
+eval "cg_default_interface_gen_dc { \
+    id 33 \
     name out_r \
+    type other \
+    dir O \
     reset_level 0 \
     sync_rst true \
-    corename {} \
-    metadata {  } \
+    corename dc_out_r \
     op interface \
-    ports { out_r_TDATA { O 64 vector } out_r_TVALID { O 1 bit } out_r_TREADY { I 1 bit } } \
+    ports { out_r { O 64 vector } out_r_ap_vld { O 1 bit } out_r_ap_ack { I 1 bit } } \
 } "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_r'"
 }
-}
-
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

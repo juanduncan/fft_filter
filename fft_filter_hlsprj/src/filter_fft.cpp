@@ -18,12 +18,12 @@ void dummy_proc_fe(config_t* config_fwd, config_ti* config_inv,
     	}
     }
 }
-void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, data_in_t  coefs[FFT_LENGTH],
+void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, complex_coef_t coefs[FFT_LENGTH],
 		data_out_t   input_xk1[FFT_LENGTH], data_out_t  input_xk2[FFT_LENGTH],
-		data_out_t  output_xk1[FFT_LENGTH], data_out_t  dummy[TAIL_LENGTH],data_out_t out[FILTER_LENGTH])
+		data_out_t  output_xk1[FFT_LENGTH], data_out_t  dummy[TAIL_LENGTH], data_out_t out[FILTER_LENGTH])
 {   int i;
     for (i=0; i< FFT_LENGTH; i++){
-    	output_xk1[i] =  data_out_t( input_xk1[i]* data_out_t(coefs[i])  );
+    	output_xk1[i] =  data_out_t( complex_coef_t(input_xk1[i]) * coefs[i]  );
     	if(i< TAIL_LENGTH){
     		dummy[i] = input_xk2[i];  //dummy ---> To discard the first TAIL_LENGTH output samples
     	}else{
@@ -33,13 +33,13 @@ void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, data_in_t  coefs
     //*ovflo = status_in->getOvflo() & 0x1;
 }
 
-void filter_top(	data_in_t coefs[FFT_LENGTH],
+void filter_top(	complex_coef_t coefs[FFT_LENGTH],
 					data_in_t in[FILTER_LENGTH],
 					data_out_t inxn2[FFT_LENGTH],
 					data_out_t outxk1[FFT_LENGTH],
 					data_out_t out[FILTER_LENGTH])
 {
-#pragma HLS INTERFACE axis port=out
+#pragma HLS INTERFACE ap_hs port=out
 #pragma HLS INTERFACE axis port=in
 #pragma HLS INTERFACE ap_memory port=outxk1
 #pragma HLS RESOURCE variable=outxk1 core=RAM_1P

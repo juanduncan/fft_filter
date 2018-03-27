@@ -106,9 +106,9 @@ filter_top::filter_top(sc_module_name name) : sc_module(name), mVcdFile(0) {
     filter_top_dummy_proc_be_U0->output_xk1_ce0(filter_top_dummy_proc_be_U0_output_xk1_ce0);
     filter_top_dummy_proc_be_U0->output_xk1_we0(filter_top_dummy_proc_be_U0_output_xk1_we0);
     filter_top_dummy_proc_be_U0->output_xk1_d0(filter_top_dummy_proc_be_U0_output_xk1_d0);
-    filter_top_dummy_proc_be_U0->out_r_TDATA(filter_top_dummy_proc_be_U0_out_r_TDATA);
-    filter_top_dummy_proc_be_U0->out_r_TVALID(filter_top_dummy_proc_be_U0_out_r_TVALID);
-    filter_top_dummy_proc_be_U0->out_r_TREADY(filter_top_dummy_proc_be_U0_out_r_TREADY);
+    filter_top_dummy_proc_be_U0->out_r(filter_top_dummy_proc_be_U0_out_r);
+    filter_top_dummy_proc_be_U0->out_r_ap_vld(filter_top_dummy_proc_be_U0_out_r_ap_vld);
+    filter_top_dummy_proc_be_U0->out_r_ap_ack(filter_top_dummy_proc_be_U0_out_r_ap_ack);
     fft_config_fwd_data_V_U = new FIFO_filter_top_fft_config_fwd_data_V("fft_config_fwd_data_V_U");
     fft_config_fwd_data_V_U->clk(ap_clk);
     fft_config_fwd_data_V_U->reset(ap_rst_n_inv);
@@ -315,8 +315,8 @@ filter_top::filter_top(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_filter_top_dummy_proc_be_U0_input_xk2_empty_n);
     sensitive << ( xk2_channel_empty_n );
 
-    SC_METHOD(thread_filter_top_dummy_proc_be_U0_out_r_TREADY);
-    sensitive << ( out_r_TREADY );
+    SC_METHOD(thread_filter_top_dummy_proc_be_U0_out_r_ap_ack);
+    sensitive << ( out_r_ap_ack );
 
     SC_METHOD(thread_filter_top_dummy_proc_fe_U0_ap_continue);
 
@@ -357,11 +357,11 @@ filter_top::filter_top(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_inxn2_we0);
 
-    SC_METHOD(thread_out_r_TDATA);
-    sensitive << ( filter_top_dummy_proc_be_U0_out_r_TDATA );
+    SC_METHOD(thread_out_r);
+    sensitive << ( filter_top_dummy_proc_be_U0_out_r );
 
-    SC_METHOD(thread_out_r_TVALID);
-    sensitive << ( filter_top_dummy_proc_be_U0_out_r_TVALID );
+    SC_METHOD(thread_out_r_ap_vld);
+    sensitive << ( filter_top_dummy_proc_be_U0_out_r_ap_vld );
 
     SC_METHOD(thread_outxk1_address0);
     sensitive << ( filter_top_dummy_proc_be_U0_output_xk1_address0 );
@@ -454,13 +454,13 @@ filter_top::filter_top(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, outxk1_d0, "(port)outxk1_d0");
     sc_trace(mVcdFile, outxk1_q0, "(port)outxk1_q0");
     sc_trace(mVcdFile, outxk1_we0, "(port)outxk1_we0");
-    sc_trace(mVcdFile, out_r_TDATA, "(port)out_r_TDATA");
+    sc_trace(mVcdFile, out_r, "(port)out_r");
     sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
     sc_trace(mVcdFile, ap_rst_n, "(port)ap_rst_n");
     sc_trace(mVcdFile, in_r_TVALID, "(port)in_r_TVALID");
     sc_trace(mVcdFile, in_r_TREADY, "(port)in_r_TREADY");
-    sc_trace(mVcdFile, out_r_TVALID, "(port)out_r_TVALID");
-    sc_trace(mVcdFile, out_r_TREADY, "(port)out_r_TREADY");
+    sc_trace(mVcdFile, out_r_ap_vld, "(port)out_r_ap_vld");
+    sc_trace(mVcdFile, out_r_ap_ack, "(port)out_r_ap_ack");
     sc_trace(mVcdFile, ap_done, "(port)ap_done");
     sc_trace(mVcdFile, ap_start, "(port)ap_start");
     sc_trace(mVcdFile, ap_idle, "(port)ap_idle");
@@ -545,9 +545,9 @@ filter_top::filter_top(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, filter_top_dummy_proc_be_U0_output_xk1_ce0, "filter_top_dummy_proc_be_U0_output_xk1_ce0");
     sc_trace(mVcdFile, filter_top_dummy_proc_be_U0_output_xk1_we0, "filter_top_dummy_proc_be_U0_output_xk1_we0");
     sc_trace(mVcdFile, filter_top_dummy_proc_be_U0_output_xk1_d0, "filter_top_dummy_proc_be_U0_output_xk1_d0");
-    sc_trace(mVcdFile, filter_top_dummy_proc_be_U0_out_r_TDATA, "filter_top_dummy_proc_be_U0_out_r_TDATA");
-    sc_trace(mVcdFile, filter_top_dummy_proc_be_U0_out_r_TVALID, "filter_top_dummy_proc_be_U0_out_r_TVALID");
-    sc_trace(mVcdFile, filter_top_dummy_proc_be_U0_out_r_TREADY, "filter_top_dummy_proc_be_U0_out_r_TREADY");
+    sc_trace(mVcdFile, filter_top_dummy_proc_be_U0_out_r, "filter_top_dummy_proc_be_U0_out_r");
+    sc_trace(mVcdFile, filter_top_dummy_proc_be_U0_out_r_ap_vld, "filter_top_dummy_proc_be_U0_out_r_ap_vld");
+    sc_trace(mVcdFile, filter_top_dummy_proc_be_U0_out_r_ap_ack, "filter_top_dummy_proc_be_U0_out_r_ap_ack");
     sc_trace(mVcdFile, ap_sig_hs_continue, "ap_sig_hs_continue");
     sc_trace(mVcdFile, fft_config_fwd_data_V_U_ap_dummy_ce, "fft_config_fwd_data_V_U_ap_dummy_ce");
     sc_trace(mVcdFile, fft_config_fwd_data_V_din, "fft_config_fwd_data_V_din");
@@ -919,8 +919,8 @@ void filter_top::thread_filter_top_dummy_proc_be_U0_input_xk2_empty_n() {
     filter_top_dummy_proc_be_U0_input_xk2_empty_n = xk2_channel_empty_n.read();
 }
 
-void filter_top::thread_filter_top_dummy_proc_be_U0_out_r_TREADY() {
-    filter_top_dummy_proc_be_U0_out_r_TREADY = out_r_TREADY.read();
+void filter_top::thread_filter_top_dummy_proc_be_U0_out_r_ap_ack() {
+    filter_top_dummy_proc_be_U0_out_r_ap_ack = out_r_ap_ack.read();
 }
 
 void filter_top::thread_filter_top_dummy_proc_fe_U0_ap_continue() {
@@ -979,12 +979,12 @@ void filter_top::thread_inxn2_we0() {
     inxn2_we0 = ap_const_logic_0;
 }
 
-void filter_top::thread_out_r_TDATA() {
-    out_r_TDATA = filter_top_dummy_proc_be_U0_out_r_TDATA.read();
+void filter_top::thread_out_r() {
+    out_r = filter_top_dummy_proc_be_U0_out_r.read();
 }
 
-void filter_top::thread_out_r_TVALID() {
-    out_r_TVALID = filter_top_dummy_proc_be_U0_out_r_TVALID.read();
+void filter_top::thread_out_r_ap_vld() {
+    out_r_ap_vld = filter_top_dummy_proc_be_U0_out_r_ap_vld.read();
 }
 
 void filter_top::thread_outxk1_address0() {
@@ -1095,12 +1095,12 @@ void filter_top::thread_hdltv_gen() {
         mHdltvoutHandle << " , " <<  " \"outxk1_d0\" :  \"" << outxk1_d0.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"outxk1_q0\" :  \"" << outxk1_q0.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"outxk1_we0\" :  \"" << outxk1_we0.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"out_r_TDATA\" :  \"" << out_r_TDATA.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"out_r\" :  \"" << out_r.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"ap_rst_n\" :  \"" << ap_rst_n.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"in_r_TVALID\" :  \"" << in_r_TVALID.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"in_r_TREADY\" :  \"" << in_r_TREADY.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"out_r_TVALID\" :  \"" << out_r_TVALID.read() << "\" ";
-        mHdltvinHandle << " , " <<  " \"out_r_TREADY\" :  \"" << out_r_TREADY.read() << "\" ";
+        mHdltvoutHandle << " , " <<  " \"out_r_ap_vld\" :  \"" << out_r_ap_vld.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"out_r_ap_ack\" :  \"" << out_r_ap_ack.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"ap_done\" :  \"" << ap_done.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"ap_start\" :  \"" << ap_start.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"ap_idle\" :  \"" << ap_idle.read() << "\" ";

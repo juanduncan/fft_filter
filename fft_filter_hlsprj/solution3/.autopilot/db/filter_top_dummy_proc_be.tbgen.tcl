@@ -12,14 +12,14 @@ set C_modelArgList {
 	{ input_xk1 int 64 regular {fifo 0 volatile }  }
 	{ input_xk2 int 64 regular {fifo 0 volatile }  }
 	{ output_xk1 int 64 regular {array 2048 { 0 } 0 1 }  }
-	{ out_r int 64 regular {axi_s 1 volatile  { out_r data } }  }
+	{ out_r int 64 regular {pointer 1 volatile }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "coefs", "interface" : "memory", "bitwidth" : 64} , 
  	{ "Name" : "input_xk1", "interface" : "fifo", "bitwidth" : 64} , 
  	{ "Name" : "input_xk2", "interface" : "fifo", "bitwidth" : 64} , 
  	{ "Name" : "output_xk1", "interface" : "memory", "bitwidth" : 64} , 
- 	{ "Name" : "out_r", "interface" : "axis", "bitwidth" : 64} ]}
+ 	{ "Name" : "out_r", "interface" : "wire", "bitwidth" : 64} ]}
 # RTL Port declarations: 
 set portNum 23
 set portList { 
@@ -43,9 +43,9 @@ set portList {
 	{ output_xk1_ce0 sc_out sc_logic 1 signal 3 } 
 	{ output_xk1_we0 sc_out sc_logic 1 signal 3 } 
 	{ output_xk1_d0 sc_out sc_lv 64 signal 3 } 
-	{ out_r_TDATA sc_out sc_lv 64 signal 4 } 
-	{ out_r_TVALID sc_out sc_logic 1 outvld 4 } 
-	{ out_r_TREADY sc_in sc_logic 1 outacc 4 } 
+	{ out_r sc_out sc_lv 64 signal 4 } 
+	{ out_r_ap_vld sc_out sc_logic 1 outvld 4 } 
+	{ out_r_ap_ack sc_in sc_logic 1 outacc 4 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -68,13 +68,13 @@ set NewPortList {[
  	{ "name": "output_xk1_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_xk1", "role": "ce0" }} , 
  	{ "name": "output_xk1_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_xk1", "role": "we0" }} , 
  	{ "name": "output_xk1_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "output_xk1", "role": "d0" }} , 
- 	{ "name": "out_r_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "out_r", "role": "TDATA" }} , 
- 	{ "name": "out_r_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "out_r", "role": "TVALID" }} , 
- 	{ "name": "out_r_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "out_r", "role": "TREADY" }}  ]}
+ 	{ "name": "out_r", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "out_r", "role": "default" }} , 
+ 	{ "name": "out_r_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "out_r", "role": "ap_vld" }} , 
+ 	{ "name": "out_r_ap_ack", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "out_r", "role": "ap_ack" }}  ]}
 set Spec2ImplPortList { 
 	coefs { ap_memory {  { coefs_address0 mem_address 1 11 }  { coefs_ce0 mem_ce 1 1 }  { coefs_q0 mem_dout 0 64 } } }
 	input_xk1 { ap_fifo {  { input_xk1_dout fifo_data 0 64 }  { input_xk1_empty_n fifo_status 0 1 }  { input_xk1_read fifo_update 1 1 } } }
 	input_xk2 { ap_fifo {  { input_xk2_dout fifo_data 0 64 }  { input_xk2_empty_n fifo_status 0 1 }  { input_xk2_read fifo_update 1 1 } } }
 	output_xk1 { ap_memory {  { output_xk1_address0 mem_address 1 11 }  { output_xk1_ce0 mem_ce 1 1 }  { output_xk1_we0 mem_we 1 1 }  { output_xk1_d0 mem_din 1 64 } } }
-	out_r { axis {  { out_r_TDATA out_data 1 64 }  { out_r_TVALID out_vld 1 1 }  { out_r_TREADY out_acc 0 1 } } }
+	out_r { ap_hs {  { out_r out_data 1 64 }  { out_r_ap_vld out_vld 1 1 }  { out_r_ap_ack out_acc 0 1 } } }
 }

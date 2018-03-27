@@ -45,8 +45,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.COEFS_D0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediat
-e dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.COEFS_D0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -68,49 +67,58 @@ e dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractw
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.COEFS_Q0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediat
-e dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.COEFS_Q0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
       <spirit:name>in_r</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="acc_fifo_read" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="acc_fifo_read_rtl" spirit:version="1.0"/>
-      <spirit:master/>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
       <spirit:portMaps>
         <spirit:portMap>
           <spirit:logicalPort>
-            <spirit:name>RD_DATA</spirit:name>
+            <spirit:name>TVALID</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>in_r_dout</spirit:name>
+            <spirit:name>in_r_TVALID</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
         <spirit:portMap>
           <spirit:logicalPort>
-            <spirit:name>EMPTY_N</spirit:name>
+            <spirit:name>TREADY</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>in_r_empty_n</spirit:name>
+            <spirit:name>in_r_TREADY</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
         <spirit:portMap>
           <spirit:logicalPort>
-            <spirit:name>RD_EN</spirit:name>
+            <spirit:name>TDATA</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>in_r_read</spirit:name>
+            <spirit:name>in_r_TDATA</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
+      <spirit:endianness>little</spirit:endianness>
       <spirit:parameters>
         <spirit:parameter>
+          <spirit:name>SIGNAL_SET</spirit:name>
+          <spirit:value spirit:resolve="immediate" spirit:id="BUSIFPARAM_VALUE.IN_R.SIGNAL_SET">00000011</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:resolve="immediate" spirit:id="BUSIFPARAM_VALUE.IN_R.TDATA_NUM_BYTES">8</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:resolve="immediate" spirit:id="BUSIFPARAM_VALUE.IN_R.TUSER_WIDTH">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.IN_R.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {RD_DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immed
-iate dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} EMPTY_N {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} va
-lue {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} RD_EN {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long mini
-mum {} maximum {}} value 0}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.IN_R.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -154,8 +162,7 @@ mum {} maximum {}} value 0}}}}</spirit:value>
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INXN2_D0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediat
-e dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INXN2_D0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -177,8 +184,7 @@ e dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractw
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INXN2_Q0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediat
-e dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.INXN2_Q0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -222,8 +228,7 @@ e dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractw
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.OUTXK1_D0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediat
-e dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.OUTXK1_D0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -245,49 +250,29 @@ e dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractw
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.OUTXK1_Q0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediat
-e dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.OUTXK1_Q0.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
       <spirit:name>out_r</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="acc_fifo_write" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="acc_fifo_write_rtl" spirit:version="1.0"/>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
       <spirit:master/>
       <spirit:portMaps>
         <spirit:portMap>
           <spirit:logicalPort>
-            <spirit:name>WR_DATA</spirit:name>
+            <spirit:name>DATA</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>out_r_din</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>FULL_N</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>out_r_full_n</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>WR_EN</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>out_r_write</spirit:name>
+            <spirit:name>out_r</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.OUT_R.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {WR_DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immed
-iate dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} FULL_N {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} val
-ue {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} WR_EN {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minim
-um {} maximum {}} value 0}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.OUT_R.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} stride {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 31} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -308,8 +293,12 @@ um {} maximum {}} value 0}}}}</spirit:value>
       </spirit:portMaps>
       <spirit:parameters>
         <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="immediate" spirit:id="BUSIFPARAM_VALUE.AP_CLK.ASSOCIATED_BUSIF">in_r</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
           <spirit:name>ASSOCIATED_RESET</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.AP_CLK.ASSOCIATED_RESET">ap_rst</spirit:value>
+          <spirit:value spirit:resolve="immediate" spirit:id="BUSIFPARAM_VALUE.AP_CLK.ASSOCIATED_RESET">ap_rst_n</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
@@ -318,7 +307,7 @@ um {} maximum {}} value 0}}}}</spirit:value>
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>ap_rst</spirit:name>
+      <spirit:name>ap_rst_n</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
       <spirit:slave/>
@@ -328,18 +317,18 @@ um {} maximum {}} value 0}}}}</spirit:value>
             <spirit:name>RST</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>ap_rst</spirit:name>
+            <spirit:name>ap_rst_n</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.AP_RST.POLARITY">ACTIVE_HIGH</spirit:value>
+          <spirit:value spirit:resolve="immediate" spirit:id="BUSIFPARAM_VALUE.AP_RST_N.POLARITY">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AP_RST.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AP_RST_N.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -367,27 +356,25 @@ um {} maximum {}} value 0}}}}</spirit:value>
         </spirit:portMap>
         <spirit:portMap>
           <spirit:logicalPort>
-            <spirit:name>ready</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>ap_ready</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
             <spirit:name>idle</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
             <spirit:name>ap_idle</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ready</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>ap_ready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
       </spirit:portMaps>
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AP_CTRL.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_typ
-e immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {da
-tatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AP_CTRL.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -406,12 +393,6 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4f2296a7</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
       </spirit:view>
       <spirit:view>
         <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
@@ -425,12 +406,6 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>250df47e</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
       </spirit:view>
       <spirit:view>
         <spirit:name>xilinx_vhdlsynthesis</spirit:name>
@@ -444,12 +419,6 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>94e09660</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
       </spirit:view>
       <spirit:view>
         <spirit:name>xilinx_vhdlbehavioralsimulation</spirit:name>
@@ -463,12 +432,6 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ddd22fb2</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
       </spirit:view>
       <spirit:view>
         <spirit:name>xilinx_documentation</spirit:name>
@@ -485,12 +448,14 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:fileSetRef>
           <spirit:localName>xilinx_miscfiles_view_fileset</spirit:localName>
         </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0f05e113</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_block_diagram</spirit:name>
+        <spirit:displayName>Block Diagram</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:block.diagram</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_block_diagram_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
       </spirit:view>
       <spirit:view>
         <spirit:name>xilinx_xpgui</spirit:name>
@@ -499,12 +464,6 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:fileSetRef>
           <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
         </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bdef2832</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
       </spirit:view>
       <spirit:view>
         <spirit:name>xilinx_utilityxitfiles</spirit:name>
@@ -513,12 +472,6 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:fileSetRef>
           <spirit:localName>xilinx_utilityxitfiles_view_fileset</spirit:localName>
         </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0f05e113</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
       </spirit:view>
     </spirit:views>
     <spirit:ports>
@@ -601,12 +554,38 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>out_r_ap_vld</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>out_r_ap_ack</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>coefs_address0</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">10</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
+            <spirit:left>10</spirit:left>
+            <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -622,8 +601,8 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
+            <spirit:left>63</spirit:left>
+            <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -639,8 +618,8 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
+            <spirit:left>63</spirit:left>
+            <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -652,24 +631,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>in_r_dout</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>in_r_empty_n</spirit:name>
+        <spirit:name>in_r_TVALID</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -682,7 +644,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>in_r_read</spirit:name>
+        <spirit:name>in_r_TREADY</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -693,14 +655,36 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>in_r_TDATA</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left>63</spirit:left>
+            <spirit:right>0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:endianness>little</xilinx:endianness>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>inxn2_address0</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">10</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
+            <spirit:left>10</spirit:left>
+            <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -716,8 +700,8 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
+            <spirit:left>63</spirit:left>
+            <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -733,8 +717,8 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
+            <spirit:left>63</spirit:left>
+            <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -750,8 +734,8 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">10</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
+            <spirit:left>10</spirit:left>
+            <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -767,8 +751,8 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
+            <spirit:left>63</spirit:left>
+            <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -784,8 +768,8 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
+            <spirit:left>63</spirit:left>
+            <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
@@ -797,42 +781,16 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>out_r_din</spirit:name>
+        <spirit:name>out_r</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
+            <spirit:left>63</spirit:left>
+            <spirit:right>0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>out_r_full_n</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>out_r_write</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
               <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -853,7 +811,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>ap_rst</spirit:name>
+        <spirit:name>ap_rst_n</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -892,7 +850,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>ap_ready</spirit:name>
+        <spirit:name>ap_idle</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -905,7 +863,7 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>ap_idle</spirit:name>
+        <spirit:name>ap_ready</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -934,6 +892,8 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:name>constraints/filter_top_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/fft_config1_s.v</spirit:name>
@@ -944,35 +904,51 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dummy_proc_fe_detbkb.v</spirit:name>
+        <spirit:name>hdl/verilog/filter_top_dummy_proc_fe_detector_tail_M_real_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dummy_proc_fe_detbkb_ram.dat</spirit:name>
+        <spirit:name>hdl/verilog/filter_top_dummy_proc_fe_detector_tail_M_real_V_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/filter_top_mul_32dEe.v</spirit:name>
+        <spirit:name>hdl/verilog/filter_top_mul_32s_32s_63_7.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/fifo_w16_d2048_A.v</spirit:name>
+        <spirit:name>hdl/verilog/FIFO_filter_top_fft_config_fwd_data_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/fifo_w64_d1344_A.v</spirit:name>
+        <spirit:name>hdl/verilog/FIFO_filter_top_fft_config_inv_data_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/fifo_w64_d64_A.v</spirit:name>
+        <spirit:name>hdl/verilog/FIFO_filter_top_xn_channel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dummy_proc_fe.v</spirit:name>
+        <spirit:name>hdl/verilog/FIFO_filter_top_xn2_channel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dummy_proc_be.v</spirit:name>
+        <spirit:name>hdl/verilog/FIFO_filter_top_xk_channel.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/FIFO_filter_top_xk2_channel.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/filter_top_dummy_proc_fe.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/filter_multop_operator_ap_fixed_s.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/filter_top_dummy_proc_be.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -995,66 +971,70 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       <spirit:file>
         <spirit:name>hdl/verilog/fft_config1_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/fft_config2_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dummy_proc_fe_detbkb.v</spirit:name>
+        <spirit:name>hdl/verilog/filter_top_dummy_proc_fe_detector_tail_M_real_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dummy_proc_fe_detbkb_ram.dat</spirit:name>
+        <spirit:name>hdl/verilog/filter_top_dummy_proc_fe_detector_tail_M_real_V_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/filter_top_mul_32dEe.v</spirit:name>
+        <spirit:name>hdl/verilog/filter_top_mul_32s_32s_63_7.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/fifo_w16_d2048_A.v</spirit:name>
+        <spirit:name>hdl/verilog/FIFO_filter_top_fft_config_fwd_data_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/fifo_w64_d1344_A.v</spirit:name>
+        <spirit:name>hdl/verilog/FIFO_filter_top_fft_config_inv_data_V.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/fifo_w64_d64_A.v</spirit:name>
+        <spirit:name>hdl/verilog/FIFO_filter_top_xn_channel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dummy_proc_fe.v</spirit:name>
+        <spirit:name>hdl/verilog/FIFO_filter_top_xn2_channel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/dummy_proc_be.v</spirit:name>
+        <spirit:name>hdl/verilog/FIFO_filter_top_xk_channel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/FIFO_filter_top_xk2_channel.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/filter_top_dummy_proc_fe.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/filter_multop_operator_ap_fixed_s.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/filter_top_dummy_proc_be.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/filter_top.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/fft_config1_s_core.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/fft_config2_s_core.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1081,6 +1061,8 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:name>constraints/filter_top_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/fft_config1_s.vhd</spirit:name>
@@ -1091,37 +1073,53 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dummy_proc_fe_detbkb.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/filter_top_dummy_proc_fe_detector_tail_M_real_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/filter_top_mul_32dEe.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/filter_top_mul_32s_32s_63_7.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/fifo_w16_d2048_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_fft_config_fwd_data_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/fifo_w64_d1344_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_fft_config_inv_data_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/fifo_w64_d64_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_xn_channel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dummy_proc_fe.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_xn2_channel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dummy_proc_be.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_xk_channel.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_xk2_channel.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/filter_top_dummy_proc_fe.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/filter_multop_operator_ap_fixed_s.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/filter_top_dummy_proc_be.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/filter_top.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_d0360787</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_fb4c4b0a</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1139,62 +1137,66 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       <spirit:file>
         <spirit:name>hdl/vhdl/fft_config1_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/fft_config2_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dummy_proc_fe_detbkb.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/filter_top_dummy_proc_fe_detector_tail_M_real_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/filter_top_mul_32dEe.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/filter_top_mul_32s_32s_63_7.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/fifo_w16_d2048_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_fft_config_fwd_data_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/fifo_w64_d1344_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_fft_config_inv_data_V.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/fifo_w64_d64_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_xn_channel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dummy_proc_fe.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_xn2_channel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/dummy_proc_be.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_xk_channel.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/FIFO_filter_top_xk2_channel.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/filter_top_dummy_proc_fe.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/filter_multop_operator_ap_fixed_s.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/filter_top_dummy_proc_be.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/filter_top.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/fft_config1_s_core.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/fft_config2_s_core.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1222,12 +1224,19 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
+      <spirit:name>xilinx_block_diagram_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>bd/bd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>xgui/filter_top_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_bdef2832</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1247,23 +1256,23 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="2">3.2999999999999998</spirit:value>
+      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.clk_period" spirit:order="2">3.300000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>machine</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.machine" spirit:order="3">64</spirit:value>
+      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.machine" spirit:order="3">64</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>combinational</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.combinational" spirit:order="4">0</spirit:value>
+      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.combinational" spirit:order="4">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">18433</spirit:value>
+      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.latency" spirit:order="5">24577</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="6">x</spirit:value>
+      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.II" spirit:order="6">x</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -1275,16 +1284,11 @@ tatype {name {attribs {resolve_type immediate dependency {} format string minimu
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Filter_top</xilinx:displayName>
-      <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1802021644</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-02-02T15:44:51Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1803241729</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-03-24T16:29:56Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2017.4</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f71bbc60"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a8278df1"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="dc574858"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8244b053"/>
+      <xilinx:xilinxVersion>2014.4</xilinx:xilinxVersion>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

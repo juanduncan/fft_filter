@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="filter_top,hls_ip_2014_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k410tffg900-2,HLS_INPUT_CLOCK=3.300000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=2.887500,HLS_SYN_LAT=22529,HLS_SYN_TPT=22530,HLS_SYN_MEM=58,HLS_SYN_DSP=96,HLS_SYN_FF=37192,HLS_SYN_LUT=30017}" *)
+(* CORE_GENERATION_INFO="filter_top,hls_ip_2014_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k410tffg900-2,HLS_INPUT_CLOCK=3.300000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=2.887500,HLS_SYN_LAT=24577,HLS_SYN_TPT=24578,HLS_SYN_MEM=58,HLS_SYN_DSP=96,HLS_SYN_FF=37182,HLS_SYN_LUT=30017}" *)
 
 module filter_top (
         coefs_address0,
@@ -26,13 +26,13 @@ module filter_top (
         outxk1_d0,
         outxk1_q0,
         outxk1_we0,
-        out_r_TDATA,
+        out_r,
         ap_clk,
         ap_rst_n,
         in_r_TVALID,
         in_r_TREADY,
-        out_r_TVALID,
-        out_r_TREADY,
+        out_r_ap_vld,
+        out_r_ap_ack,
         ap_done,
         ap_start,
         ap_idle,
@@ -61,13 +61,13 @@ output   outxk1_ce0;
 output  [63:0] outxk1_d0;
 input  [63:0] outxk1_q0;
 output   outxk1_we0;
-output  [63:0] out_r_TDATA;
+output  [63:0] out_r;
 input   ap_clk;
 input   ap_rst_n;
 input   in_r_TVALID;
 output   in_r_TREADY;
-output   out_r_TVALID;
-input   out_r_TREADY;
+output   out_r_ap_vld;
+input   out_r_ap_ack;
 output   ap_done;
 input   ap_start;
 output   ap_idle;
@@ -152,9 +152,9 @@ wire   [10:0] filter_top_dummy_proc_be_U0_output_xk1_address0;
 wire    filter_top_dummy_proc_be_U0_output_xk1_ce0;
 wire    filter_top_dummy_proc_be_U0_output_xk1_we0;
 wire   [63:0] filter_top_dummy_proc_be_U0_output_xk1_d0;
-wire   [63:0] filter_top_dummy_proc_be_U0_out_r_TDATA;
-wire    filter_top_dummy_proc_be_U0_out_r_TVALID;
-wire    filter_top_dummy_proc_be_U0_out_r_TREADY;
+wire   [63:0] filter_top_dummy_proc_be_U0_out_r;
+wire    filter_top_dummy_proc_be_U0_out_r_ap_vld;
+wire    filter_top_dummy_proc_be_U0_out_r_ap_ack;
 wire    ap_sig_hs_continue;
 wire    fft_config_fwd_data_V_U_ap_dummy_ce;
 wire   [15:0] fft_config_fwd_data_V_din;
@@ -306,9 +306,9 @@ filter_top_dummy_proc_be filter_top_dummy_proc_be_U0(
     .output_xk1_ce0( filter_top_dummy_proc_be_U0_output_xk1_ce0 ),
     .output_xk1_we0( filter_top_dummy_proc_be_U0_output_xk1_we0 ),
     .output_xk1_d0( filter_top_dummy_proc_be_U0_output_xk1_d0 ),
-    .out_r_TDATA( filter_top_dummy_proc_be_U0_out_r_TDATA ),
-    .out_r_TVALID( filter_top_dummy_proc_be_U0_out_r_TVALID ),
-    .out_r_TREADY( filter_top_dummy_proc_be_U0_out_r_TREADY )
+    .out_r( filter_top_dummy_proc_be_U0_out_r ),
+    .out_r_ap_vld( filter_top_dummy_proc_be_U0_out_r_ap_vld ),
+    .out_r_ap_ack( filter_top_dummy_proc_be_U0_out_r_ap_ack )
 );
 
 FIFO_filter_top_fft_config_fwd_data_V fft_config_fwd_data_V_U(
@@ -614,7 +614,7 @@ assign filter_top_dummy_proc_be_U0_input_xk1_dout = xk_channel_dout;
 assign filter_top_dummy_proc_be_U0_input_xk1_empty_n = xk_channel_empty_n;
 assign filter_top_dummy_proc_be_U0_input_xk2_dout = xk2_channel_dout;
 assign filter_top_dummy_proc_be_U0_input_xk2_empty_n = xk2_channel_empty_n;
-assign filter_top_dummy_proc_be_U0_out_r_TREADY = out_r_TREADY;
+assign filter_top_dummy_proc_be_U0_out_r_ap_ack = out_r_ap_ack;
 assign filter_top_dummy_proc_fe_U0_ap_continue = ap_const_logic_1;
 assign filter_top_dummy_proc_fe_U0_ap_start = ap_sig_start_in_filter_top_dummy_proc_fe_U0_ap_start;
 assign filter_top_dummy_proc_fe_U0_config_fwd_data_V_full_n = fft_config_fwd_data_V_full_n;
@@ -629,8 +629,8 @@ assign inxn2_address0 = filter_top_dummy_proc_fe_U0_input_xn2_address0;
 assign inxn2_ce0 = filter_top_dummy_proc_fe_U0_input_xn2_ce0;
 assign inxn2_d0 = ap_const_lv64_0;
 assign inxn2_we0 = ap_const_logic_0;
-assign out_r_TDATA = filter_top_dummy_proc_be_U0_out_r_TDATA;
-assign out_r_TVALID = filter_top_dummy_proc_be_U0_out_r_TVALID;
+assign out_r = filter_top_dummy_proc_be_U0_out_r;
+assign out_r_ap_vld = filter_top_dummy_proc_be_U0_out_r_ap_vld;
 assign outxk1_address0 = filter_top_dummy_proc_be_U0_output_xk1_address0;
 assign outxk1_ce0 = filter_top_dummy_proc_be_U0_output_xk1_ce0;
 assign outxk1_d0 = filter_top_dummy_proc_be_U0_output_xk1_d0;

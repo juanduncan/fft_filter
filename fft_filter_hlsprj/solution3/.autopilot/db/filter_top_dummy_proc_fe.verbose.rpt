@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'filter_top_dummy_proc_fe'
 ================================================================
-* Date:           Sat Mar 24 15:13:15 2018
+* Date:           Sat Mar 24 17:29:40 2018
 
 * Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
 * Project:        fft_filter_hlsprj
@@ -214,22 +214,22 @@ IsGatedGlobalClock: 0
 
  <State 1>: 1.44ns
 ST_1: stg_7 [1/1] 0.00ns
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:0  call void (...)* @_ssdm_op_SpecInterface(i64* %in_r, [5 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:0  call void (...)* @_ssdm_op_SpecInterface(i64* %in_r, [5 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ST_1: stg_8 [1/1] 0.00ns
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:1  call void (...)* @_ssdm_op_SpecInterface(i64* %output_xn2, [8 x i8]* @str83, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str83, [8 x i8]* @str83, [8 x i8]* @str83)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:1  call void (...)* @_ssdm_op_SpecInterface(i64* %output_xn2, [8 x i8]* @str84, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str84, [8 x i8]* @str84, [8 x i8]* @str84)
 
 ST_1: stg_9 [1/1] 0.00ns
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:2  call void (...)* @_ssdm_op_SpecInterface(i64* %output_xn1, [8 x i8]* @str82, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str82, [8 x i8]* @str82, [8 x i8]* @str82)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:2  call void (...)* @_ssdm_op_SpecInterface(i64* %output_xn1, [8 x i8]* @str83, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str83, [8 x i8]* @str83, [8 x i8]* @str83)
 
 ST_1: stg_10 [1/1] 0.00ns
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:3  call void (...)* @_ssdm_op_SpecInterface(i16* %config_inv_data_V, [8 x i8]* @str81, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str81, [8 x i8]* @str81, [8 x i8]* @str81)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:3  call void (...)* @_ssdm_op_SpecInterface(i16* %config_inv_data_V, [8 x i8]* @str82, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str82, [8 x i8]* @str82, [8 x i8]* @str82)
 
 ST_1: stg_11 [1/1] 0.00ns
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:4  call void (...)* @_ssdm_op_SpecInterface(i16* %config_fwd_data_V, [8 x i8]* @str80, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str80, [8 x i8]* @str80, [8 x i8]* @str80)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:4  call void (...)* @_ssdm_op_SpecInterface(i16* %config_fwd_data_V, [8 x i8]* @str81, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str81, [8 x i8]* @str81, [8 x i8]* @str81)
 
 ST_1: stg_12 [1/1] 0.00ns
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:5  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %input_xn2, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:5  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %input_xn2, [1 x i8]* @p_str1, [12 x i8]* @p_str5, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ST_1: stg_13 [1/1] 0.00ns
 _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:6  call void (...)* @_ssdm_op_SpecInterface([2048 x i64]* %input_xn2, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
@@ -288,11 +288,11 @@ ST_3: input_xn2_load [1/2] 2.39ns
 ST_4: stg_29 [1/1] 1.44ns
 :3  call void @_ssdm_op_Write.ap_fifo.volatile.i64P(i64* %output_xn2, i64 %input_xn2_load)
 
-ST_4: tmp_1 [1/1] 0.00ns
-:4  %tmp_1 = call i3 @_ssdm_op_PartSelect.i3.i12.i32.i32(i12 %i, i32 9, i32 11)
+ST_4: tmp_5 [1/1] 0.00ns
+:4  %tmp_5 = call i3 @_ssdm_op_PartSelect.i3.i12.i32.i32(i12 %i, i32 9, i32 11)
 
 ST_4: icmp [1/1] 0.94ns
-:5  %icmp = icmp eq i3 %tmp_1, 0
+:5  %icmp = icmp eq i3 %tmp_5, 0
 
 ST_4: stg_32 [1/1] 0.00ns
 :6  br i1 %icmp, label %2, label %3
@@ -300,8 +300,8 @@ ST_4: stg_32 [1/1] 0.00ns
 ST_4: in_read [1/1] 0.00ns
 :0  %in_read = call i64 @_ssdm_op_Read.axis.volatile.i64P(i64* %in_r)
 
-ST_4: tmp_2 [1/1] 0.00ns
-:1  %tmp_2 = trunc i64 %in_read to i32
+ST_4: tmp_7 [1/1] 0.00ns
+:1  %tmp_7 = trunc i64 %in_read to i32
 
 ST_4: in_M_imag_V_load_new [1/1] 0.00ns
 :2  %in_M_imag_V_load_new = call i32 @_ssdm_op_PartSelect.i32.i64.i32.i32(i64 %in_read, i32 32, i32 63)
@@ -315,17 +315,17 @@ ST_4: tmp_4 [1/1] 1.30ns
 ST_4: stg_38 [1/1] 0.00ns
 :5  br i1 %tmp_4, label %4, label %._crit_edge
 
-ST_4: tmp_3 [1/1] 0.00ns
-:0  %tmp_3 = trunc i12 %i to i9
+ST_4: tmp_8 [1/1] 0.00ns
+:0  %tmp_8 = trunc i12 %i to i9
 
 ST_4: tmp_6 [1/1] 0.00ns
-:1  %tmp_6 = zext i9 %tmp_3 to i64
+:1  %tmp_6 = zext i9 %tmp_8 to i64
 
 ST_4: detector_tail_M_real_V_addr_1 [1/1] 0.00ns
 :2  %detector_tail_M_real_V_addr_1 = getelementptr [512 x i32]* @detector_tail_M_real_V, i64 0, i64 %tmp_6
 
 ST_4: stg_42 [1/1] 2.39ns
-:3  store i32 %tmp_2, i32* %detector_tail_M_real_V_addr_1, align 4
+:3  store i32 %tmp_7, i32* %detector_tail_M_real_V_addr_1, align 4
 
 ST_4: detector_tail_M_imag_V_addr_1 [1/1] 0.00ns
 :4  %detector_tail_M_imag_V_addr_1 = getelementptr [512 x i32]* @detector_tail_M_imag_V, i64 0, i64 %tmp_6
@@ -387,14 +387,14 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ config_fwd_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x3b00740; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ config_inv_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x3f06510; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ in_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x3c80e30; pingpong=0; private_global=0; IO mode=axis:ce=0
-Port [ input_xn2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0x42b3e70; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
-Port [ output_xn1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x4e70310; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ output_xn2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x4e708e0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ detector_tail_M_real_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; mode=0x3938780; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
-Port [ detector_tail_M_imag_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; mode=0x315b7f0; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ config_fwd_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x4ed13d0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ config_inv_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x4c04940; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ in_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; mode=0x4dc8ea0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ input_xn2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; mode=0x4c049a0; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ output_xn1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x4973480; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ output_xn2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; mode=0x49734e0; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ detector_tail_M_real_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; mode=0x4dc9a40; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
+Port [ detector_tail_M_imag_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; mode=0x4dcad30; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[23]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -423,16 +423,16 @@ input_xn2_addr                (getelementptr    ) [ 0001000]
 stg_27                        (ret              ) [ 0000000]
 input_xn2_load                (load             ) [ 0000100]
 stg_29                        (write            ) [ 0000000]
-tmp_1                         (partselect       ) [ 0000000]
+tmp_5                         (partselect       ) [ 0000000]
 icmp                          (icmp             ) [ 0011111]
 stg_32                        (br               ) [ 0000000]
 in_read                       (read             ) [ 0000000]
-tmp_2                         (trunc            ) [ 0000000]
+tmp_7                         (trunc            ) [ 0000000]
 in_M_imag_V_load_new          (partselect       ) [ 0000000]
 stg_36                        (write            ) [ 0000000]
 tmp_4                         (icmp             ) [ 0011111]
 stg_38                        (br               ) [ 0000000]
-tmp_3                         (trunc            ) [ 0000000]
+tmp_8                         (trunc            ) [ 0000000]
 tmp_6                         (zext             ) [ 0000000]
 detector_tail_M_real_V_addr_1 (getelementptr    ) [ 0000000]
 stg_42                        (store            ) [ 0000000]
@@ -542,7 +542,7 @@ stg_56                        (br               ) [ 0111111]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str2"/></StgValue>
+<StgValue><ssdm name="p_str3"/></StgValue>
 </bind>
 </comp>
 
@@ -569,7 +569,7 @@ stg_56                        (br               ) [ 0111111]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="str83"/></StgValue>
+<StgValue><ssdm name="str84"/></StgValue>
 </bind>
 </comp>
 
@@ -578,7 +578,7 @@ stg_56                        (br               ) [ 0111111]
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="str82"/></StgValue>
+<StgValue><ssdm name="str83"/></StgValue>
 </bind>
 </comp>
 
@@ -587,7 +587,7 @@ stg_56                        (br               ) [ 0111111]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="str81"/></StgValue>
+<StgValue><ssdm name="str82"/></StgValue>
 </bind>
 </comp>
 
@@ -596,7 +596,7 @@ stg_56                        (br               ) [ 0111111]
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="str80"/></StgValue>
+<StgValue><ssdm name="str81"/></StgValue>
 </bind>
 </comp>
 
@@ -614,7 +614,7 @@ stg_56                        (br               ) [ 0111111]
 <pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str4"/></StgValue>
+<StgValue><ssdm name="p_str5"/></StgValue>
 </bind>
 </comp>
 
@@ -1097,7 +1097,7 @@ stg_56                        (br               ) [ 0111111]
 </bind>
 </comp>
 
-<comp id="229" class="1004" name="tmp_1_fu_229">
+<comp id="229" class="1004" name="tmp_5_fu_229">
 <pin_list>
 <pin id="230" dir="0" index="0" bw="3" slack="0"/>
 <pin id="231" dir="0" index="1" bw="12" slack="2"/>
@@ -1107,7 +1107,7 @@ stg_56                        (br               ) [ 0111111]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_1/4 "/>
+<opset="tmp_5/4 "/>
 </bind>
 </comp>
 
@@ -1123,14 +1123,14 @@ stg_56                        (br               ) [ 0111111]
 </bind>
 </comp>
 
-<comp id="245" class="1004" name="tmp_2_fu_245">
+<comp id="245" class="1004" name="tmp_7_fu_245">
 <pin_list>
 <pin id="246" dir="0" index="0" bw="64" slack="0"/>
 <pin id="247" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_2/4 "/>
+<opset="tmp_7/4 "/>
 </bind>
 </comp>
 
@@ -1160,14 +1160,14 @@ stg_56                        (br               ) [ 0111111]
 </bind>
 </comp>
 
-<comp id="267" class="1004" name="tmp_3_fu_267">
+<comp id="267" class="1004" name="tmp_8_fu_267">
 <pin_list>
 <pin id="268" dir="0" index="0" bw="12" slack="2"/>
 <pin id="269" dir="1" index="1" bw="9" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_3/4 "/>
+<opset="tmp_8/4 "/>
 </bind>
 </comp>
 
@@ -1530,11 +1530,11 @@ stg_56                        (br               ) [ 0111111]
 |   zext   |            tmp_fu_224           |    0    |    0    |
 |          |           tmp_6_fu_271          |    0    |    0    |
 |----------|---------------------------------|---------|---------|
-|partselect|           tmp_1_fu_229          |    0    |    0    |
+|partselect|           tmp_5_fu_229          |    0    |    0    |
 |          |   in_M_imag_V_load_new_fu_250   |    0    |    0    |
 |----------|---------------------------------|---------|---------|
-|   trunc  |           tmp_2_fu_245          |    0    |    0    |
-|          |           tmp_3_fu_267          |    0    |    0    |
+|   trunc  |           tmp_7_fu_245          |    0    |    0    |
+|          |           tmp_8_fu_267          |    0    |    0    |
 |----------|---------------------------------|---------|---------|
 |bitconcatenate| output_xn1_M_imag_V_addr_fu_277 |    0    |    0    |
 |----------|---------------------------------|---------|---------|

@@ -1,72 +1,5 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 10
-set name filter_top_mul_32s_32s_63_7
-set corename simcore_mul
-set op mul
-set stage_num 7
-set max_latency -1
-set registered_input 1
-set in0_width 32
-set in0_signed 1
-set in1_width 32
-set in1_signed 1
-set out_width 63
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
-eval "ap_gen_simcore_mul { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    out_width ${out_width} \
-}"
-} else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler ${name}
-}
-
-
-set op mul
-set corename MulnS
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul] == "::AESL_LIB_VIRTEX::xil_gen_multicycle_mul"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_multicycle_mul { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    out_width ${out_width} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, check your platform lib"
-}
-}
-
-
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -78,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 14 \
+    id 18 \
     name coefs \
     reset_level 1 \
     sync_rst true \
@@ -97,7 +30,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 17 \
+    id 21 \
     name output_xk1 \
     reset_level 1 \
     sync_rst true \
@@ -112,29 +45,10 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
-# Native AXIS:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
-eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 18 \
-    name out_r \
-    reset_level 1 \
-    sync_rst true \
-    corename {} \
-    metadata {  } \
-    op interface \
-    ports { out_r_TDATA { O 64 vector } out_r_TVALID { O 1 bit } out_r_TREADY { I 1 bit } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_r'"
-}
-}
-
-
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 15 \
+    id 19 \
     name input_xk1 \
     type fifo \
     dir I \
@@ -149,7 +63,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 16 \
+    id 20 \
     name input_xk2 \
     type fifo \
     dir I \
@@ -158,6 +72,21 @@ eval "cg_default_interface_gen_dc { \
     corename dc_input_xk2 \
     op interface \
     ports { input_xk2_dout { I 64 vector } input_xk2_empty_n { I 1 bit } input_xk2_read { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 22 \
+    name out_r \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_out_r \
+    op interface \
+    ports { out_r { O 64 vector } out_r_ap_vld { O 1 bit } out_r_ap_ack { I 1 bit } } \
 } "
 }
 

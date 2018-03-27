@@ -19,12 +19,16 @@ typedef ap_fixed<FFT_INPUT_WIDTH ,  1> b_data_in_t;
 typedef ap_fixed<FFT_OUTPUT_WIDTH,  INTEGER_PART> b_data_out_t;
 typedef ap_fixed<IFFT_INPUT_WIDTH , INTEGER_PART> b_dataI_in_t;
 typedef ap_fixed<IFFT_OUTPUT_WIDTH, INTEGER_PART> b_dataI_out_t;
-
+typedef ap_fixed<16,1> b_coef_t;
 
 typedef std::complex<b_data_in_t>  data_in_t;
 typedef std::complex<b_data_out_t> data_out_t;
 typedef std::complex<b_data_in_t>  dataI_in_t;
 typedef std::complex<b_data_in_t>  dataI_out_t;
+
+typedef std::complex<b_data_in_t> complex_coef_t;
+
+
 /*
 typedef std::complex<float>  data_in_t;
 typedef std::complex<float> data_out_t;
@@ -68,13 +72,13 @@ void dummy_proc_fe(config_t* config_fwd, config_ti* config_inv,
 		data_in_t tail[TAIL_LENGTH], data_in_t in[FILTER_LENGTH], data_out_t input_xn2[FFT_LENGTH],
 		data_in_t output_xn1[FFT_LENGTH],	data_out_t  output_xn2[FFT_LENGTH]);
 
-void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, data_in_t  coefs[FFT_LENGTH],
+void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, complex_coef_t coefs[FFT_LENGTH],
 		data_out_t   input_xk1[FFT_LENGTH], data_out_t  input_xk2[FFT_LENGTH],
 		data_out_t  output_xk1[FFT_LENGTH], data_out_t  dummy[TAIL_LENGTH],data_out_t out[FILTER_LENGTH]);
 
 
 ////////// TOP BLOCK ///////////////////////
-void filter_top(	data_in_t coefs[FFT_LENGTH],
+void filter_top(	complex_coef_t coefs[FFT_LENGTH],
 					data_in_t in[FILTER_LENGTH],
 					data_out_t inxn2[FFT_LENGTH],
 					data_out_t outxk1[FFT_LENGTH],

@@ -64,7 +64,7 @@
 
 <node id="9" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:0  call void (...)* @_ssdm_op_SpecInterface(i64* %in_r, [5 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:0  call void (...)* @_ssdm_op_SpecInterface(i64* %in_r, [5 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -79,7 +79,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:0  call void (...)* @_ssdm_op_S
 
 <node id="10" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:1  call void (...)* @_ssdm_op_SpecInterface(i64* %output_xn2, [8 x i8]* @str83, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str83, [8 x i8]* @str83, [8 x i8]* @str83)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:1  call void (...)* @_ssdm_op_SpecInterface(i64* %output_xn2, [8 x i8]* @str84, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str84, [8 x i8]* @str84, [8 x i8]* @str84)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -94,7 +94,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:1  call void (...)* @_ssdm_op_S
 
 <node id="11" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:2  call void (...)* @_ssdm_op_SpecInterface(i64* %output_xn1, [8 x i8]* @str82, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str82, [8 x i8]* @str82, [8 x i8]* @str82)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:2  call void (...)* @_ssdm_op_SpecInterface(i64* %output_xn1, [8 x i8]* @str83, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str83, [8 x i8]* @str83, [8 x i8]* @str83)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -109,7 +109,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:2  call void (...)* @_ssdm_op_S
 
 <node id="12" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:3  call void (...)* @_ssdm_op_SpecInterface(i16* %config_inv_data_V, [8 x i8]* @str81, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str81, [8 x i8]* @str81, [8 x i8]* @str81)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:3  call void (...)* @_ssdm_op_SpecInterface(i16* %config_inv_data_V, [8 x i8]* @str82, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str82, [8 x i8]* @str82, [8 x i8]* @str82)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -124,7 +124,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:3  call void (...)* @_ssdm_op_S
 
 <node id="13" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:4  call void (...)* @_ssdm_op_SpecInterface(i16* %config_fwd_data_V, [8 x i8]* @str80, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str80, [8 x i8]* @str80, [8 x i8]* @str80)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:4  call void (...)* @_ssdm_op_SpecInterface(i16* %config_fwd_data_V, [8 x i8]* @str81, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str81, [8 x i8]* @str81, [8 x i8]* @str81)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -139,7 +139,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:4  call void (...)* @_ssdm_op_S
 
 <node id="14" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="8" op_7_bw="8" op_8_bw="8">
 <![CDATA[
-_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:5  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %input_xn2, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+_ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:5  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %input_xn2, [1 x i8]* @p_str1, [12 x i8]* @p_str5, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -422,10 +422,10 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:11  br label %0
 
 <node id="32" bw="3" op_0_bw="3" op_1_bw="12" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-:4  %tmp_1 = call i3 @_ssdm_op_PartSelect.i3.i12.i32.i32(i12 %i, i32 9, i32 11)
+:4  %tmp_5 = call i3 @_ssdm_op_PartSelect.i3.i12.i32.i32(i12 %i, i32 9, i32 11)
 
 ]]></node>
-<StgValue><ssdm name="tmp_1"/></StgValue>
+<StgValue><ssdm name="tmp_5"/></StgValue>
 </operation>
 
 <operation id="31" st_id="4" stage="1" lat="1">
@@ -437,7 +437,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:11  br label %0
 
 <node id="33" bw="1" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-:5  %icmp = icmp eq i3 %tmp_1, 0
+:5  %icmp = icmp eq i3 %tmp_5, 0
 
 ]]></node>
 <StgValue><ssdm name="icmp"/></StgValue>
@@ -484,10 +484,10 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:11  br label %0
 
 <node id="37" bw="32" op_0_bw="64">
 <![CDATA[
-:1  %tmp_2 = trunc i64 %in_read to i32
+:1  %tmp_7 = trunc i64 %in_read to i32
 
 ]]></node>
-<StgValue><ssdm name="tmp_2"/></StgValue>
+<StgValue><ssdm name="tmp_7"/></StgValue>
 </operation>
 
 <operation id="35" st_id="4" stage="1" lat="1">
@@ -565,10 +565,10 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:11  br label %0
 
 <node id="43" bw="9" op_0_bw="12">
 <![CDATA[
-:0  %tmp_3 = trunc i12 %i to i9
+:0  %tmp_8 = trunc i12 %i to i9
 
 ]]></node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 
 <operation id="40" st_id="4" stage="1" lat="1">
@@ -582,7 +582,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:11  br label %0
 
 <node id="44" bw="64" op_0_bw="9">
 <![CDATA[
-:1  %tmp_6 = zext i9 %tmp_3 to i64
+:1  %tmp_6 = zext i9 %tmp_8 to i64
 
 ]]></node>
 <StgValue><ssdm name="tmp_6"/></StgValue>
@@ -616,7 +616,7 @@ _ZN3hls6ip_fft8config_tI7config1E6setSchEjj.exit:11  br label %0
 
 <node id="46" bw="0" op_0_bw="32" op_1_bw="9">
 <![CDATA[
-:3  store i32 %tmp_2, i32* %detector_tail_M_real_V_addr_1, align 4
+:3  store i32 %tmp_7, i32* %detector_tail_M_real_V_addr_1, align 4
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

@@ -489,8 +489,8 @@
 					<item>69</item>
 					<item>70</item>
 					<item>71</item>
-					<item>331</item>
-					<item>333</item>
+					<item>332</item>
+					<item>334</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 			</item>
@@ -522,7 +522,7 @@
 					<item>75</item>
 					<item>76</item>
 					<item>77</item>
-					<item>332</item>
+					<item>333</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 			</item>
@@ -555,9 +555,9 @@
 					<item>82</item>
 					<item>83</item>
 					<item>84</item>
-					<item>329</item>
 					<item>330</item>
-					<item>334</item>
+					<item>331</item>
+					<item>335</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 			</item>
@@ -962,37 +962,37 @@
 				<sink_obj>31</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_58">
-				<id>329</id>
+				<id>330</id>
 				<edge_type>4</edge_type>
 				<source_obj>41</source_obj>
 				<sink_obj>46</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_59">
-				<id>330</id>
+				<id>331</id>
 				<edge_type>4</edge_type>
 				<source_obj>36</source_obj>
 				<sink_obj>46</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_60">
-				<id>331</id>
+				<id>332</id>
 				<edge_type>4</edge_type>
 				<source_obj>31</source_obj>
 				<sink_obj>36</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_61">
-				<id>332</id>
+				<id>333</id>
 				<edge_type>4</edge_type>
 				<source_obj>31</source_obj>
 				<sink_obj>41</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_62">
-				<id>333</id>
+				<id>334</id>
 				<edge_type>4</edge_type>
 				<source_obj>31</source_obj>
 				<sink_obj>36</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_63">
-				<id>334</id>
+				<id>335</id>
 				<edge_type>4</edge_type>
 				<source_obj>36</source_obj>
 				<sink_obj>46</sink_obj>
@@ -1019,7 +1019,7 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>22529</mMinLatency>
+			<mMinLatency>24577</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>1</mIsDfPipe>
 			<mDfPipe class_id="23" tracking_level="1" version="0" object_id="_65">
@@ -1985,7 +1985,7 @@
 		<count>12</count>
 		<item_version>0</item_version>
 		<item class_id="56" tracking_level="0" version="0">
-			<first>96</first>
+			<first>98</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -1993,7 +1993,7 @@
 			</second>
 		</item>
 		<item>
-			<first>100</first>
+			<first>102</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2001,7 +2001,7 @@
 			</second>
 		</item>
 		<item>
-			<first>104</first>
+			<first>106</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2009,7 +2009,7 @@
 			</second>
 		</item>
 		<item>
-			<first>108</first>
+			<first>110</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2017,7 +2017,7 @@
 			</second>
 		</item>
 		<item>
-			<first>112</first>
+			<first>114</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2025,7 +2025,7 @@
 			</second>
 		</item>
 		<item>
-			<first>116</first>
+			<first>118</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2033,7 +2033,7 @@
 			</second>
 		</item>
 		<item>
-			<first>120</first>
+			<first>122</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2041,7 +2041,7 @@
 			</second>
 		</item>
 		<item>
-			<first>124</first>
+			<first>126</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2049,7 +2049,7 @@
 			</second>
 		</item>
 		<item>
-			<first>129</first>
+			<first>131</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -2058,7 +2058,7 @@
 			</second>
 		</item>
 		<item>
-			<first>141</first>
+			<first>143</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -2067,7 +2067,7 @@
 			</second>
 		</item>
 		<item>
-			<first>157</first>
+			<first>159</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -2076,7 +2076,7 @@
 			</second>
 		</item>
 		<item>
-			<first>165</first>
+			<first>167</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -2089,7 +2089,7 @@
 		<count>8</count>
 		<item_version>0</item_version>
 		<item class_id="59" tracking_level="0" version="0">
-			<first>fft_config_fwd_data_V_fu_100</first>
+			<first>fft_config_fwd_data_V_fu_102</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2097,7 +2097,7 @@
 			</second>
 		</item>
 		<item>
-			<first>fft_config_inv_data_V_fu_96</first>
+			<first>fft_config_inv_data_V_fu_98</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2105,7 +2105,7 @@
 			</second>
 		</item>
 		<item>
-			<first>fft_status_fwd_data_V_fu_120</first>
+			<first>fft_status_fwd_data_V_fu_122</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2113,7 +2113,7 @@
 			</second>
 		</item>
 		<item>
-			<first>fft_status_inv_data_V_fu_124</first>
+			<first>fft_status_inv_data_V_fu_126</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2121,7 +2121,7 @@
 			</second>
 		</item>
 		<item>
-			<first>xk2_channel_fu_112</first>
+			<first>xk2_channel_fu_114</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2129,7 +2129,7 @@
 			</second>
 		</item>
 		<item>
-			<first>xk_channel_fu_116</first>
+			<first>xk_channel_fu_118</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2137,7 +2137,7 @@
 			</second>
 		</item>
 		<item>
-			<first>xn2_channel_fu_104</first>
+			<first>xn2_channel_fu_106</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2145,7 +2145,7 @@
 			</second>
 		</item>
 		<item>
-			<first>xn_channel_fu_108</first>
+			<first>xn_channel_fu_110</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2157,7 +2157,7 @@
 		<count>4</count>
 		<item_version>0</item_version>
 		<item>
-			<first>grp_fft_config1_s_fu_157</first>
+			<first>grp_fft_config1_s_fu_159</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -2166,7 +2166,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_fft_config2_s_fu_165</first>
+			<first>grp_fft_config2_s_fu_167</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -2175,7 +2175,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_filter_top_dummy_proc_be_fu_129</first>
+			<first>grp_filter_top_dummy_proc_be_fu_131</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -2184,7 +2184,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_filter_top_dummy_proc_fe_fu_141</first>
+			<first>grp_filter_top_dummy_proc_fe_fu_143</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -2231,7 +2231,7 @@
 		<count>8</count>
 		<item_version>0</item_version>
 		<item>
-			<first>173</first>
+			<first>175</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2239,7 +2239,7 @@
 			</second>
 		</item>
 		<item>
-			<first>179</first>
+			<first>181</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2247,7 +2247,7 @@
 			</second>
 		</item>
 		<item>
-			<first>185</first>
+			<first>187</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2255,7 +2255,7 @@
 			</second>
 		</item>
 		<item>
-			<first>191</first>
+			<first>193</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2263,7 +2263,7 @@
 			</second>
 		</item>
 		<item>
-			<first>197</first>
+			<first>199</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2271,7 +2271,7 @@
 			</second>
 		</item>
 		<item>
-			<first>203</first>
+			<first>205</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2279,7 +2279,7 @@
 			</second>
 		</item>
 		<item>
-			<first>209</first>
+			<first>211</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2287,7 +2287,7 @@
 			</second>
 		</item>
 		<item>
-			<first>214</first>
+			<first>216</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2299,7 +2299,7 @@
 		<count>8</count>
 		<item_version>0</item_version>
 		<item>
-			<first>fft_config_fwd_data_V_reg_179</first>
+			<first>fft_config_fwd_data_V_reg_181</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2307,7 +2307,7 @@
 			</second>
 		</item>
 		<item>
-			<first>fft_config_inv_data_V_reg_173</first>
+			<first>fft_config_inv_data_V_reg_175</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2315,7 +2315,7 @@
 			</second>
 		</item>
 		<item>
-			<first>fft_status_fwd_data_V_reg_209</first>
+			<first>fft_status_fwd_data_V_reg_211</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2323,7 +2323,7 @@
 			</second>
 		</item>
 		<item>
-			<first>fft_status_inv_data_V_reg_214</first>
+			<first>fft_status_inv_data_V_reg_216</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2331,7 +2331,7 @@
 			</second>
 		</item>
 		<item>
-			<first>xk2_channel_reg_197</first>
+			<first>xk2_channel_reg_199</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2339,7 +2339,7 @@
 			</second>
 		</item>
 		<item>
-			<first>xk_channel_reg_203</first>
+			<first>xk_channel_reg_205</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2347,7 +2347,7 @@
 			</second>
 		</item>
 		<item>
-			<first>xn2_channel_reg_185</first>
+			<first>xn2_channel_reg_187</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2355,7 +2355,7 @@
 			</second>
 		</item>
 		<item>
-			<first>xn_channel_reg_191</first>
+			<first>xn_channel_reg_193</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

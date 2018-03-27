@@ -757,7 +757,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>tmp_1</name>
+						<name>tmp_5</name>
 						<fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
 						<fileDirectory>/home/commlab/Documents/VIVADO_projects/fft_filter</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -928,7 +928,7 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>tmp_2</name>
+						<name>tmp_7</name>
 						<fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
 						<fileDirectory>/home/commlab/Documents/VIVADO_projects/fft_filter</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -1141,7 +1141,7 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>tmp_3</name>
+						<name>tmp_8</name>
 						<fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
 						<fileDirectory>/home/commlab/Documents/VIVADO_projects/fft_filter</fileDirectory>
 						<lineNumber>10</lineNumber>

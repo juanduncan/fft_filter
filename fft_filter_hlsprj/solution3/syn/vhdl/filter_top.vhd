@@ -27,13 +27,13 @@ port (
     outxk1_d0 : OUT STD_LOGIC_VECTOR (63 downto 0);
     outxk1_q0 : IN STD_LOGIC_VECTOR (63 downto 0);
     outxk1_we0 : OUT STD_LOGIC;
-    out_r_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+    out_r : OUT STD_LOGIC_VECTOR (63 downto 0);
     ap_clk : IN STD_LOGIC;
     ap_rst_n : IN STD_LOGIC;
     in_r_TVALID : IN STD_LOGIC;
     in_r_TREADY : OUT STD_LOGIC;
-    out_r_TVALID : OUT STD_LOGIC;
-    out_r_TREADY : IN STD_LOGIC;
+    out_r_ap_vld : OUT STD_LOGIC;
+    out_r_ap_ack : IN STD_LOGIC;
     ap_done : OUT STD_LOGIC;
     ap_start : IN STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
@@ -44,7 +44,7 @@ end;
 architecture behav of filter_top is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "filter_top,hls_ip_2014_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k410tffg900-2,HLS_INPUT_CLOCK=3.300000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=2.887500,HLS_SYN_LAT=22529,HLS_SYN_TPT=22530,HLS_SYN_MEM=58,HLS_SYN_DSP=96,HLS_SYN_FF=37192,HLS_SYN_LUT=30017}";
+    "filter_top,hls_ip_2014_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7k410tffg900-2,HLS_INPUT_CLOCK=3.300000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=2.887500,HLS_SYN_LAT=24577,HLS_SYN_TPT=24578,HLS_SYN_MEM=58,HLS_SYN_DSP=96,HLS_SYN_FF=37182,HLS_SYN_LUT=30017}";
     constant ap_const_lv11_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_lv64_0 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
@@ -129,9 +129,9 @@ architecture behav of filter_top is
     signal filter_top_dummy_proc_be_U0_output_xk1_ce0 : STD_LOGIC;
     signal filter_top_dummy_proc_be_U0_output_xk1_we0 : STD_LOGIC;
     signal filter_top_dummy_proc_be_U0_output_xk1_d0 : STD_LOGIC_VECTOR (63 downto 0);
-    signal filter_top_dummy_proc_be_U0_out_r_TDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal filter_top_dummy_proc_be_U0_out_r_TVALID : STD_LOGIC;
-    signal filter_top_dummy_proc_be_U0_out_r_TREADY : STD_LOGIC;
+    signal filter_top_dummy_proc_be_U0_out_r : STD_LOGIC_VECTOR (63 downto 0);
+    signal filter_top_dummy_proc_be_U0_out_r_ap_vld : STD_LOGIC;
+    signal filter_top_dummy_proc_be_U0_out_r_ap_ack : STD_LOGIC;
     signal ap_sig_hs_continue : STD_LOGIC;
     signal fft_config_fwd_data_V_U_ap_dummy_ce : STD_LOGIC;
     signal fft_config_fwd_data_V_din : STD_LOGIC_VECTOR (15 downto 0);
@@ -289,9 +289,9 @@ architecture behav of filter_top is
         output_xk1_ce0 : OUT STD_LOGIC;
         output_xk1_we0 : OUT STD_LOGIC;
         output_xk1_d0 : OUT STD_LOGIC_VECTOR (63 downto 0);
-        out_r_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-        out_r_TVALID : OUT STD_LOGIC;
-        out_r_TREADY : IN STD_LOGIC );
+        out_r : OUT STD_LOGIC_VECTOR (63 downto 0);
+        out_r_ap_vld : OUT STD_LOGIC;
+        out_r_ap_ack : IN STD_LOGIC );
     end component;
 
 
@@ -481,9 +481,9 @@ begin
         output_xk1_ce0 => filter_top_dummy_proc_be_U0_output_xk1_ce0,
         output_xk1_we0 => filter_top_dummy_proc_be_U0_output_xk1_we0,
         output_xk1_d0 => filter_top_dummy_proc_be_U0_output_xk1_d0,
-        out_r_TDATA => filter_top_dummy_proc_be_U0_out_r_TDATA,
-        out_r_TVALID => filter_top_dummy_proc_be_U0_out_r_TVALID,
-        out_r_TREADY => filter_top_dummy_proc_be_U0_out_r_TREADY);
+        out_r => filter_top_dummy_proc_be_U0_out_r,
+        out_r_ap_vld => filter_top_dummy_proc_be_U0_out_r_ap_vld,
+        out_r_ap_ack => filter_top_dummy_proc_be_U0_out_r_ap_ack);
 
     fft_config_fwd_data_V_U : component FIFO_filter_top_fft_config_fwd_data_V
     port map (
@@ -824,7 +824,7 @@ begin
     filter_top_dummy_proc_be_U0_input_xk1_empty_n <= xk_channel_empty_n;
     filter_top_dummy_proc_be_U0_input_xk2_dout <= xk2_channel_dout;
     filter_top_dummy_proc_be_U0_input_xk2_empty_n <= xk2_channel_empty_n;
-    filter_top_dummy_proc_be_U0_out_r_TREADY <= out_r_TREADY;
+    filter_top_dummy_proc_be_U0_out_r_ap_ack <= out_r_ap_ack;
     filter_top_dummy_proc_fe_U0_ap_continue <= ap_const_logic_1;
     filter_top_dummy_proc_fe_U0_ap_start <= ap_sig_start_in_filter_top_dummy_proc_fe_U0_ap_start;
     filter_top_dummy_proc_fe_U0_config_fwd_data_V_full_n <= fft_config_fwd_data_V_full_n;
@@ -839,8 +839,8 @@ begin
     inxn2_ce0 <= filter_top_dummy_proc_fe_U0_input_xn2_ce0;
     inxn2_d0 <= ap_const_lv64_0;
     inxn2_we0 <= ap_const_logic_0;
-    out_r_TDATA <= filter_top_dummy_proc_be_U0_out_r_TDATA;
-    out_r_TVALID <= filter_top_dummy_proc_be_U0_out_r_TVALID;
+    out_r <= filter_top_dummy_proc_be_U0_out_r;
+    out_r_ap_vld <= filter_top_dummy_proc_be_U0_out_r_ap_vld;
     outxk1_address0 <= filter_top_dummy_proc_be_U0_output_xk1_address0;
     outxk1_ce0 <= filter_top_dummy_proc_be_U0_output_xk1_ce0;
     outxk1_d0 <= filter_top_dummy_proc_be_U0_output_xk1_d0;

@@ -21,12 +21,12 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>22529</Best-caseLatency>
-<Average-caseLatency>22529</Average-caseLatency>
-<Worst-caseLatency>22529</Worst-caseLatency>
-<DataflowPipelineThroughput>22530</DataflowPipelineThroughput>
-<Interval-min>22530</Interval-min>
-<Interval-max>22530</Interval-max>
+<Best-caseLatency>24577</Best-caseLatency>
+<Average-caseLatency>24577</Average-caseLatency>
+<Worst-caseLatency>24577</Worst-caseLatency>
+<DataflowPipelineThroughput>24578</DataflowPipelineThroughput>
+<Interval-min>24578</Interval-min>
+<Interval-max>24578</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
@@ -34,7 +34,7 @@
 <Resources>
 <BRAM_18K>58</BRAM_18K>
 <DSP48E>96</DSP48E>
-<FF>37192</FF>
+<FF>37182</FF>
 <LUT>30017</LUT>
 <SLICE>0</SLICE>
 </Resources>
@@ -265,11 +265,11 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_TDATA</name>
+<name>out_r</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>axis</IOProtocol>
+<IOProtocol>ap_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>64</Bits>
@@ -277,11 +277,11 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_TVALID</name>
+<name>out_r_ap_vld</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>axis</IOProtocol>
+<IOProtocol>ap_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
 <Bits>1</Bits>
@@ -289,11 +289,11 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>out_r_TREADY</name>
+<name>out_r_ap_ack</name>
 <Object>out_r</Object>
 <Type>pointer</Type>
 <Scope></Scope>
-<IOProtocol>axis</IOProtocol>
+<IOProtocol>ap_hs</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>1</Bits>
