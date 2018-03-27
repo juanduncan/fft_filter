@@ -9,7 +9,7 @@ add_files fft_filter_hlsprj/src/filter_fft.cpp
 add_files -tb fft_filter_hlsprj/src/bckups/filter_tb.cpp
 open_solution "solution3"
 set_part {xc7k410tffg900-2}
-create_clock -period 3.3 -name default
+create_clock -period 5 -name default
 config_dataflow -default_channel fifo -fifo_depth 2048
 source "./fft_filter_hlsprj/solution3/directives.tcl"
 csim_design

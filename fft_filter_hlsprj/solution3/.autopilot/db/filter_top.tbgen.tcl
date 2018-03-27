@@ -9,14 +9,14 @@ set C_modelName filter_top
 set C_modelType { void 0 }
 set C_modelArgList { 
 	{ coefs int 64 regular {array 2048 { 1 } 1 1 }  }
-	{ in_r int 64 regular {axi_s 0 volatile  { in_r data } }  }
+	{ in_r int 64 regular {pointer 0 volatile }  }
 	{ inxn2 int 64 regular {array 2048 { 1 } 1 1 }  }
 	{ outxk1 int 64 regular {array 2048 { 0 } 0 1 }  }
 	{ out_r int 64 regular {pointer 1 volatile }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "coefs", "interface" : "memory", "bitwidth" : 64,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "coefs._M_real.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 2047,"step" : 1}]}]},{"low":32,"up":63,"cElement": [{"cName": "coefs._M_imag.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 2047,"step" : 1}]}]}]} , 
- 	{ "Name" : "in_r", "interface" : "axis", "bitwidth" : 64,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "in._M_real.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 1535,"step" : 1}]}]},{"low":32,"up":63,"cElement": [{"cName": "in._M_imag.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 1535,"step" : 1}]}]}]} , 
+ 	{ "Name" : "in_r", "interface" : "wire", "bitwidth" : 64,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "in._M_real.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 1535,"step" : 1}]}]},{"low":32,"up":63,"cElement": [{"cName": "in._M_imag.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 1535,"step" : 1}]}]}]} , 
  	{ "Name" : "inxn2", "interface" : "memory", "bitwidth" : 64,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "inxn2._M_real.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 2047,"step" : 1}]}]},{"low":32,"up":63,"cElement": [{"cName": "inxn2._M_imag.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 2047,"step" : 1}]}]}]} , 
  	{ "Name" : "outxk1", "interface" : "memory", "bitwidth" : 64,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "outxk1._M_real.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 2047,"step" : 1}]}]},{"low":32,"up":63,"cElement": [{"cName": "outxk1._M_imag.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 2047,"step" : 1}]}]}]} , 
  	{ "Name" : "out_r", "interface" : "wire", "bitwidth" : 64,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "out._M_real.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 1535,"step" : 1}]}]},{"low":32,"up":63,"cElement": [{"cName": "out._M_imag.V","cData": "int32","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 1535,"step" : 1}]}]}]} ]}
@@ -28,7 +28,7 @@ set portList {
 	{ coefs_d0 sc_out sc_lv 64 signal 0 } 
 	{ coefs_q0 sc_in sc_lv 64 signal 0 } 
 	{ coefs_we0 sc_out sc_logic 1 signal 0 } 
-	{ in_r_TDATA sc_in sc_lv 64 signal 1 } 
+	{ in_r sc_in sc_lv 64 signal 1 } 
 	{ inxn2_address0 sc_out sc_lv 11 signal 2 } 
 	{ inxn2_ce0 sc_out sc_logic 1 signal 2 } 
 	{ inxn2_d0 sc_out sc_lv 64 signal 2 } 
@@ -41,9 +41,9 @@ set portList {
 	{ outxk1_we0 sc_out sc_logic 1 signal 3 } 
 	{ out_r sc_out sc_lv 64 signal 4 } 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
-	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
-	{ in_r_TVALID sc_in sc_logic 1 invld 1 } 
-	{ in_r_TREADY sc_out sc_logic 1 inacc 1 } 
+	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
+	{ in_r_ap_vld sc_in sc_logic 1 invld 1 } 
+	{ in_r_ap_ack sc_out sc_logic 1 inacc 1 } 
 	{ out_r_ap_vld sc_out sc_logic 1 outvld 4 } 
 	{ out_r_ap_ack sc_in sc_logic 1 outacc 4 } 
 	{ ap_done sc_out sc_logic 1 predone -1 } 
@@ -57,7 +57,7 @@ set NewPortList {[
  	{ "name": "coefs_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "coefs", "role": "d0" }} , 
  	{ "name": "coefs_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "coefs", "role": "q0" }} , 
  	{ "name": "coefs_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "coefs", "role": "we0" }} , 
- 	{ "name": "in_r_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "in_r", "role": "TDATA" }} , 
+ 	{ "name": "in_r", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "in_r", "role": "default" }} , 
  	{ "name": "inxn2_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "inxn2", "role": "address0" }} , 
  	{ "name": "inxn2_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "inxn2", "role": "ce0" }} , 
  	{ "name": "inxn2_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "inxn2", "role": "d0" }} , 
@@ -70,9 +70,9 @@ set NewPortList {[
  	{ "name": "outxk1_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "outxk1", "role": "we0" }} , 
  	{ "name": "out_r", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "out_r", "role": "default" }} , 
  	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
- 	{ "name": "ap_rst_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst_n", "role": "default" }} , 
- 	{ "name": "in_r_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in_r", "role": "TVALID" }} , 
- 	{ "name": "in_r_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in_r", "role": "TREADY" }} , 
+ 	{ "name": "ap_rst", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst", "role": "default" }} , 
+ 	{ "name": "in_r_ap_vld", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "in_r", "role": "ap_vld" }} , 
+ 	{ "name": "in_r_ap_ack", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in_r", "role": "ap_ack" }} , 
  	{ "name": "out_r_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "out_r", "role": "ap_vld" }} , 
  	{ "name": "out_r_ap_ack", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "out_r", "role": "ap_ack" }} , 
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
@@ -81,7 +81,7 @@ set NewPortList {[
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }}  ]}
 set Spec2ImplPortList { 
 	coefs { ap_memory {  { coefs_address0 mem_address 1 11 }  { coefs_ce0 mem_ce 1 1 }  { coefs_d0 mem_din 1 64 }  { coefs_q0 mem_dout 0 64 }  { coefs_we0 mem_we 1 1 } } }
-	in_r { axis {  { in_r_TDATA in_data 0 64 }  { in_r_TVALID in_vld 0 1 }  { in_r_TREADY in_acc 1 1 } } }
+	in_r { ap_hs {  { in_r in_data 0 64 }  { in_r_ap_vld in_vld 0 1 }  { in_r_ap_ack in_acc 1 1 } } }
 	inxn2 { ap_memory {  { inxn2_address0 mem_address 1 11 }  { inxn2_ce0 mem_ce 1 1 }  { inxn2_d0 mem_din 1 64 }  { inxn2_q0 mem_dout 0 64 }  { inxn2_we0 mem_we 1 1 } } }
 	outxk1 { ap_memory {  { outxk1_address0 mem_address 1 11 }  { outxk1_ce0 mem_ce 1 1 }  { outxk1_d0 mem_din 1 64 }  { outxk1_q0 mem_dout 0 64 }  { outxk1_we0 mem_we 1 1 } } }
 	out_r { ap_hs {  { out_r out_data 1 64 }  { out_r_ap_vld out_vld 1 1 }  { out_r_ap_ack out_acc 0 1 } } }

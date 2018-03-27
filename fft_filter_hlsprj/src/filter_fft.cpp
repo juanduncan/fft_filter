@@ -2,7 +2,8 @@
 void dummy_proc_fe(config_t* config_fwd, config_ti* config_inv,
 		data_in_t tail[TAIL_LENGTH], data_in_t in[FILTER_LENGTH], data_out_t input_xn2[FFT_LENGTH],
 		data_in_t output_xn1[FFT_LENGTH],	data_out_t  output_xn2[FFT_LENGTH])
-{   int i;
+{
+   int i;
     config_fwd->setDir(  bool(1)      );
     config_inv->setDir(  bool(0)      );
     config_fwd-> setSch(0x61F);
@@ -21,7 +22,8 @@ void dummy_proc_fe(config_t* config_fwd, config_ti* config_inv,
 void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, complex_coef_t coefs[FFT_LENGTH],
 		data_out_t   input_xk1[FFT_LENGTH], data_out_t  input_xk2[FFT_LENGTH],
 		data_out_t  output_xk1[FFT_LENGTH], data_out_t  dummy[TAIL_LENGTH], data_out_t out[FILTER_LENGTH])
-{   int i;
+{
+   int i;
     for (i=0; i< FFT_LENGTH; i++){
     	output_xk1[i] =  data_out_t( complex_coef_t(input_xk1[i]) * coefs[i]  );
     	if(i< TAIL_LENGTH){
@@ -40,7 +42,7 @@ void filter_top(	complex_coef_t coefs[FFT_LENGTH],
 					data_out_t out[FILTER_LENGTH])
 {
 #pragma HLS INTERFACE ap_hs port=out
-#pragma HLS INTERFACE axis port=in
+#pragma HLS INTERFACE ap_hs port=in
 #pragma HLS INTERFACE ap_memory port=outxk1
 #pragma HLS RESOURCE variable=outxk1 core=RAM_1P
 #pragma HLS DATA_PACK variable=outxk1

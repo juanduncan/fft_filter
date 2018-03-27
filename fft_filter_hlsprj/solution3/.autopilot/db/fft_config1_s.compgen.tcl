@@ -204,7 +204,7 @@ set ipParamList { \
     rounding_modes {0} \
     run_time_configurable_transform_length {0} \
     scaling_options {0} \
-    target_clock_frequency {304} \
+    target_clock_frequency {200} \
     throttle_scheme {nonrealtime} \
     transform_length {2048} \
     xk_index {0} \

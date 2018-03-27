@@ -74,7 +74,7 @@
 
 <node id="8" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="8" op_7_bw="8" op_8_bw="8">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %output_xk1, [1 x i8]* @p_str1, [7 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+:2  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %output_xk1, [1 x i8]* @p_str1, [7 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -89,7 +89,7 @@
 
 <node id="9" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="8" op_7_bw="8" op_8_bw="8">
 <![CDATA[
-:3  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %coefs, [1 x i8]* @p_str1, [12 x i8]* @p_str5, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+:3  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %coefs, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -588,7 +588,7 @@
 </dataflow>
 <dataflow id="74" from="p_str1" to="stg_7" fromId="73" toId="7">
 </dataflow>
-<dataflow id="76" from="p_str4" to="stg_7" fromId="75" toId="7">
+<dataflow id="76" from="p_str3" to="stg_7" fromId="75" toId="7">
 </dataflow>
 <dataflow id="77" from="p_str1" to="stg_7" fromId="73" toId="7">
 </dataflow>
@@ -606,7 +606,7 @@
 </dataflow>
 <dataflow id="85" from="p_str1" to="stg_8" fromId="73" toId="8">
 </dataflow>
-<dataflow id="87" from="p_str5" to="stg_8" fromId="86" toId="8">
+<dataflow id="87" from="p_str4" to="stg_8" fromId="86" toId="8">
 </dataflow>
 <dataflow id="88" from="p_str1" to="stg_8" fromId="73" toId="8">
 </dataflow>

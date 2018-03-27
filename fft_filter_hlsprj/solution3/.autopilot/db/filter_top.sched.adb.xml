@@ -319,7 +319,7 @@
 
 <node id="12" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-.preheader51.preheader:4  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !16
+.preheader51.preheader:4  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %coefs), !map !16
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -334,7 +334,7 @@
 
 <node id="13" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-.preheader51.preheader:5  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !25
+.preheader51.preheader:5  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %inxn2), !map !25
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -349,7 +349,7 @@
 
 <node id="14" bw="0" op_0_bw="0" op_1_bw="64">
 <![CDATA[
-.preheader51.preheader:6  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %coefs), !map !32
+.preheader51.preheader:6  call void (...)* @_ssdm_op_SpecBitsMap([2048 x i64]* %outxk1), !map !32
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -424,7 +424,7 @@
 
 <node id="25" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="8" op_8_bw="8" op_9_bw="8">
 <![CDATA[
-.preheader51.preheader:17  call void (...)* @_ssdm_op_SpecInterface(i64* %in_r, [5 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+.preheader51.preheader:17  call void (...)* @_ssdm_op_SpecInterface(i64* %in_r, [6 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -454,7 +454,7 @@
 
 <node id="27" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="8" op_7_bw="8" op_8_bw="8">
 <![CDATA[
-.preheader51.preheader:19  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %outxk1, [1 x i8]* @p_str1, [7 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+.preheader51.preheader:19  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %outxk1, [1 x i8]* @p_str1, [7 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -469,7 +469,7 @@
 
 <node id="28" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="8" op_7_bw="8" op_8_bw="8">
 <![CDATA[
-.preheader51.preheader:20  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %inxn2, [1 x i8]* @p_str1, [12 x i8]* @p_str5, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+.preheader51.preheader:20  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %inxn2, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -499,7 +499,7 @@
 
 <node id="30" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="32" op_6_bw="8" op_7_bw="8" op_8_bw="8">
 <![CDATA[
-.preheader51.preheader:22  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %coefs, [1 x i8]* @p_str1, [12 x i8]* @p_str5, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+.preheader51.preheader:22  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %coefs, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

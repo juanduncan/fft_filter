@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'filter_top_dummy_proc_be'
 ================================================================
-* Date:           Sat Mar 24 17:29:40 2018
+* Date:           Tue Mar 27 09:39:46 2018
 
 * Version:        2014.4 (Build 1071461 on Tue Nov 18 16:42:57 PM 2014)
 * Project:        fft_filter_hlsprj
@@ -20,7 +20,7 @@
     +---------+-------+----------+------------+
     |  Clock  | Target| Estimated| Uncertainty|
     +---------+-------+----------+------------+
-    |default  |   3.30|      2.39|        0.41|
+    |default  |   5.00|      3.93|        0.62|
     +---------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |    Latency    |    Interval   | Pipeline|
     |  min  |  max  |  min  |  max  |   Type  |
     +-------+-------+-------+-------+---------+
-    |  24577|  24577|  24577|  24577|   none  |
+    |  20481|  20481|  20481|  20481|   none  |
     +-------+-------+-------+-------+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |          |    Latency    | Iteration|  Initiation Interval  | Trip |          |
         | Loop Name|  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
         +----------+-------+-------+----------+-----------+-----------+------+----------+
-        |- Loop 1  |  24576|  24576|        12|          -|          -|  2048|    no    |
+        |- Loop 1  |  20480|  20480|        10|          -|          -|  2048|    no    |
         +----------+-------+-------+----------+-----------+-----------+------+----------+
 
 
@@ -143,10 +143,10 @@ ST_1: stg_6 [1/1] 0.00ns
 :1  call void (...)* @_ssdm_op_SpecInterface(i64* %input_xk1, [8 x i8]* @str94, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @str94, [8 x i8]* @str94, [8 x i8]* @str94)
 
 ST_1: stg_7 [1/1] 0.00ns
-:2  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %output_xk1, [1 x i8]* @p_str1, [7 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+:2  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %output_xk1, [1 x i8]* @p_str1, [7 x i8]* @p_str3, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ST_1: stg_8 [1/1] 0.00ns
-:3  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %coefs, [1 x i8]* @p_str1, [12 x i8]* @p_str5, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+:3  call void (...)* @_ssdm_op_SpecMemCore([2048 x i64]* %coefs, [1 x i8]* @p_str1, [12 x i8]* @p_str4, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
 
 ST_1: stg_9 [1/1] 0.00ns
 :4  call void (...)* @_ssdm_op_SpecInterface([2048 x i64]* %output_xk1, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
@@ -158,7 +158,7 @@ ST_1: stg_11 [1/1] 0.89ns
 :6  br label %1
 
 
- <State 2>: 1.44ns
+ <State 2>: 1.79ns
 ST_2: i [1/1] 0.00ns
 :0  %i = phi i12 [ 0, %0 ], [ %i_1, %4 ]
 
@@ -174,7 +174,7 @@ ST_2: i_1 [1/1] 1.30ns
 ST_2: stg_16 [1/1] 0.00ns
 :4  br i1 %exitcond, label %5, label %2
 
-ST_2: input_xk1_read [1/1] 1.44ns
+ST_2: input_xk1_read [1/1] 1.79ns
 :1  %input_xk1_read = call i64 @_ssdm_op_Read.ap_fifo.volatile.i64P(i64* %input_xk1)
 
 ST_2: tmp_9 [1/1] 0.00ns
@@ -186,15 +186,15 @@ ST_2: p_12_0_new [1/1] 0.00ns
 ST_2: tmp_4 [2/2] 0.00ns
 :4  %tmp_4 = call fastcc { i32, i32 } @"filter_top_operator*<ap_fixed >"(i32 %tmp_9, i32 %p_12_0_new, [2048 x i64]* %coefs, i12 %i)
 
-ST_2: input_xk2_read [1/1] 1.44ns
+ST_2: input_xk2_read [1/1] 1.79ns
 :12  %input_xk2_read = call i64 @_ssdm_op_Read.ap_fifo.volatile.i64P(i64* %input_xk2)
 
 ST_2: stg_22 [1/1] 0.00ns
 :0  ret void
 
 
- <State 3>: 2.08ns
-ST_3: tmp_4 [1/2] 2.08ns
+ <State 3>: 3.62ns
+ST_3: tmp_4 [1/2] 3.62ns
 :4  %tmp_4 = call fastcc { i32, i32 } @"filter_top_operator*<ap_fixed >"(i32 %tmp_9, i32 %p_12_0_new, [2048 x i64]* %coefs, i12 %i)
 
 ST_3: p_0 [1/1] 0.00ns

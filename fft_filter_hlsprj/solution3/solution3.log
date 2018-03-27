@@ -5,9 +5,178 @@ Copyright (C) 2014 Xilinx Inc. All rights reserved.
 
 ==============================================================
 
-@I [SYN-201] Setting up clock 'default' with a period of 3.3ns.
+@I [SYN-201] Setting up clock 'default' with a period of 5ns.
 @I [HLS-10] Setting target device to 'xc7k410tffg900-2'
 @I [XFORM-701] Set default FIFO size in dataflow to 2048.
 @I [XFORM-701] Set the default channel type in dataflow to FIFO.
-@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
+@I [SYN-201] Setting up clock 'default' with a period of 5ns.
+@I [XFORM-701] Set default FIFO size in dataflow to 2048.
+@I [XFORM-701] Set the default channel type in dataflow to FIFO.
+@I [HLS-10] Analyzing design file 'fft_filter_hlsprj/src/filter_fft.cpp' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@I [HLS-10] Checking synthesizability ...
+@I [XFORM-1101] Packing variable 'outxk1' (fft_filter_hlsprj/src/filter_fft.cpp:41) into a 64-bit variable.
+@I [XFORM-1101] Packing variable 'inxn2' (fft_filter_hlsprj/src/filter_fft.cpp:40) into a 64-bit variable.
+@I [XFORM-1101] Packing variable 'in' (fft_filter_hlsprj/src/filter_fft.cpp:39) into a 64-bit variable.
+@I [XFORM-1101] Packing variable 'out' (fft_filter_hlsprj/src/filter_fft.cpp:42) into a 64-bit variable.
+@I [XFORM-1101] Packing variable 'coefs' (fft_filter_hlsprj/src/filter_fft.cpp:38) into a 64-bit variable.
+@W [ANALYSIS-31] The program may have out of bound access of array variable 'detector_tail._M_real.V' in function 'dummy_proc_fe' (fft_filter_hlsprj/src/filter_fft.cpp:14:7).
+@W [ANALYSIS-31] The program may have out of bound access of array variable 'detector_tail._M_imag.V' in function 'dummy_proc_fe' (fft_filter_hlsprj/src/filter_fft.cpp:14:7).
+@I [XFORM-712] Applying dataflow to function 'filter_top' (fft_filter_hlsprj/src/filter_fft.cpp:38), detected/extracted 4 process function(s):
+	 'dummy_proc_fe'
+	 'hls::fft<config1>'
+	 'hls::fft<config2>'
+	 'dummy_proc_be'.
+@W [XFORM-124] Array 'xn' may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-124] Array 'xk2' may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+@W [XFORM-631] Renaming function 'std::operator*<ap_fixed<32, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >' into operator*<ap_fixed >.
+@W [XFORM-631] Renaming function 'hls::fft<config2>' (/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls_fft.h:909) into fft<config2>.
+@W [XFORM-631] Renaming function 'hls::fft<config1>' (/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls_fft.h:909) into fft<config1>.
+@I [HLS-111] Elapsed time: 4.27 seconds; current memory usage: 119 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'filter_top' ...
+@W [SYN-103] Legalizing function name 'fft<config1>' to 'fft_config1_s'.
+@W [SYN-103] Legalizing function name 'fft<config2>' to 'fft_config2_s'.
+@W [SYN-103] Legalizing function name 'filter_top_operator*<ap_fixed >' to 'filter_multop_operator_ap_fixed_s'.
+@W [SYN-107] Renaming port name 'filter_top/in' to 'filter_top/in_r' to avoid conflict or HDL keywords.
+@W [SYN-107] Renaming port name 'filter_top/out' to 'filter_top/out_r' to avoid conflict or HDL keywords.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'filter_top_dummy_proc_fe' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.06 seconds; current memory usage: 120 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'filter_top_dummy_proc_fe' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 120 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'fft_config1_s' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Skip scheduling the IP block.
+@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 120 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'fft_config1_s' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 121 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'fft_config2_s' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Skip scheduling the IP block.
+@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 121 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'fft_config2_s' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 121 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'filter_multop_operator_ap_fixed_s' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.08 seconds; current memory usage: 121 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'filter_multop_operator_ap_fixed_s' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 121 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'filter_top_dummy_proc_be' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.06 seconds; current memory usage: 121 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'filter_top_dummy_proc_be' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 121 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'filter_top' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 121 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'filter_top' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 122 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'filter_top_dummy_proc_fe' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'filter_top_dummy_proc_fe'.
+@I [HLS-111] Elapsed time: 0.06 seconds; current memory usage: 122 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'fft_config1_s' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'fft_config1_s'.
+@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 123 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'fft_config2_s' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'fft_config2_s'.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 123 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'filter_multop_operator_ap_fixed_s' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Generating core module 'filter_top_mul_32s_32s_63_7': 4 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'filter_multop_operator_ap_fixed_s'.
+@I [HLS-111] Elapsed time: 0.02 seconds; current memory usage: 123 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'filter_top_dummy_proc_be' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'filter_top_dummy_proc_be'.
+@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 124 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'filter_top' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'filter_top/coefs' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on port 'filter_top/in_r' to 'ap_hs'.
+@I [RTGEN-500] Setting interface mode on port 'filter_top/inxn2' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on port 'filter_top/outxk1' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on port 'filter_top/out_r' to 'ap_hs'.
+@I [RTGEN-500] Setting interface mode on function 'filter_top' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Finished creating RTL model for 'filter_top'.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 125 MB.
+@I [RTMG-278] Implementing memory 'filter_top_dummy_proc_fe_detector_tail_M_real_V_ram' using block RAMs with power-on initialization.
+@I [RTMG-282] Generating pipelined core: 'filter_top_mul_32s_32s_63_7_MulnS_0'
+@I [RTMG-285] Implementing FIFO 'FIFO_filter_top_fft_config_fwd_data_V' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_filter_top_fft_config_inv_data_V' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_filter_top_xn_channel' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_filter_top_xn2_channel' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_filter_top_xk_channel' using Block RAMs.
+@I [RTMG-285] Implementing FIFO 'FIFO_filter_top_xk2_channel' using Block RAMs.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'filter_top'.
+@I [WVHDL-304] Generating RTL VHDL for 'filter_top'.
+@I [WVLOG-307] Generating RTL Verilog for 'filter_top'.
+@I [HLS-112] Total elapsed time: 16.841 seconds; peak memory usage: 125 MB.
 @I [LIC-101] Checked in feature [HLS]

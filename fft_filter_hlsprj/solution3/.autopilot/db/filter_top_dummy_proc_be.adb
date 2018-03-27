@@ -162,7 +162,7 @@
               <name/>
               <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>25</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>dummy_proc_be</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -177,7 +177,7 @@
                         <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
                         <second>dummy_proc_be</second>
                       </first>
-                      <second>25</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -233,7 +233,7 @@
               <name>exitcond</name>
               <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>25</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>dummy_proc_be</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -248,7 +248,7 @@
                         <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
                         <second>dummy_proc_be</second>
                       </first>
-                      <second>25</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -275,7 +275,7 @@
               <name>i_1</name>
               <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>25</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>dummy_proc_be</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -290,7 +290,7 @@
                         <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
                         <second>dummy_proc_be</second>
                       </first>
-                      <second>25</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -317,7 +317,7 @@
               <name/>
               <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>25</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>dummy_proc_be</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -332,7 +332,7 @@
                         <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
                         <second>dummy_proc_be</second>
                       </first>
-                      <second>25</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -360,7 +360,7 @@
               <name>tmp</name>
               <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
+              <lineNumber>28</lineNumber>
               <contextFuncName>dummy_proc_be</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -375,7 +375,7 @@
                         <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
                         <second>dummy_proc_be</second>
                       </first>
-                      <second>26</second>
+                      <second>28</second>
                     </item>
                   </second>
                 </item>
@@ -399,474 +399,6 @@
               <type>0</type>
               <id>21</id>
               <name>input_xk1_read</name>
-              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
-              <contextFuncName>dummy_proc_be</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
-                        <second>dummy_proc_be</second>
-                      </first>
-                      <second>26</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>64</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>59</item>
-            <item>60</item>
-          </oprand_edges>
-          <opcode>read</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_13">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>22</id>
-              <name>tmp_9</name>
-              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
-              <contextFuncName>dummy_proc_be</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
-                        <second>dummy_proc_be</second>
-                      </first>
-                      <second>26</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>tmp_9_fu_130_p1</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>32</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>61</item>
-          </oprand_edges>
-          <opcode>trunc</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_14">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>23</id>
-              <name>p_12_0_new</name>
-              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
-              <contextFuncName>dummy_proc_be</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
-                        <second>dummy_proc_be</second>
-                      </first>
-                      <second>26</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>p_12_0_new_reg_195</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>32</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>63</item>
-            <item>64</item>
-            <item>66</item>
-            <item>68</item>
-          </oprand_edges>
-          <opcode>partselect</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_15">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>24</id>
-              <name>tmp_4</name>
-              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
-              <contextFuncName>dummy_proc_be</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
-                        <second>dummy_proc_be</second>
-                      </first>
-                      <second>26</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>grp_filter_multop_operator_ap_fixed_s_fu_108</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>64</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>5</count>
-            <item_version>0</item_version>
-            <item>70</item>
-            <item>71</item>
-            <item>72</item>
-            <item>73</item>
-            <item>74</item>
-          </oprand_edges>
-          <opcode>call</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_16">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>25</id>
-              <name>p_0</name>
-              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
-              <contextFuncName>dummy_proc_be</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
-                        <second>dummy_proc_be</second>
-                      </first>
-                      <second>26</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>32</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>75</item>
-          </oprand_edges>
-          <opcode>extractvalue</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_17">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>26</id>
-              <name>p_1</name>
-              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
-              <contextFuncName>dummy_proc_be</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
-                        <second>dummy_proc_be</second>
-                      </first>
-                      <second>26</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>32</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>76</item>
-          </oprand_edges>
-          <opcode>extractvalue</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_18">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>27</id>
-              <name>output_xk1_addr</name>
-              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
-              <contextFuncName>dummy_proc_be</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
-                        <second>dummy_proc_be</second>
-                      </first>
-                      <second>26</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>11</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>77</item>
-            <item>79</item>
-            <item>80</item>
-          </oprand_edges>
-          <opcode>getelementptr</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_19">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>28</id>
-              <name>output_xk1_M_imag_V_addr</name>
-              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
-              <contextFuncName>dummy_proc_be</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
-                        <second>dummy_proc_be</second>
-                      </first>
-                      <second>26</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>output_xk1_d0</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>64</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>82</item>
-            <item>83</item>
-            <item>84</item>
-          </oprand_edges>
-          <opcode>bitconcatenate</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_20">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>29</id>
-              <name/>
-              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>26</lineNumber>
-              <contextFuncName>dummy_proc_be</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
-                        <second>dummy_proc_be</second>
-                      </first>
-                      <second>26</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName/>
-              <coreName/>
-            </Obj>
-            <bitwidth>0</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>85</item>
-            <item>86</item>
-          </oprand_edges>
-          <opcode>store</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_21">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>30</id>
-              <name>tmp_10</name>
-              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>27</lineNumber>
-              <contextFuncName>dummy_proc_be</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
-                        <second>dummy_proc_be</second>
-                      </first>
-                      <second>27</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>tmp_10_fu_166_p4</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>3</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>88</item>
-            <item>89</item>
-            <item>91</item>
-            <item>93</item>
-          </oprand_edges>
-          <opcode>partselect</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_22">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>31</id>
-              <name>icmp</name>
-              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>27</lineNumber>
-              <contextFuncName>dummy_proc_be</contextFuncName>
-              <inlineStackInfo>
-                <count>1</count>
-                <item_version>0</item_version>
-                <item>
-                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
-                  <second>
-                    <count>1</count>
-                    <item_version>0</item_version>
-                    <item>
-                      <first>
-                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
-                        <second>dummy_proc_be</second>
-                      </first>
-                      <second>27</second>
-                    </item>
-                  </second>
-                </item>
-              </inlineStackInfo>
-              <originalName/>
-              <rtlName>icmp_fu_176_p2</rtlName>
-              <coreName/>
-            </Obj>
-            <bitwidth>1</bitwidth>
-          </Value>
-          <oprand_edges>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>94</item>
-            <item>96</item>
-          </oprand_edges>
-          <opcode>icmp</opcode>
-        </item>
-        <item class_id_reference="9" object_id="_23">
-          <Value>
-            <Obj>
-              <type>0</type>
-              <id>32</id>
-              <name>input_xk2_read</name>
               <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>28</lineNumber>
@@ -898,20 +430,20 @@
           <oprand_edges>
             <count>2</count>
             <item_version>0</item_version>
-            <item>97</item>
-            <item>98</item>
+            <item>59</item>
+            <item>60</item>
           </oprand_edges>
           <opcode>read</opcode>
         </item>
-        <item class_id_reference="9" object_id="_24">
+        <item class_id_reference="9" object_id="_13">
           <Value>
             <Obj>
               <type>0</type>
-              <id>33</id>
-              <name/>
+              <id>22</id>
+              <name>tmp_9</name>
               <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>27</lineNumber>
+              <lineNumber>28</lineNumber>
               <contextFuncName>dummy_proc_be</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -926,7 +458,475 @@
                         <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
                         <second>dummy_proc_be</second>
                       </first>
-                      <second>27</second>
+                      <second>28</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>tmp_9_fu_130_p1</rtlName>
+              <coreName/>
+            </Obj>
+            <bitwidth>32</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>61</item>
+          </oprand_edges>
+          <opcode>trunc</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_14">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>23</id>
+              <name>p_12_0_new</name>
+              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>28</lineNumber>
+              <contextFuncName>dummy_proc_be</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
+                        <second>dummy_proc_be</second>
+                      </first>
+                      <second>28</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>p_12_0_new_reg_195</rtlName>
+              <coreName/>
+            </Obj>
+            <bitwidth>32</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>63</item>
+            <item>64</item>
+            <item>66</item>
+            <item>68</item>
+          </oprand_edges>
+          <opcode>partselect</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_15">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>24</id>
+              <name>tmp_4</name>
+              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>28</lineNumber>
+              <contextFuncName>dummy_proc_be</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
+                        <second>dummy_proc_be</second>
+                      </first>
+                      <second>28</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>grp_filter_multop_operator_ap_fixed_s_fu_108</rtlName>
+              <coreName/>
+            </Obj>
+            <bitwidth>64</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>5</count>
+            <item_version>0</item_version>
+            <item>70</item>
+            <item>71</item>
+            <item>72</item>
+            <item>73</item>
+            <item>74</item>
+          </oprand_edges>
+          <opcode>call</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_16">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>25</id>
+              <name>p_0</name>
+              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>28</lineNumber>
+              <contextFuncName>dummy_proc_be</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
+                        <second>dummy_proc_be</second>
+                      </first>
+                      <second>28</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName/>
+              <coreName/>
+            </Obj>
+            <bitwidth>32</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>75</item>
+          </oprand_edges>
+          <opcode>extractvalue</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_17">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>26</id>
+              <name>p_1</name>
+              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>28</lineNumber>
+              <contextFuncName>dummy_proc_be</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
+                        <second>dummy_proc_be</second>
+                      </first>
+                      <second>28</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName/>
+              <coreName/>
+            </Obj>
+            <bitwidth>32</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>76</item>
+          </oprand_edges>
+          <opcode>extractvalue</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_18">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>27</id>
+              <name>output_xk1_addr</name>
+              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>28</lineNumber>
+              <contextFuncName>dummy_proc_be</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
+                        <second>dummy_proc_be</second>
+                      </first>
+                      <second>28</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName/>
+              <coreName/>
+            </Obj>
+            <bitwidth>11</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>77</item>
+            <item>79</item>
+            <item>80</item>
+          </oprand_edges>
+          <opcode>getelementptr</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_19">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>28</id>
+              <name>output_xk1_M_imag_V_addr</name>
+              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>28</lineNumber>
+              <contextFuncName>dummy_proc_be</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
+                        <second>dummy_proc_be</second>
+                      </first>
+                      <second>28</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>output_xk1_d0</rtlName>
+              <coreName/>
+            </Obj>
+            <bitwidth>64</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>82</item>
+            <item>83</item>
+            <item>84</item>
+          </oprand_edges>
+          <opcode>bitconcatenate</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_20">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>29</id>
+              <name/>
+              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>28</lineNumber>
+              <contextFuncName>dummy_proc_be</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
+                        <second>dummy_proc_be</second>
+                      </first>
+                      <second>28</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName/>
+              <coreName/>
+            </Obj>
+            <bitwidth>0</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>85</item>
+            <item>86</item>
+          </oprand_edges>
+          <opcode>store</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_21">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>30</id>
+              <name>tmp_10</name>
+              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>29</lineNumber>
+              <contextFuncName>dummy_proc_be</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
+                        <second>dummy_proc_be</second>
+                      </first>
+                      <second>29</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>tmp_10_fu_166_p4</rtlName>
+              <coreName/>
+            </Obj>
+            <bitwidth>3</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>88</item>
+            <item>89</item>
+            <item>91</item>
+            <item>93</item>
+          </oprand_edges>
+          <opcode>partselect</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_22">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>31</id>
+              <name>icmp</name>
+              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>29</lineNumber>
+              <contextFuncName>dummy_proc_be</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
+                        <second>dummy_proc_be</second>
+                      </first>
+                      <second>29</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName>icmp_fu_176_p2</rtlName>
+              <coreName/>
+            </Obj>
+            <bitwidth>1</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>94</item>
+            <item>96</item>
+          </oprand_edges>
+          <opcode>icmp</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_23">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>32</id>
+              <name>input_xk2_read</name>
+              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>30</lineNumber>
+              <contextFuncName>dummy_proc_be</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
+                        <second>dummy_proc_be</second>
+                      </first>
+                      <second>30</second>
+                    </item>
+                  </second>
+                </item>
+              </inlineStackInfo>
+              <originalName/>
+              <rtlName/>
+              <coreName/>
+            </Obj>
+            <bitwidth>64</bitwidth>
+          </Value>
+          <oprand_edges>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>97</item>
+            <item>98</item>
+          </oprand_edges>
+          <opcode>read</opcode>
+        </item>
+        <item class_id_reference="9" object_id="_24">
+          <Value>
+            <Obj>
+              <type>0</type>
+              <id>33</id>
+              <name/>
+              <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
+              <fileDirectory>..</fileDirectory>
+              <lineNumber>29</lineNumber>
+              <contextFuncName>dummy_proc_be</contextFuncName>
+              <inlineStackInfo>
+                <count>1</count>
+                <item_version>0</item_version>
+                <item>
+                  <first>/home/commlab/Documents/VIVADO_projects/fft_filter</first>
+                  <second>
+                    <count>1</count>
+                    <item_version>0</item_version>
+                    <item>
+                      <first>
+                        <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
+                        <second>dummy_proc_be</second>
+                      </first>
+                      <second>29</second>
                     </item>
                   </second>
                 </item>
@@ -954,7 +954,7 @@
               <name/>
               <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>30</lineNumber>
+              <lineNumber>32</lineNumber>
               <contextFuncName>dummy_proc_be</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -969,7 +969,7 @@
                         <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
                         <second>dummy_proc_be</second>
                       </first>
-                      <second>30</second>
+                      <second>32</second>
                     </item>
                   </second>
                 </item>
@@ -1024,7 +1024,7 @@
               <name/>
               <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>25</lineNumber>
+              <lineNumber>27</lineNumber>
               <contextFuncName>dummy_proc_be</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1039,7 +1039,7 @@
                         <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
                         <second>dummy_proc_be</second>
                       </first>
-                      <second>25</second>
+                      <second>27</second>
                     </item>
                   </second>
                 </item>
@@ -1065,7 +1065,7 @@
               <name/>
               <fileName>fft_filter_hlsprj/src/filter_fft.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>34</lineNumber>
+              <lineNumber>36</lineNumber>
               <contextFuncName>dummy_proc_be</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1080,7 +1080,7 @@
                         <first>fft_filter_hlsprj/src/filter_fft.cpp</first>
                         <second>dummy_proc_be</second>
                       </first>
-                      <second>34</second>
+                      <second>36</second>
                     </item>
                   </second>
                 </item>
@@ -1830,7 +1830,7 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>24577</mMinLatency>
+        <mMinLatency>20481</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -1877,7 +1877,7 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>2048</mMinTripCount>
         <mMaxTripCount>2048</mMaxTripCount>
-        <mMinLatency>24576</mMinLatency>
+        <mMinLatency>20480</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -2180,11 +2180,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>326</second>
+              <second>72</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>130</second>
+              <second>194</second>
             </item>
           </second>
         </item>

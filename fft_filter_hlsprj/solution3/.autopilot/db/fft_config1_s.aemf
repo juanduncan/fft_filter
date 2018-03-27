@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1522136386000">
+  <ScheduleInfo time="0"/>
+  <ioPorts name="config_ch_data_V">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="status_data_V">
+    <contents name="write">
+      <nodeIds>34</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="xk">
+    <contents name="write">
+      <nodeIds>30</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="xn">
+    <contents name="read">
+      <nodeIds>29</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm/>
+  <CFGRegionsRoot/>
+</cdfg:DBCdfg>
