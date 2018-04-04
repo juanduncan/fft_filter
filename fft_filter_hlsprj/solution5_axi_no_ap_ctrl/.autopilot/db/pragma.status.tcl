@@ -1,0 +1,3 @@
+lappend pragmaStatus0 {pragma "INTERFACE" source "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp" location "filter_top" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "PIPELINE" source "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp" location "dummy_proc_be/for_of_the_multi" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus2 {pragma "INTERFACE" source "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp" location "filter_top" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}

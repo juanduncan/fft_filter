@@ -199,7 +199,9 @@ extern "C" {
 #pragma line 8 "<command line>" 2
 #pragma line 1 "<built-in>" 2
 #pragma line 1 "fft_filter_hlsprj/src/filter_fft.cpp" 2
-#pragma line 1 "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.h" 1
+#pragma line 1 "/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/filter_fft.h" 1
+//FFT filter version with CFO filtering included
+#pragma empty_line
 #pragma line 1 "/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/ap_fixed.h" 1
 #pragma line 1 "/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/ap_int.h" 1
 // -*- c++ -*-
@@ -38348,7 +38350,7 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
 #pragma empty_line
 };
 #pragma line 2 "/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/ap_fixed.h" 2
-#pragma line 2 "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.h" 2
+#pragma line 3 "/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/filter_fft.h" 2
 #pragma line 1 "/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls_fft.h" 1
 /* -*- c++ -*-*/
 /*
@@ -41897,7 +41899,7 @@ void fft(
 } // End of 1-channel, floating-point
 #pragma empty_line
 } // namespace hls
-#pragma line 3 "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.h" 2
+#pragma line 4 "/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/filter_fft.h" 2
 #pragma empty_line
 using namespace std;
 #pragma empty_line
@@ -41919,21 +41921,15 @@ typedef ap_fixed<IFFT_INPUT_WIDTH , INTEGER_PART> b_dataI_in_t;
 typedef ap_fixed<IFFT_OUTPUT_WIDTH, INTEGER_PART> b_dataI_out_t;
 typedef ap_fixed<16,1> b_coef_t;
 #pragma empty_line
+typedef ap_fixed<FFT_INPUT_WIDTH*2 , 1 + FFT_NFFT_MAX > cfo_summation_t;
+typedef float cfo_aver_data_out_t;
+#pragma empty_line
 typedef std::complex<b_data_in_t> data_in_t;
 typedef std::complex<b_data_out_t> data_out_t;
 typedef std::complex<b_data_in_t> dataI_in_t;
 typedef std::complex<b_data_in_t> dataI_out_t;
 #pragma empty_line
 typedef std::complex<b_data_in_t> complex_coef_t;
-#pragma empty_line
-#pragma empty_line
-/*
-typedef std::complex<float>  data_in_t;
-typedef std::complex<float> data_out_t;
-typedef std::complex<float>  dataI_in_t;
-typedef std::complex<float>  dataI_out_t;*/
-#pragma empty_line
-//typedef std::complex<data_in_t> cmpx_t;
 #pragma empty_line
 struct config1 : hls::ip_fft::params_t {
  static const unsigned input_width = FFT_INPUT_WIDTH ;
@@ -41965,24 +41961,30 @@ typedef hls::ip_fft::status_t<config1> status_t;
 typedef hls::ip_fft::config_t<config2> config_ti;
 typedef hls::ip_fft::status_t<config2> status_ti;
 #pragma empty_line
-#pragma empty_line
 void dummy_proc_fe(config_t* config_fwd, config_ti* config_inv,
   data_in_t tail[TAIL_LENGTH], data_in_t in[FILTER_LENGTH], data_out_t input_xn2[FFT_LENGTH],
   data_in_t output_xn1[FFT_LENGTH], data_out_t output_xn2[FFT_LENGTH]);
 #pragma empty_line
-void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, complex_coef_t coefs[FFT_LENGTH],
+void dummy_proc_be(status_t* status_fwd, status_ti* status_inv,
+  complex_coef_t coefs[FFT_LENGTH],
+  b_data_in_t coefs_cfo[FFT_LENGTH],
   data_out_t input_xk1[FFT_LENGTH], data_out_t input_xk2[FFT_LENGTH],
-  data_out_t output_xk1[FFT_LENGTH], data_out_t dummy[TAIL_LENGTH],data_out_t out[FILTER_LENGTH]);
+  data_out_t output_xk1[FFT_LENGTH], data_out_t dummy[TAIL_LENGTH], data_out_t out[FILTER_LENGTH],
+  cfo_aver_data_out_t cfoIout[1]);
 #pragma empty_line
 #pragma empty_line
 ////////// TOP BLOCK ///////////////////////
-void filter_top( complex_coef_t coefs[FFT_LENGTH],
+void fft_filter_wcfo_top(
+     complex_coef_t coefs[FFT_LENGTH],
+     b_data_in_t coefs_cfo[FFT_LENGTH],
      data_in_t in[FILTER_LENGTH],
      data_out_t inxn2[FFT_LENGTH],
      data_out_t outxk1[FFT_LENGTH],
-     data_out_t out[FILTER_LENGTH]);
+     data_out_t out[FILTER_LENGTH],
+     cfo_aver_data_out_t cfoIout[1]);
 //////////////////////////////////////////////
 #pragma line 2 "fft_filter_hlsprj/src/filter_fft.cpp" 2
+//FFT filter version with CFO filtering included
 void dummy_proc_fe(config_t* config_fwd, config_ti* config_inv,
   data_in_t tail[TAIL_LENGTH], data_in_t in[FILTER_LENGTH], data_out_t input_xn2[FFT_LENGTH],
   data_in_t output_xn1[FFT_LENGTH], data_out_t output_xn2[FFT_LENGTH])
@@ -42003,28 +42005,45 @@ void dummy_proc_fe(config_t* config_fwd, config_ti* config_inv,
      }
     }
 }
-void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, complex_coef_t coefs[FFT_LENGTH],
+void dummy_proc_be(status_t* status_fwd, status_ti* status_inv,
+  complex_coef_t coefs[FFT_LENGTH],
+  b_data_in_t coefs_cfo[FFT_LENGTH],
   data_out_t input_xk1[FFT_LENGTH], data_out_t input_xk2[FFT_LENGTH],
-  data_out_t output_xk1[FFT_LENGTH], data_out_t dummy[TAIL_LENGTH], data_out_t out[FILTER_LENGTH])
+  data_out_t output_xk1[FFT_LENGTH], data_out_t dummy[TAIL_LENGTH], data_out_t out[FILTER_LENGTH],
+  cfo_aver_data_out_t cfoIout[1])
 {
    int i;
+   cfo_summation_t summation_cfo_I = 0;
+   //cfo_aver_data_out_t summation_cfo_Q = 0;
     for_of_the_multi : for (i=0; i< FFT_LENGTH; i++){
      output_xk1[i] = data_out_t( complex_coef_t(input_xk1[i]) * coefs[i] );
+     b_data_in_t absI = input_xk1[i].real();
+     if (absI < 0) absI = -absI;
+#pragma empty_line
+     summation_cfo_I += cfo_summation_t( cfo_summation_t( absI ) * cfo_summation_t( coefs_cfo[i] ) );
      if(i< TAIL_LENGTH){
       dummy[i] = input_xk2[i]; //dummy ---> To discard the first TAIL_LENGTH output samples
      }else{
       out[i-TAIL_LENGTH] = input_xk2[i];
      }
     }
+    cfoIout[0] = float(summation_cfo_I);
     //*ovflo = status_in->getOvflo() & 0x1;
 }
 #pragma empty_line
-void filter_top( complex_coef_t coefs[FFT_LENGTH],
+void fft_filter_wcfo_top(
+     complex_coef_t coefs[FFT_LENGTH],
+     b_data_in_t coefs_cfo[FFT_LENGTH],
      data_in_t in[FILTER_LENGTH],
      data_out_t inxn2[FFT_LENGTH],
      data_out_t outxk1[FFT_LENGTH],
-     data_out_t out[FILTER_LENGTH])
+     data_out_t out[FILTER_LENGTH],
+     cfo_aver_data_out_t cfoIout[1])
 {
+#pragma HLS INTERFACE ap_hs port=cfoIout
+#pragma HLS RESOURCE variable=coefs_cfo core=ROM_1P
+#pragma HLS INTERFACE ap_memory port=coefs_cfo
+#pragma empty_line
 #pragma HLS INTERFACE ap_hs port=out
 #pragma HLS INTERFACE ap_hs port=in
 #pragma HLS INTERFACE ap_memory port=outxk1
@@ -42058,13 +42077,12 @@ void filter_top( complex_coef_t coefs[FFT_LENGTH],
     status_t fft_status_fwd;
     status_ti fft_status_inv; // , fft_status2;
 #pragma empty_line
-#pragma empty_line
+     //cfo_aver_data_out_t temp_cfoIout;
   dummy_proc_fe(&fft_config_fwd,&fft_config_inv, detector_tail, in, inxn2, xn, xn2 );
   // FFT IP
   hls::fft<config1>(xn, xk, &fft_status_fwd, &fft_config_fwd);
   hls::fft<config2>(xn2, xk2, &fft_status_inv, &fft_config_inv);
-  dummy_proc_be(&fft_status_fwd, &fft_status_inv, coefs, xk, xk2, outxk1, really_dummy, out);
-#pragma empty_line
-#pragma empty_line
+  dummy_proc_be(&fft_status_fwd, &fft_status_inv, coefs, coefs_cfo, xk, xk2, outxk1, really_dummy, out, cfoIout );
+  //cfoIout =   temp_cfoIout;
 #pragma empty_line
 }

@@ -6,4 +6,4 @@
 # ==============================================================
 
 
-/opt/Xilinx/Vivado_HLS/2014.4/../../Vivado/2014.4/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xc7k410tffg900-2 ../COMMLAB_hls_filter_top_1_0.zip
+/opt/Xilinx/Vivado_HLS/2014.4/../../Vivado/2014.4/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xc7k410tffg900-2 ../COMMLAB_hls_fft_filter_wcfo_top_1_0.zip

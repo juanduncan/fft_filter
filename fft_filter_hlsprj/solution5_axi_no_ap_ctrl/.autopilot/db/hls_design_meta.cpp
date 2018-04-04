@@ -1,0 +1,28 @@
+#include "hls_design_meta.h"
+const Port_Property HLS_Design_Meta::port_props[]={
+	Port_Property("coefs_address0", 11, hls_out, 0, "ap_memory", "mem_address", 1),
+	Port_Property("coefs_ce0", 1, hls_out, 0, "ap_memory", "mem_ce", 1),
+	Port_Property("coefs_d0", 64, hls_out, 0, "ap_memory", "mem_din", 1),
+	Port_Property("coefs_q0", 64, hls_in, 0, "ap_memory", "mem_dout", 1),
+	Port_Property("coefs_we0", 1, hls_out, 0, "ap_memory", "mem_we", 1),
+	Port_Property("ap_ce", 1, hls_in, -1, "", "", 1),
+	Port_Property("in_r_TDATA", 64, hls_in, 1, "axis", "in_data", 1),
+	Port_Property("inxn2_address0", 11, hls_out, 2, "ap_memory", "mem_address", 1),
+	Port_Property("inxn2_ce0", 1, hls_out, 2, "ap_memory", "mem_ce", 1),
+	Port_Property("inxn2_d0", 64, hls_out, 2, "ap_memory", "mem_din", 1),
+	Port_Property("inxn2_q0", 64, hls_in, 2, "ap_memory", "mem_dout", 1),
+	Port_Property("inxn2_we0", 1, hls_out, 2, "ap_memory", "mem_we", 1),
+	Port_Property("outxk1_address0", 11, hls_out, 3, "ap_memory", "mem_address", 1),
+	Port_Property("outxk1_ce0", 1, hls_out, 3, "ap_memory", "mem_ce", 1),
+	Port_Property("outxk1_d0", 64, hls_out, 3, "ap_memory", "mem_din", 1),
+	Port_Property("outxk1_q0", 64, hls_in, 3, "ap_memory", "mem_dout", 1),
+	Port_Property("outxk1_we0", 1, hls_out, 3, "ap_memory", "mem_we", 1),
+	Port_Property("out_r_TDATA", 64, hls_out, 4, "axis", "out_data", 1),
+	Port_Property("ap_clk", 1, hls_in, -1, "", "", 1),
+	Port_Property("ap_rst_n", 1, hls_in, -1, "", "", 1),
+	Port_Property("in_r_TVALID", 1, hls_in, 1, "axis", "in_vld", 1),
+	Port_Property("in_r_TREADY", 1, hls_out, 1, "axis", "in_acc", 1),
+	Port_Property("out_r_TVALID", 1, hls_out, 4, "axis", "out_vld", 1),
+	Port_Property("out_r_TREADY", 1, hls_in, 4, "axis", "out_acc", 1),
+};
+const char* HLS_Design_Meta::dut_name = "filter_top";

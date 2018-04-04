@@ -8,7 +8,7 @@
 #
 # Settings for Vivado implementation flow
 #
-set top_module filter_top
+set top_module fft_filter_wcfo_top
 set language vhdl
 set family kintex7
 set device xc7k410t

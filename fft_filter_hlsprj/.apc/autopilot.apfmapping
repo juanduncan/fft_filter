@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="filter_fft.cpp" path="/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp"/>
+    <originFiles name="filter_fft.cpp" path="/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/filter_fft.cpp"/>
   </source>
   <testbench>
-    <originFiles name="filter_tb.cpp" path="/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/bckups/filter_tb.cpp"/>
+    <originFiles name="filter_tb.cpp" path="/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/bckups/filter_tb.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

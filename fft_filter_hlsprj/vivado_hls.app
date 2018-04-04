@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" name="fft_filter_hlsprj" top="filter_top">
+<project xmlns="com.autoesl.autopilot.project" name="fft_filter_hlsprj" top="fft_filter_wcfo_top">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -11,8 +11,9 @@
     <solutions xmlns="">
         <solution name="solution1" status="inactive"/>
         <solution name="solution2" status="inactive"/>
-        <solution name="solution3" status="inactive"/>
-        <solution name="solution4_axi" status="active"/>
+        <solution name="solution3" status="active"/>
+        <solution name="solution4_axi" status="inactive"/>
+        <solution name="solution5_axi_no_ap_ctrl" status="inactive"/>
     </solutions>
 </project>
 

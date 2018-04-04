@@ -9,22 +9,5 @@ Copyright (C) 2014 Xilinx Inc. All rights reserved.
 @I [HLS-10] Setting target device to 'xc7k410tffg900-2'
 @I [XFORM-701] Set default FIFO size in dataflow to 2048.
 @I [XFORM-701] Set the default channel type in dataflow to FIFO.
-@I [SYN-201] Setting up clock 'default' with a period of 5ns.
-@I [XFORM-701] Set default FIFO size in dataflow to 2048.
-@I [XFORM-701] Set the default channel type in dataflow to FIFO.
-@I [HLS-10] Analyzing design file 'fft_filter_hlsprj/src/filter_fft.cpp' ... 
-@E [HLS-70] Compilation errors found:
-fft_filter_hlsprj/src/filter_fft.cpp:81:3: error: no matching function for call to 'fft'
-                hls::fft<config2>(xn2, xk2, &fft_status_inv, &fft_config_inv);
-                ^~~~~~~~~~~~~~~~~
-/opt/Xilinx/Vivado_HLS/2014.4/include/hls_fft.h:908:6: note: candidate function [with CONFIG_T = config2] not viable: no known conversion from 'data_out_t [2048]' to 'complex<ap_fixed<(config2::input_width % 8) ? (config2::input_width / 8 + 1) * 8 : config2::input_width, 1> > *' for 1st argument; 
-void fft(
-     ^
-/opt/Xilinx/Vivado_HLS/2014.4/include/hls_fft.h:944:6: note: candidate function [with CONFIG_T = config2] not viable: no known conversion from 'data_out_t [2048]' to 'complex<ap_fixed<(config2::input_width % 8) ? (config2::input_width / 8 + 1) * 8 : config2::input_width, 1> > (*)[2048]' for 1st argument; 
-void fft(
-     ^
-/opt/Xilinx/Vivado_HLS/2014.4/include/hls_fft.h:984:6: note: candidate function [with CONFIG_T = config2] not viable: no known conversion from 'data_out_t [2048]' to 'complex<float> *' for 1st argument; 
-void fft(
-     ^
-1 error generated.
+@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
 @I [LIC-101] Checked in feature [HLS]

@@ -199,7 +199,9 @@ extern "C" {
 #8 "<command line>" 2
 #1 "<built-in>" 2
 #1 "fft_filter_hlsprj/src/filter_fft.cpp" 2
-#1 "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.h" 1
+#1 "/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/filter_fft.h" 1
+//FFT filter version with CFO filtering included
+
 #1 "/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/ap_fixed.h" 1
 #1 "/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/ap_int.h" 1
 // -*- c++ -*-
@@ -38368,7 +38370,7 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
 
 };
 #2 "/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/ap_fixed.h" 2
-#2 "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.h" 2
+#3 "/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/filter_fft.h" 2
 #1 "/opt/Xilinx/Vivado_HLS/2014.4/common/technology/autopilot/hls_fft.h" 1
 /* -*- c++ -*-*/
 /*
@@ -41921,7 +41923,7 @@ _ssdm_DataPack( xk, 0, 0, "", "", "");
 } // End of 1-channel, floating-point
 
 } // namespace hls
-#3 "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.h" 2
+#4 "/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/filter_fft.h" 2
 
 using namespace std;
 
@@ -41943,21 +41945,15 @@ typedef ap_fixed<IFFT_INPUT_WIDTH , INTEGER_PART> b_dataI_in_t;
 typedef ap_fixed<IFFT_OUTPUT_WIDTH, INTEGER_PART> b_dataI_out_t;
 typedef ap_fixed<16,1> b_coef_t;
 
+typedef ap_fixed<FFT_INPUT_WIDTH*2 , 1 + FFT_NFFT_MAX > cfo_summation_t;
+typedef float cfo_aver_data_out_t;
+
 typedef std::complex<b_data_in_t> data_in_t;
 typedef std::complex<b_data_out_t> data_out_t;
 typedef std::complex<b_data_in_t> dataI_in_t;
 typedef std::complex<b_data_in_t> dataI_out_t;
 
 typedef std::complex<b_data_in_t> complex_coef_t;
-
-
-/*
-typedef std::complex<float>  data_in_t;
-typedef std::complex<float> data_out_t;
-typedef std::complex<float>  dataI_in_t;
-typedef std::complex<float>  dataI_out_t;*/
-
-//typedef std::complex<data_in_t> cmpx_t;
 
 struct config1 : hls::ip_fft::params_t {
  static const unsigned input_width = FFT_INPUT_WIDTH ;
@@ -41974,7 +41970,7 @@ struct config1 : hls::ip_fft::params_t {
 
 public :
 inline __attribute__((always_inline)) config1() { _ssdm_SpecConstant(&input_width); _ssdm_SpecConstant(&output_width); _ssdm_SpecConstant(&ordering_opt); _ssdm_SpecConstant(&phase_factor_width); _ssdm_SpecConstant(&has_nfft); _ssdm_SpecConstant(&max_nfft); _ssdm_SpecConstant(&arch_opt); _ssdm_SpecConstant(&scaling_option); _ssdm_SpecConstant(&stages_block_ram); _ssdm_SpecConstant(&complex_mult_type);  }
-#52 "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.h"
+#47 "/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/filter_fft.h"
 };
 struct config2 : hls::ip_fft::params_t {
  static const unsigned input_width = IFFT_INPUT_WIDTH ;
@@ -41990,31 +41986,37 @@ struct config2 : hls::ip_fft::params_t {
 
 public :
 inline __attribute__((always_inline)) config2() { _ssdm_SpecConstant(&input_width); _ssdm_SpecConstant(&output_width); _ssdm_SpecConstant(&ordering_opt); _ssdm_SpecConstant(&phase_factor_width); _ssdm_SpecConstant(&has_nfft); _ssdm_SpecConstant(&max_nfft); _ssdm_SpecConstant(&arch_opt); _ssdm_SpecConstant(&scaling_option); _ssdm_SpecConstant(&stages_block_ram); _ssdm_SpecConstant(&complex_mult_type);  }
-#64 "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.h"
+#59 "/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/filter_fft.h"
 };
 typedef hls::ip_fft::config_t<config1> config_t;
 typedef hls::ip_fft::status_t<config1> status_t;
 typedef hls::ip_fft::config_t<config2> config_ti;
 typedef hls::ip_fft::status_t<config2> status_ti;
 
-
 void dummy_proc_fe(config_t* config_fwd, config_ti* config_inv,
   data_in_t tail[TAIL_LENGTH], data_in_t in[FILTER_LENGTH], data_out_t input_xn2[FFT_LENGTH],
   data_in_t output_xn1[FFT_LENGTH], data_out_t output_xn2[FFT_LENGTH]);
 
-void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, complex_coef_t coefs[FFT_LENGTH],
+void dummy_proc_be(status_t* status_fwd, status_ti* status_inv,
+  complex_coef_t coefs[FFT_LENGTH],
+  b_data_in_t coefs_cfo[FFT_LENGTH],
   data_out_t input_xk1[FFT_LENGTH], data_out_t input_xk2[FFT_LENGTH],
-  data_out_t output_xk1[FFT_LENGTH], data_out_t dummy[TAIL_LENGTH],data_out_t out[FILTER_LENGTH]);
+  data_out_t output_xk1[FFT_LENGTH], data_out_t dummy[TAIL_LENGTH], data_out_t out[FILTER_LENGTH],
+  cfo_aver_data_out_t cfoIout[1]);
 
 
 ////////// TOP BLOCK ///////////////////////
-void filter_top( complex_coef_t coefs[FFT_LENGTH],
+void fft_filter_wcfo_top(
+     complex_coef_t coefs[FFT_LENGTH],
+     b_data_in_t coefs_cfo[FFT_LENGTH],
      data_in_t in[FILTER_LENGTH],
      data_out_t inxn2[FFT_LENGTH],
      data_out_t outxk1[FFT_LENGTH],
-     data_out_t out[FILTER_LENGTH]);
+     data_out_t out[FILTER_LENGTH],
+     cfo_aver_data_out_t cfoIout[1]);
 //////////////////////////////////////////////
 #2 "fft_filter_hlsprj/src/filter_fft.cpp" 2
+//FFT filter version with CFO filtering included
 void dummy_proc_fe(config_t* config_fwd, config_ti* config_inv,
   data_in_t tail[TAIL_LENGTH], data_in_t in[FILTER_LENGTH], data_out_t input_xn2[FFT_LENGTH],
   data_in_t output_xn1[FFT_LENGTH], data_out_t output_xn2[FFT_LENGTH])
@@ -42035,33 +42037,47 @@ void dummy_proc_fe(config_t* config_fwd, config_ti* config_inv,
      }
     }
 }
-void dummy_proc_be(status_t* status_fwd, status_ti* status_inv, complex_coef_t coefs[FFT_LENGTH],
+void dummy_proc_be(status_t* status_fwd, status_ti* status_inv,
+  complex_coef_t coefs[FFT_LENGTH],
+  b_data_in_t coefs_cfo[FFT_LENGTH],
   data_out_t input_xk1[FFT_LENGTH], data_out_t input_xk2[FFT_LENGTH],
-  data_out_t output_xk1[FFT_LENGTH], data_out_t dummy[TAIL_LENGTH], data_out_t out[FILTER_LENGTH])
-{_ssdm_SpecArrayDimSize(dummy,TAIL_LENGTH);_ssdm_SpecArrayDimSize(coefs,FFT_LENGTH);_ssdm_SpecArrayDimSize(output_xk1,FFT_LENGTH);_ssdm_SpecArrayDimSize(input_xk2,FFT_LENGTH);_ssdm_SpecArrayDimSize(input_xk1,FFT_LENGTH);_ssdm_SpecArrayDimSize(out,FILTER_LENGTH);
+  data_out_t output_xk1[FFT_LENGTH], data_out_t dummy[TAIL_LENGTH], data_out_t out[FILTER_LENGTH],
+  cfo_aver_data_out_t cfoIout[1])
+{_ssdm_SpecArrayDimSize(dummy,TAIL_LENGTH);_ssdm_SpecArrayDimSize(coefs,FFT_LENGTH);_ssdm_SpecArrayDimSize(output_xk1,FFT_LENGTH);_ssdm_SpecArrayDimSize(cfoIout,1);_ssdm_SpecArrayDimSize(input_xk2,FFT_LENGTH);_ssdm_SpecArrayDimSize(input_xk1,FFT_LENGTH);_ssdm_SpecArrayDimSize(coefs_cfo,FFT_LENGTH);_ssdm_SpecArrayDimSize(out,FILTER_LENGTH);
    int i;
+   cfo_summation_t summation_cfo_I = 0;
+   //cfo_aver_data_out_t summation_cfo_Q = 0;
     for_of_the_multi : for (i=0; i< FFT_LENGTH; i++){_ssdm_op_SpecLoopName("for_of_the_multi");_ssdm_RegionBegin("for_of_the_multi");
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
-#27 "fft_filter_hlsprj/src/filter_fft.cpp"
+#33 "fft_filter_hlsprj/src/filter_fft.cpp"
 
      output_xk1[i] = data_out_t( complex_coef_t(input_xk1[i]) * coefs[i] );
+     b_data_in_t absI = input_xk1[i].real();
+     if (absI < 0) absI = -absI;
+
+     summation_cfo_I += cfo_summation_t( cfo_summation_t( absI ) * cfo_summation_t( coefs_cfo[i] ) );
      if(i< TAIL_LENGTH){
       dummy[i] = input_xk2[i]; //dummy ---> To discard the first TAIL_LENGTH output samples
      }else{
       out[i-TAIL_LENGTH] = input_xk2[i];
      }
     _ssdm_RegionEnd("for_of_the_multi");}
+    cfoIout[0] = float(summation_cfo_I);
     //*ovflo = status_in->getOvflo() & 0x1;
 }
 
-void filter_top( complex_coef_t coefs[FFT_LENGTH],
+void fft_filter_wcfo_top(
+     complex_coef_t coefs[FFT_LENGTH],
+     b_data_in_t coefs_cfo[FFT_LENGTH],
      data_in_t in[FILTER_LENGTH],
      data_out_t inxn2[FFT_LENGTH],
      data_out_t outxk1[FFT_LENGTH],
-     data_out_t out[FILTER_LENGTH])
-{_ssdm_SpecArrayDimSize(coefs,FFT_LENGTH);_ssdm_SpecArrayDimSize(outxk1,FFT_LENGTH);_ssdm_SpecArrayDimSize(in,FILTER_LENGTH);_ssdm_SpecArrayDimSize(inxn2,FFT_LENGTH);_ssdm_SpecArrayDimSize(out,FILTER_LENGTH);
-_ssdm_op_SpecInterface(coefs, "ap_memory", 0, 0, 0, 0, "", "", "");
-#43 "fft_filter_hlsprj/src/filter_fft.cpp"
+     data_out_t out[FILTER_LENGTH],
+     cfo_aver_data_out_t cfoIout[1])
+{_ssdm_SpecArrayDimSize(coefs,FFT_LENGTH);_ssdm_SpecArrayDimSize(outxk1,FFT_LENGTH);_ssdm_SpecArrayDimSize(in,FILTER_LENGTH);_ssdm_SpecArrayDimSize(cfoIout,1);_ssdm_SpecArrayDimSize(inxn2,FFT_LENGTH);_ssdm_SpecArrayDimSize(coefs_cfo,FFT_LENGTH);_ssdm_SpecArrayDimSize(out,FILTER_LENGTH);
+_ssdm_op_SpecInterface(cfoIout, "ap_hs", 0, 0, 0, 0, "", "", "");
+_ssdm_op_SpecResource(coefs_cfo, "", "ROM_1P", "", -1, "", "", "");
+_ssdm_op_SpecInterface(coefs_cfo, "ap_memory", 0, 0, 0, 0, "", "", "");
 
 _ssdm_op_SpecInterface(out, "ap_hs", 0, 0, 0, 0, "", "", "");
 _ssdm_op_SpecInterface(in, "ap_hs", 0, 0, 0, 0, "", "", "");
@@ -42096,14 +42112,13 @@ _ssdm_SpecStream( xk2, 0, 64, "");
     status_t fft_status_fwd;
     status_ti fft_status_inv; // , fft_status2;
 
-
+     //cfo_aver_data_out_t temp_cfoIout;
   dummy_proc_fe(&fft_config_fwd,&fft_config_inv, detector_tail, in, inxn2, xn, xn2 );
   // FFT IP
   hls::fft<config1>(xn, xk, &fft_status_fwd, &fft_config_fwd);
   hls::fft<config2>(xn2, xk2, &fft_status_inv, &fft_config_inv);
-  dummy_proc_be(&fft_status_fwd, &fft_status_inv, coefs, xk, xk2, outxk1, really_dummy, out);
-
-
+  dummy_proc_be(&fft_status_fwd, &fft_status_inv, coefs, coefs_cfo, xk, xk2, outxk1, really_dummy, out, cfoIout );
+  //cfoIout =   temp_cfoIout;
 
 }
 

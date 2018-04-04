@@ -245,95 +245,113 @@
 <option name="variable" positionalBoolean="4" value="xk"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
+<pragma name="INTERFACE">
+<option name="ap_hs" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="cfoIout"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="coefs_cfo"/>
+<option name="core" value="ROM_1P"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
+<pragma name="INTERFACE">
+<option name="ap_memory" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="coefs_cfo"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="INTERFACE">
 <option name="ap_hs" positionalBoolean="mode" value=""/>
 <option name="port" positionalBoolean="4" value="out"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="INTERFACE">
 <option name="ap_hs" positionalBoolean="mode" value=""/>
 <option name="port" positionalBoolean="4" value="in"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="INTERFACE">
 <option name="ap_memory" positionalBoolean="mode" value=""/>
 <option name="port" positionalBoolean="4" value="outxk1"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="RESOURCE">
 <option name="variable" positionalBoolean="4" value="outxk1"/>
 <option name="core" value="RAM_1P"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="DATA_PACK">
 <option name="variable" positionalBoolean="4" value="outxk1"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="DATA_PACK">
 <option name="variable" positionalBoolean="4" value="inxn2"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="RESOURCE">
 <option name="variable" positionalBoolean="4" value="inxn2"/>
 <option name="core" value="ROM_1P_BRAM"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="INTERFACE">
 <option name="ap_memory" positionalBoolean="mode" value=""/>
 <option name="port" positionalBoolean="4" value="inxn2"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="RESOURCE">
 <option name="variable" positionalBoolean="4" value="coefs"/>
 <option name="core" value="ROM_1P_BRAM"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="DATA_PACK">
 <option name="variable" positionalBoolean="4" value="in"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="DATA_PACK">
 <option name="variable" positionalBoolean="4" value="out"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="DATA_PACK">
 <option name="variable" positionalBoolean="4" value="coefs"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="DATAFLOW"/>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="xn"/>
 <option name="depth" value="1344"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="xk"/>
 <option name="depth" value="64"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="xn2"/>
 <option name="depth" value="64"/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="filter_top" label="">
+<directive functionLabel="" functionName="fft_filter_wcfo_top" label="">
 <pragma name="STREAM">
 <option name="variable" positionalBoolean="4" value="xk2"/>
 <option name="depth" value="64"/>

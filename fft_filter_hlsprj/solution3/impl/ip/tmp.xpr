@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="2" Path="/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/impl/ip/tmp.xpr">
+<Project Version="7" Minor="2" Path="/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution3/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="4ffb74c1e9424c0c8c2d506dc9d83385"/>
+    <Option Name="Id" Val="faaf442d0ac34f7cabdaa5d736f67811"/>
     <Option Name="Part" Val="xc7vx485tffg1157-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
@@ -25,6 +25,13 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/ip/fft_config2_s_core/fft_config2_s_core.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/fft_filter_wcfo_top_ap_sitofp_4_no_dsp_64/fft_filter_wcfo_top_ap_sitofp_4_no_dsp_64.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

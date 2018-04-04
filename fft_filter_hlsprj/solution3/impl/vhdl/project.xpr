@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="2" Path="/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/impl/vhdl/project.xpr">
+<Project Version="7" Minor="2" Path="/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution3/impl/vhdl/project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="43f1d8a5818f489c846c31d542658477"/>
+    <Option Name="Id" Val="d0a1c43b0f1c4ac7883dc2dc8ba60fcc"/>
     <Option Name="Part" Val="xc7k410tffg900-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
@@ -29,73 +29,79 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/filter_top_dummy_proc_fe_detector_tail_M_real_V.vhd">
+      <File Path="$PPRDIR/fft_filter_wcfo_top_sitofp_64ns_32_6.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/filter_top_mul_32s_32s_63_7.vhd">
+      <File Path="$PPRDIR/fft_filter_wcfo_top_dummy_proc_fe_detector_tail_M_real_V.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/FIFO_filter_top_fft_config_fwd_data_V.vhd">
+      <File Path="$PPRDIR/fft_filter_wcfo_top_mul_32s_32s_63_7.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/FIFO_filter_top_fft_config_inv_data_V.vhd">
+      <File Path="$PPRDIR/fft_filter_wcfo_top_mul_53s_53s_106_13.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/FIFO_filter_top_xn_channel.vhd">
+      <File Path="$PPRDIR/FIFO_fft_filter_wcfo_top_fft_config_fwd_data_V.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/FIFO_filter_top_xn2_channel.vhd">
+      <File Path="$PPRDIR/FIFO_fft_filter_wcfo_top_fft_config_inv_data_V.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/FIFO_filter_top_xk_channel.vhd">
+      <File Path="$PPRDIR/FIFO_fft_filter_wcfo_top_xn_channel.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/FIFO_filter_top_xk2_channel.vhd">
+      <File Path="$PPRDIR/FIFO_fft_filter_wcfo_top_xn2_channel.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/filter_top_dummy_proc_fe.vhd">
+      <File Path="$PPRDIR/FIFO_fft_filter_wcfo_top_xk_channel.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/filter_multop_operator_ap_fixed_s.vhd">
+      <File Path="$PPRDIR/FIFO_fft_filter_wcfo_top_xk2_channel.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/filter_top_dummy_proc_be.vhd">
+      <File Path="$PPRDIR/fft_filter_wcfo_top_dummy_proc_fe.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/filter_top.vhd">
+      <File Path="$PPRDIR/fft_filter_wcfo_top_dummy_proc_be.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/fft_filter_wcfo_top.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -115,6 +121,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/ip/fft_filter_wcfo_top_ap_sitofp_4_no_dsp_64/fft_filter_wcfo_top_ap_sitofp_4_no_dsp_64.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
@@ -122,7 +135,7 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/filter_top.xdc">
+      <File Path="$PPRDIR/fft_filter_wcfo_top.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

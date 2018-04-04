@@ -1,5 +1,5 @@
 
-set TopModule "filter_top"
+set TopModule "fft_filter_wcfo_top"
 set ClockPeriod "5.000000"
 set ClockList {ap_clk}
 set multiClockList {}
@@ -9,7 +9,7 @@ set PipelineFlag 1
 set DataflowTaskPipelineFlag  1
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
-set FloatingPointFlag 0
+set FloatingPointFlag 1
 set FftOrFirFlag 1
 set NewDSPMapping 0
 set ResetLevelFlag 1
@@ -40,7 +40,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7k410t:ffg900:-2"
 set SourceFiles {sc {} c ../src/filter_fft.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/solution3.directive}
+set DirectiveFile {/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution3/solution3.directive}
 set TBFiles {verilog ../src/bckups/filter_tb.cpp bc ../src/bckups/filter_tb.cpp vhdl ../src/bckups/filter_tb.cpp sc ../src/bckups/filter_tb.cpp cas ../src/bckups/filter_tb.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

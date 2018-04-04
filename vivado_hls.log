@@ -1,35 +1,34 @@
 @I [LIC-101] Checked out feature [HLS]
 @I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2014.4/bin/unwrapped/lnx64.o/vivado_hls'
-            for user 'commlab' on host 'commlab-server.uni.lux' (Linux_x86_64 version 3.10.0-693.17.1.el7.x86_64) on Tue Mar 27 14:41:27 CEST 2018
-            in directory '/home/commlab/Documents/VIVADO_projects/fft_filter'
-@I [HLS-10] Opening project '/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj'.
-@I [HLS-10] Adding design file 'fft_filter_hlsprj/src/filter_fft.cpp' to the project
-@I [HLS-10] Adding test bench file 'fft_filter_hlsprj/src/bckups/filter_tb.cpp' to the project
-@I [HLS-10] Opening solution '/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution4_axi'.
+            for user 'commlab' on host 'commlab-server.uni.lux' (Linux_x86_64 version 3.10.0-693.17.1.el7.x86_64) on Wed Apr 04 14:21:22 CEST 2018
+            in directory '/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est'
+@I [HLS-10] Opening project '/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj'.
+@I [HLS-10] Opening solution '/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution3'.
 @I [SYN-201] Setting up clock 'default' with a period of 5ns.
 @I [HLS-10] Setting target device to 'xc7k410tffg900-2'
 @I [XFORM-701] Set default FIFO size in dataflow to 2048.
 @I [XFORM-701] Set the default channel type in dataflow to FIFO.
-@I [SYN-201] Setting up clock 'default' with a period of 5ns.
-@I [XFORM-701] Set default FIFO size in dataflow to 2048.
-@I [XFORM-701] Set the default channel type in dataflow to FIFO.
-@I [HLS-10] Analyzing design file 'fft_filter_hlsprj/src/filter_fft.cpp' ... 
-@E [HLS-70] Compilation errors found:
-fft_filter_hlsprj/src/filter_fft.cpp:81:3: error: no matching function for call to 'fft'
-                hls::fft<config2>(xn2, xk2, &fft_status_inv, &fft_config_inv);
-                ^~~~~~~~~~~~~~~~~
-/opt/Xilinx/Vivado_HLS/2014.4/include/hls_fft.h:908:6: note: candidate function [with CONFIG_T = config2] not viable: no known conversion from 'data_out_t [2048]' to 'complex<ap_fixed<(config2::input_width % 8) ? (config2::input_width / 8 + 1) * 8 : config2::input_width, 1> > *' for 1st argument; 
-void fft(
-     ^
-/opt/Xilinx/Vivado_HLS/2014.4/include/hls_fft.h:944:6: note: candidate function [with CONFIG_T = config2] not viable: no known conversion from 'data_out_t [2048]' to 'complex<ap_fixed<(config2::input_width % 8) ? (config2::input_width / 8 + 1) * 8 : config2::input_width, 1> > (*)[2048]' for 1st argument; 
-void fft(
-     ^
-/opt/Xilinx/Vivado_HLS/2014.4/include/hls_fft.h:984:6: note: candidate function [with CONFIG_T = config2] not viable: no known conversion from 'data_out_t [2048]' to 'complex<float> *' for 1st argument; 
-void fft(
-     ^
-1 error generated.
-Failed checking during preprocessing.
-    while executing
-"csynth_design"
-    (file "/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution4_axi/csynth.tcl" line 15)
+@I [IMPL-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 16:47:07 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2014.4/data/ip'.
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'memory_options_hybrid' from 'false' to '0' has been ignored for IP 'fft_config1_s_core'
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fft_config1_s_core'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fft_config1_s_core'...
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'memory_options_hybrid' from 'false' to '0' has been ignored for IP 'fft_config2_s_core'
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fft_config2_s_core'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fft_config2_s_core'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fft_filter_wcfo_top_ap_sitofp_4_no_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fft_filter_wcfo_top_ap_sitofp_4_no_dsp_64'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2014.4/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  4 14:21:30 2018...
 @I [LIC-101] Checked in feature [HLS]

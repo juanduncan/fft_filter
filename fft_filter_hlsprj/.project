@@ -34,97 +34,122 @@
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/.apc/.tb</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/.apc/.tb</location>
+		</link>
+		<link>
+			<name>.reference/filter_fft.h</name>
+			<type>1</type>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.h</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution1/.tcls</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>solution2/constraints</name>
 			<type>2</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution2/.tcls</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution2/.tcls</location>
 		</link>
 		<link>
 			<name>solution3/constraints</name>
 			<type>2</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/.tcls</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution3/.tcls</location>
 		</link>
 		<link>
 			<name>solution4_axi/constraints</name>
 			<type>2</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution4_axi/.tcls</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution4_axi/.tcls</location>
+		</link>
+		<link>
+			<name>solution5_axi_no_ap_ctrl/constraints</name>
+			<type>2</type>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution5_axi_no_ap_ctrl/.tcls</location>
 		</link>
 		<link>
 			<name>source/filter_fft.cpp</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/filter_fft.cpp</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/filter_fft.cpp</location>
 		</link>
 		<link>
 			<name>testbench/filter_tb.cpp</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/src/bckups/filter_tb.cpp</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/src/bckups/filter_tb.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution1/solution1.directive</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution1/directives.tcl</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution1/script.tcl</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution1/script.tcl</location>
 		</link>
 		<link>
 			<name>solution2/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution2/solution2.directive</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution2/solution2.directive</location>
 		</link>
 		<link>
 			<name>solution2/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution2/directives.tcl</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution2/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution2/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution2/script.tcl</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution2/script.tcl</location>
 		</link>
 		<link>
 			<name>solution3/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/solution3.directive</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution3/solution3.directive</location>
 		</link>
 		<link>
 			<name>solution3/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/directives.tcl</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution3/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution3/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution3/script.tcl</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution3/script.tcl</location>
 		</link>
 		<link>
 			<name>solution4_axi/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution4_axi/solution4_axi.directive</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution4_axi/solution4_axi.directive</location>
 		</link>
 		<link>
 			<name>solution4_axi/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution4_axi/directives.tcl</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution4_axi/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution4_axi/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/commlab/Documents/VIVADO_projects/fft_filter/fft_filter_hlsprj/solution4_axi/script.tcl</location>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution4_axi/script.tcl</location>
+		</link>
+		<link>
+			<name>solution5_axi_no_ap_ctrl/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution5_axi_no_ap_ctrl/solution5_axi_no_ap_ctrl.directive</location>
+		</link>
+		<link>
+			<name>solution5_axi_no_ap_ctrl/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution5_axi_no_ap_ctrl/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution5_axi_no_ap_ctrl/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/commlab/Documents/VIVADO_projects/fft_filter_with_cfo_est/fft_filter_hlsprj/solution5_axi_no_ap_ctrl/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

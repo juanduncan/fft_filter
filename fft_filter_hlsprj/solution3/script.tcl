@@ -4,7 +4,7 @@
 ## Copyright (C) 2014 Xilinx Inc. All rights reserved.
 ############################################################
 open_project fft_filter_hlsprj
-set_top filter_top
+set_top fft_filter_wcfo_top
 add_files fft_filter_hlsprj/src/filter_fft.cpp
 add_files -tb fft_filter_hlsprj/src/bckups/filter_tb.cpp
 open_solution "solution3"
